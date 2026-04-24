@@ -71,6 +71,52 @@
           </div>
         </div>
       </article>
+
+      <article class="mt-12 rounded-2xl border border-primary/10 bg-white/90 p-8 shadow-lg backdrop-blur-sm">
+        <h2 class="text-center text-3xl font-serif font-bold text-dark">
+          <span class="inline-flex items-center gap-2 border-b-2 border-primary pb-2">AI情感量化分析</span>
+        </h2>
+
+        <div class="mt-10">
+          <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">选择诗句分析情感维度</h3>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <button
+              v-for="item in emotionLines"
+              :key="item"
+              type="button"
+              class="rounded-lg border p-4 text-left transition"
+              :class="item === selectedEmotionLine ? 'border-primary bg-primary/10 text-primary' : 'border-primary/20 bg-primary/5 text-dark/80 hover:bg-primary/10'"
+              @click="selectEmotionLine(item)"
+            >
+              {{ item }}
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <div>
+            <div class="mb-4 rounded-lg bg-primary/5 p-4">
+              <h4 class="mb-2 text-lg font-serif font-bold text-primary">{{ emotionData.line }}</h4>
+              <p class="text-dark/70 leading-7">{{ emotionData.explanation }}</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                v-for="(dimension, idx) in emotionData.dimensions"
+                :key="`${dimension}-${idx}`"
+                class="rounded-lg border border-primary/20 bg-white p-4"
+              >
+                <div class="text-sm text-dark/60">{{ dimension }}</div>
+                <div class="mt-2 text-3xl font-bold text-primary">{{ emotionScore(dimension, idx) }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-lg border border-primary/20 bg-white p-4">
+            <div ref="emotionChartRef" class="h-[360px] w-full"></div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 </template>
@@ -110,7 +156,23 @@ const graph = ref(fallbackGraph)
 const selectedNodeName = ref('')
 const zoom = ref(1)
 const graphContainerRef = ref(null)
+const emotionChartRef = ref(null)
+const emotionData = ref({
+  line: '庄生晓梦迷蝴蝶',
+  explanation: '点击诗句后会显示五维情感分析与解释。',
+  dimensions: ['迷惘感', '凄美感', '孤独感', '执念感', '虚无感'],
+  scores: [0.85, 0.4, 0.5, 0.3, 0.9],
+})
+const emotionLines = [
+  '庄生晓梦迷蝴蝶',
+  '望帝春心托杜鹃',
+  '沧海月明珠有泪',
+  '蓝田日暖玉生烟',
+  '此情可待成追忆，只是当时已惘然',
+]
+const selectedEmotionLine = ref('庄生晓梦迷蝴蝶')
 let chartInstance = null
+let emotionChartInstance = null
 let resizeHandler = null
 
 const selectedNode = computed(() => {
@@ -194,6 +256,73 @@ function renderChart() {
   chartInstance.setOption(buildOption(), true)
 }
 
+function buildEmotionOption() {
+  return {
+    animationDuration: 700,
+    radar: {
+      indicator: (emotionData.value.dimensions || []).map((name) => ({ name, max: 100 })),
+      splitNumber: 5,
+      radius: '68%',
+      axisName: {
+        color: '#6b7280',
+        fontSize: 14,
+      },
+      splitLine: {
+        lineStyle: {
+          color: 'rgba(148, 163, 184, 0.25)',
+        },
+      },
+      splitArea: {
+        areaStyle: {
+          color: ['rgba(255,255,255,0.85)'],
+        },
+      },
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(148, 163, 184, 0.28)',
+        },
+      },
+    },
+    series: [
+      {
+        type: 'radar',
+        data: [
+          {
+            value: (emotionData.value.scores || []).map((value) => Math.round(value * 100)),
+            areaStyle: {
+              color: 'rgba(139,69,19,0.18)',
+            },
+            lineStyle: {
+              color: '#8B4513',
+              width: 3,
+            },
+            symbol: 'circle',
+            symbolSize: 8,
+            itemStyle: {
+              color: '#CD5C5C',
+            },
+          },
+        ],
+      },
+    ],
+  }
+}
+
+function renderEmotionChart() {
+  if (!emotionChartRef.value) {
+    return
+  }
+  if (!emotionChartInstance) {
+    emotionChartInstance = echarts.init(emotionChartRef.value)
+  }
+  emotionChartInstance.setOption(buildEmotionOption(), true)
+}
+
+function emotionScore(dimension, idx) {
+  const score = emotionData.value.scores?.[idx] || 0
+  return Math.round(score * 100)
+}
+
 function zoomIn() {
   zoom.value = Math.min(2.2, Number((zoom.value + 0.15).toFixed(2)))
   chartInstance?.setOption({ series: [{ zoom: zoom.value }] })
@@ -220,6 +349,23 @@ async function loadGraph() {
     await nextTick()
     renderChart()
   }
+}
+
+async function loadEmotion(line) {
+  try {
+    emotionData.value = await mockApi('/api/emotion', {
+      body: { line, mode: 'fast' },
+    })
+    await nextTick()
+    renderEmotionChart()
+  } catch (error) {
+    console.warn('loadEmotion fallback:', error)
+  }
+}
+
+function selectEmotionLine(line) {
+  selectedEmotionLine.value = line
+  loadEmotion(line)
 }
 
 watch(
@@ -249,9 +395,13 @@ watch(selectedNodeName, (name) => {
 })
 
 onMounted(() => {
-  resizeHandler = () => chartInstance?.resize()
+  resizeHandler = () => {
+    chartInstance?.resize()
+    emotionChartInstance?.resize()
+  }
   window.addEventListener('resize', resizeHandler)
   loadGraph()
+  loadEmotion(selectedEmotionLine.value)
 })
 
 onBeforeUnmount(() => {
@@ -259,6 +409,8 @@ onBeforeUnmount(() => {
     window.removeEventListener('resize', resizeHandler)
   }
   chartInstance?.dispose()
+  emotionChartInstance?.dispose()
   chartInstance = null
+  emotionChartInstance = null
 })
 </script>

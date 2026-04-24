@@ -34,7 +34,6 @@ const open = ref(false)
 
 const navItems = [
   { to: '/', label: '首页' },
-  { to: '/ai-dialogue', label: '智能对话' },
   { to: '/poem-appreciation', label: '诗句赏析' },
   { to: '/tone-analysis', label: '平仄分析' },
   { to: '/ai-image', label: '诗意生图' },

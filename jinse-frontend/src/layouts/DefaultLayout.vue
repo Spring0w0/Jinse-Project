@@ -5,10 +5,12 @@
     <main class="relative container mx-auto flex flex-1 min-h-0 px-4 pt-24 pb-10">
       <RouterView />
     </main>
+    <FloatingChatWidget />
   </div>
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
 import AppNav from '../components/AppNav.vue'
+import FloatingChatWidget from '../components/chat/FloatingChatWidget.vue'
 </script>

@@ -56,6 +56,41 @@ const imageUrlMap = {
   '蓝田日暖玉生烟': ['/data/绘本图片/蓝田日暖玉生烟/1.png', '/data/绘本图片/蓝田日暖玉生烟/2.png', '/data/绘本图片/蓝田日暖玉生烟/3.png'],
 }
 
+const emotionDimensions = ['迷惘感', '凄美感', '孤独感', '执念感', '虚无感']
+
+const emotionAnalysisMap = {
+  '庄生晓梦迷蝴蝶': {
+    line: '庄生晓梦迷蝴蝶',
+    explanation: '梦蝶意象强化了真假难辨的迷惘感，也把人生如梦、情感难定的幽微体验推到前景。',
+    dimensions: emotionDimensions,
+    scores: [0.85, 0.4, 0.5, 0.3, 0.9],
+  },
+  '望帝春心托杜鹃': {
+    line: '望帝春心托杜鹃',
+    explanation: '杜鹃啼血承载深情与执念，本句的情绪核心并不是单纯悲伤，而是难以放下的情感牵系。',
+    dimensions: emotionDimensions,
+    scores: [0.45, 0.78, 0.52, 0.92, 0.38],
+  },
+  '沧海月明珠有泪': {
+    line: '沧海月明珠有泪',
+    explanation: '“明月”“沧海”“珠泪”共同营造出清冷凄美的情绪场，悲感被处理得晶莹而节制。',
+    dimensions: emotionDimensions,
+    scores: [0.52, 0.94, 0.66, 0.41, 0.47],
+  },
+  '蓝田日暖玉生烟': {
+    line: '蓝田日暖玉生烟',
+    explanation: '本句更突出朦胧与可望难即之感，情绪并不激烈，但空灵与失落在缓慢扩散。',
+    dimensions: emotionDimensions,
+    scores: [0.64, 0.71, 0.43, 0.36, 0.82],
+  },
+  '此情可待成追忆，只是当时已惘然': {
+    line: '此情可待成追忆，只是当时已惘然',
+    explanation: '尾联把前文所有情绪最终压缩到“惘然”之中，追忆、迷惘与虚无感在这里形成集中收束。',
+    dimensions: emotionDimensions,
+    scores: [0.91, 0.74, 0.68, 0.49, 0.88],
+  },
+}
+
 const mockGraph = {
   categories: [{ name: '核心' }, { name: '典故' }, { name: '人物' }, { name: '出处' }, { name: '意象' }, { name: '情感' }],
   nodes: [
@@ -363,6 +398,11 @@ export async function mockApi(url, options = {}) {
 
   if (url === '/api/knowledge-graph') {
     return deepClone(mockGraph)
+  }
+
+  if (url === '/api/emotion') {
+    const line = body.line || '庄生晓梦迷蝴蝶'
+    return deepClone(emotionAnalysisMap[line] || emotionAnalysisMap['庄生晓梦迷蝴蝶'])
   }
 
   if (url === '/api/quiz/generate') {

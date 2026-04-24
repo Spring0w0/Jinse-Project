@@ -19,13 +19,14 @@
               <i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i>
               开始学习
             </RouterLink>
-            <RouterLink
-              to="/ai-dialogue"
+            <button
+              type="button"
               class="rounded-lg border-2 border-primary px-6 py-3 font-medium text-primary transition hover:bg-primary/10"
+              @click="openChat"
             >
               <i class="fa fa-commenting mr-2" aria-hidden="true"></i>
               与诗人对话
-            </RouterLink>
+            </button>
           </div>
         </div>
 
@@ -69,11 +70,14 @@
         </span>
       </h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <RouterLink
+        <component
           v-for="item in featureCards"
           :key="item.title"
+          :is="item.to ? 'RouterLink' : 'button'"
           :to="item.to"
+          :type="item.to ? undefined : 'button'"
           class="group rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 p-6 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          @click="item.action ? item.action() : undefined"
         >
           <div class="flex items-start gap-4">
             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary transition group-hover:bg-primary/30">
@@ -84,13 +88,21 @@
               <p class="text-lg leading-8 text-dark/70">{{ item.desc }}</p>
             </div>
           </div>
-        </RouterLink>
+        </component>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
+import { useChatStore } from '../stores/chat'
+
+const chatStore = useChatStore()
+
+function openChat() {
+  chatStore.openPanel()
+}
+
 const learningPaths = [
   { iconClass: 'fa-history', title: '背景导入', desc: '了解李商隐生平与创作背景，理解时代语境' },
   { iconClass: 'fa-pencil-square-o', title: '诗句赏析', desc: '逐句解读《锦瑟》，深入理解诗歌内涵' },
@@ -100,7 +112,7 @@ const learningPaths = [
 ]
 
 const featureCards = [
-  { to: '/ai-dialogue', iconClass: 'fa-commenting', title: 'AI诗人智能对话', desc: '与李商隐进行跨时空对话，解答诗歌疑问' },
+  { iconClass: 'fa-commenting', title: 'AI诗人智能对话', desc: '与李商隐进行跨时空对话，解答诗歌疑问', action: openChat },
   { to: '/poem-appreciation', iconClass: 'fa-book', title: '诗句深度赏析', desc: '逐句解析《锦瑟》，理解诗歌内涵与情感' },
   { to: '/tone-analysis', iconClass: 'fa-music', title: '声律分析', desc: '分析诗歌平仄规律，感受声律之美' },
   { to: '/ai-image', iconClass: 'fa-paint-brush', title: 'AI诗意生图', desc: '将诗句转化为视觉图像，直观感受诗歌意境' },
