@@ -32,7 +32,7 @@ function createUserMessage(text) {
 }
 
 function createWelcomeMessage() {
-  return createAssistantMessage('我是《锦瑟》学习助手。你可以随时问我诗句、典故、意象、情感、声律，或者直接围绕当前页面内容继续追问。')
+  return createAssistantMessage('我是古诗词学习助手。你可以随时围绕当前学习诗歌提问，也可以直接追问当前页面里的诗句、意象、典故、情感或声律。')
 }
 
 function buildSessionTitle(firstUserMessage) {
@@ -316,7 +316,7 @@ export const useChatStore = defineStore('chat', () => {
         },
       })
 
-      pendingAssistantMessage.text = response.reply || '暂时没有生成可用回复。'
+      pendingAssistantMessage.text = response.reply || '我先整理一下这首诗的相关思路，你也可以继续把问题问得更具体。'
       pendingAssistantMessage.pending = false
       pendingAssistantMessage.streaming = false
       pendingAssistantMessage.mode = response.mode || 'mock-stream'
@@ -327,11 +327,11 @@ export const useChatStore = defineStore('chat', () => {
         pendingAssistantMessage.streaming = false
         pendingAssistantMessage.aborted = true
         if (!pendingAssistantMessage.text) {
-          pendingAssistantMessage.text = '已停止生成。'
+          pendingAssistantMessage.text = '本次生成已停止。'
         }
         updateSessionTimestamp(session.id)
       } else {
-        pendingAssistantMessage.text = '当前对话暂时不可用，请稍后重试。'
+        pendingAssistantMessage.text = '当前这条回复没有成功生成，你可以重新发送，或者把问题缩小到某一句再试一次。'
         pendingAssistantMessage.pending = false
         pendingAssistantMessage.streaming = false
         pendingAssistantMessage.error = true

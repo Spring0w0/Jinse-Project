@@ -2,7 +2,7 @@
   <section class="w-full py-16 sm:py-20">
     <div class="mx-auto w-full max-w-6xl px-4">
       <h1 class="text-center text-3xl font-serif font-bold text-dark sm:text-4xl">
-        <span class="inline-block border-b-2 border-primary pb-2">诗词知识图谱</span>
+        <span class="inline-block border-b-2 border-primary pb-2">知识图谱</span>
       </h1>
 
       <article class="mt-12 rounded-2xl border border-primary/10 bg-white/90 p-8 shadow-lg backdrop-blur-sm">
@@ -11,11 +11,11 @@
             ref="graphContainerRef"
             class="h-[600px] w-full rounded-xl border border-primary/20 bg-gradient-to-br from-gray-50 to-white shadow-inner"
           ></div>
-          <p class="mt-3 text-xs text-dark/55">提示：图中节点可拖动，可滚轮缩放，可拖动画布平移。</p>
+          <p class="mt-3 text-xs text-dark/55">点击图谱节点后，下方会联动显示该节点的背景信息、作用和相关意象。</p>
         </div>
 
         <div class="mb-8">
-          <h2 class="mb-4 text-xl font-serif font-bold text-dark/80">节点类型</h2>
+          <h2 class="mb-4 text-xl font-serif font-bold text-dark/80">节点类别</h2>
           <div class="flex flex-wrap gap-4">
             <div v-for="item in categoryLegend" :key="item.name" class="flex items-center">
               <span class="mr-2 h-4 w-4 rounded-full" :style="{ backgroundColor: item.color }"></span>
@@ -26,9 +26,15 @@
 
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div class="flex flex-wrap gap-3">
-            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="zoomIn"><i class="fa fa-search-plus mr-2"></i>放大</button>
-            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="zoomOut"><i class="fa fa-search-minus mr-2"></i>缩小</button>
-            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="resetGraph"><i class="fa fa-refresh mr-2"></i>重置</button>
+            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="zoomIn">
+              <i class="fa fa-search-plus mr-2"></i>放大
+            </button>
+            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="zoomOut">
+              <i class="fa fa-search-minus mr-2"></i>缩小
+            </button>
+            <button type="button" class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20" @click="resetGraph">
+              <i class="fa fa-refresh mr-2"></i>重置
+            </button>
           </div>
           <div>
             <select
@@ -36,7 +42,7 @@
               class="rounded-lg border border-primary/30 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
               <option value="">选择节点查看详情</option>
-              <option v-for="node in graph.nodes" :key="`option-${node.name}`" :value="node.name">{{ node.name }}</option>
+              <option v-for="node in graphData.nodes" :key="`option-${node.name}`" :value="node.name">{{ node.name }}</option>
             </select>
           </div>
         </div>
@@ -47,14 +53,14 @@
             <h4 class="mb-2 text-lg font-serif font-bold text-primary">{{ selectedNode.name }}</h4>
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
-                <h5 class="mb-2 font-bold text-dark/80">基本信息</h5>
-                <p class="mb-4 text-dark/70">{{ selectedNode.info || selectedNode.value || '暂无说明。' }}</p>
-                <h5 class="mb-2 font-bold text-dark/80">相关典故</h5>
-                <p class="text-dark/70">{{ selectedNode.source || '暂无出处信息。' }}</p>
+                <h5 class="mb-2 font-bold text-dark/80">基础说明</h5>
+                <p class="mb-4 text-dark/70">{{ selectedNode.info }}</p>
+                <h5 class="mb-2 font-bold text-dark/80">来源</h5>
+                <p class="text-dark/70">{{ selectedNode.source }}</p>
               </div>
               <div>
-                <h5 class="mb-2 font-bold text-dark/80">在诗中的作用</h5>
-                <p class="mb-4 text-dark/70">{{ selectedNode.role || '暂无角色说明。' }}</p>
+                <h5 class="mb-2 font-bold text-dark/80">在作品中的作用</h5>
+                <p class="mb-4 text-dark/70">{{ selectedNode.role }}</p>
                 <h5 class="mb-2 font-bold text-dark/80">相关意象</h5>
                 <div class="flex flex-wrap gap-2">
                   <span
@@ -64,7 +70,6 @@
                   >
                     {{ image }}
                   </span>
-                  <span v-if="!(selectedNode.images || []).length" class="text-dark/60">暂无关联意象。</span>
                 </div>
               </div>
             </div>
@@ -74,21 +79,21 @@
 
       <article class="mt-12 rounded-2xl border border-primary/10 bg-white/90 p-8 shadow-lg backdrop-blur-sm">
         <h2 class="text-center text-3xl font-serif font-bold text-dark">
-          <span class="inline-flex items-center gap-2 border-b-2 border-primary pb-2">AI情感量化分析</span>
+          <span class="inline-flex items-center gap-2 border-b-2 border-primary pb-2">AI 情感量化分析</span>
         </h2>
 
         <div class="mt-10">
-          <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">选择诗句分析情感维度</h3>
+          <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">选择诗句进行分析</h3>
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <button
               v-for="item in emotionLines"
-              :key="item"
+              :key="item.line"
               type="button"
               class="rounded-lg border p-4 text-left transition"
-              :class="item === selectedEmotionLine ? 'border-primary bg-primary/10 text-primary' : 'border-primary/20 bg-primary/5 text-dark/80 hover:bg-primary/10'"
-              @click="selectEmotionLine(item)"
+              :class="item.line === selectedEmotionLine ? 'border-primary bg-primary/10 text-primary' : 'border-primary/20 bg-primary/5 text-dark/80 hover:bg-primary/10'"
+              @click="selectEmotionLine(item.line)"
             >
-              {{ item }}
+              {{ item.line }}
             </button>
           </div>
         </div>
@@ -96,18 +101,18 @@
         <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
           <div>
             <div class="mb-4 rounded-lg bg-primary/5 p-4">
-              <h4 class="mb-2 text-lg font-serif font-bold text-primary">{{ emotionData.line }}</h4>
-              <p class="text-dark/70 leading-7">{{ emotionData.explanation }}</p>
+              <h4 class="mb-2 text-lg font-serif font-bold text-primary">{{ currentEmotion.line }}</h4>
+              <p class="leading-7 text-dark/70">{{ currentEmotion.explanation }}</p>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div
-                v-for="(dimension, idx) in emotionData.dimensions"
+                v-for="(dimension, idx) in currentEmotion.dimensions"
                 :key="`${dimension}-${idx}`"
                 class="rounded-lg border border-primary/20 bg-white p-4"
               >
                 <div class="text-sm text-dark/60">{{ dimension }}</div>
-                <div class="mt-2 text-3xl font-bold text-primary">{{ emotionScore(dimension, idx) }}</div>
+                <div class="mt-2 text-3xl font-bold text-primary">{{ emotionScore(idx) }}</div>
               </div>
             </div>
           </div>
@@ -124,66 +129,43 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import * as echarts from 'echarts'
-import { mockApi } from '../mocks/jinseMockApi'
+import { getPoemKnowledgeGraph } from '../services/poemDataService'
+import { useCurrentPoemStore } from '../stores/currentPoem'
 
-const fallbackGraph = {
-  categories: [{ name: '诗句' }, { name: '典故' }, { name: '诗人' }, { name: '出处' }, { name: '意象' }, { name: '情感' }],
-  nodes: [
-    { name: '《锦瑟》', category: 0, symbolSize: 70, info: '全诗核心节点。', role: '连接诗句、典故、意象与情感。', source: '晚唐诗歌', images: ['华年', '惘然'] },
-    { name: '庄生梦蝶', category: 1, symbolSize: 48, info: '人生如梦，真幻难辨。', role: '强化迷离感。', source: '《庄子·齐物论》', images: ['蝴蝶', '梦境'] },
-    { name: '望帝啼鹃', category: 1, symbolSize: 48, info: '杜鹃啼血寄寓执念。', role: '增强悲怆张力。', source: '《华阳国志》', images: ['杜鹃', '啼血'] },
-    { name: '李商隐', category: 2, symbolSize: 44, info: '晚唐诗人。', role: '诗风深婉绮丽，善用典。', source: '晚唐诗坛', images: ['无题诗'] },
-  ],
-  links: [
-    { source: '《锦瑟》', target: '庄生梦蝶' },
-    { source: '《锦瑟》', target: '望帝啼鹃' },
-    { source: '《锦瑟》', target: '李商隐' },
-  ],
-}
+const currentPoemStore = useCurrentPoemStore()
 
-const categoryColors = ['#CD5C5C', '#483D8B', '#8B4513', '#3B82F6', '#16A34A', '#EAB308']
-
-const categoryLegend = [
-  { name: '诗人', color: '#8B4513' },
-  { name: '诗句', color: '#CD5C5C' },
-  { name: '典故', color: '#483D8B' },
-  { name: '意象', color: '#16A34A' },
-  { name: '情感', color: '#EAB308' },
-  { name: '出处', color: '#3B82F6' },
-]
-
-const graph = ref(fallbackGraph)
-const selectedNodeName = ref('')
+const categoryColors = ['#CD5C5C', '#483D8B', '#8B4513', '#16A34A', '#EAB308']
 const zoom = ref(1)
 const graphContainerRef = ref(null)
 const emotionChartRef = ref(null)
-const emotionData = ref({
-  line: '庄生晓梦迷蝴蝶',
-  explanation: '点击诗句后会显示五维情感分析与解释。',
-  dimensions: ['迷惘感', '凄美感', '孤独感', '执念感', '虚无感'],
-  scores: [0.85, 0.4, 0.5, 0.3, 0.9],
-})
-const emotionLines = [
-  '庄生晓梦迷蝴蝶',
-  '望帝春心托杜鹃',
-  '沧海月明珠有泪',
-  '蓝田日暖玉生烟',
-  '此情可待成追忆，只是当时已惘然',
-]
-const selectedEmotionLine = ref('庄生晓梦迷蝴蝶')
+const selectedNodeName = ref('')
+const selectedEmotionLine = ref('')
+
 let chartInstance = null
 let emotionChartInstance = null
 let resizeHandler = null
 
+const graphData = computed(() => getPoemKnowledgeGraph(currentPoemStore.currentPoemId))
+const categoryLegend = computed(() => {
+  return (graphData.value.categories || []).map((name, index) => ({
+    name,
+    color: categoryColors[index] || '#6b7280',
+  }))
+})
 const selectedNode = computed(() => {
-  if (!selectedNodeName.value) {
-    return null
+  return (graphData.value.nodes || []).find((item) => item.name === selectedNodeName.value) || null
+})
+const emotionLines = computed(() => graphData.value.emotionAnalyses || [])
+const currentEmotion = computed(() => {
+  return emotionLines.value.find((item) => item.line === selectedEmotionLine.value) || emotionLines.value[0] || {
+    line: '',
+    explanation: '',
+    dimensions: [],
+    scores: [],
   }
-  return (graph.value.nodes || []).find((item) => item.name === selectedNodeName.value) || null
 })
 
-
-function buildOption() {
+function buildGraphOption() {
   return {
     tooltip: {
       trigger: 'item',
@@ -193,7 +175,7 @@ function buildOption() {
       textStyle: { color: '#374151', fontSize: 13 },
       formatter: (params) => {
         const data = params.data || {}
-        return `<div><strong>${data.name || ''}</strong><br/>${data.info || data.value || '暂无说明'}</div>`
+        return `<div><strong>${data.name || ''}</strong><br/>${data.info || ''}</div>`
       },
     },
     animationDuration: 900,
@@ -204,7 +186,7 @@ function buildOption() {
         roam: true,
         draggable: true,
         zoom: zoom.value,
-        force: { repulsion: 360, edgeLength: 140, gravity: 0.04 },
+        force: { repulsion: 340, edgeLength: 150, gravity: 0.05 },
         label: {
           show: true,
           position: 'inside',
@@ -214,19 +196,18 @@ function buildOption() {
         },
         edgeSymbol: ['none', 'arrow'],
         edgeSymbolSize: [3, 5],
-        lineStyle: { color: '#d1d5db', width: 1.2, opacity: 0.6, curveness: 0.12 },
+        lineStyle: { color: '#d1d5db', width: 1.2, opacity: 0.7, curveness: 0.12 },
         emphasis: {
           focus: 'adjacency',
           lineStyle: { width: 2.5, color: '#dc2626', opacity: 0.8 },
           label: { fontSize: 14 },
         },
-        categories: (graph.value.categories || []).map((item, idx) => ({
-          name: item.name,
+        categories: (graphData.value.categories || []).map((name, idx) => ({
+          name,
           itemStyle: { color: categoryColors[idx] || '#6b7280' },
         })),
-        data: (graph.value.nodes || []).map((node) => ({
+        data: (graphData.value.nodes || []).map((node) => ({
           ...node,
-          symbolSize: node.symbolSize || 46,
           itemStyle: {
             color: categoryColors[Number(node.category || 0)] || '#6b7280',
             shadowBlur: 10,
@@ -235,13 +216,13 @@ function buildOption() {
             borderColor: 'rgba(255,255,255,0.88)',
           },
         })),
-        links: graph.value.links || [],
+        links: graphData.value.links || [],
       },
     ],
   }
 }
 
-function renderChart() {
+function renderGraph() {
   if (!graphContainerRef.value) {
     return
   }
@@ -253,54 +234,32 @@ function renderChart() {
       }
     })
   }
-  chartInstance.setOption(buildOption(), true)
+  chartInstance.setOption(buildGraphOption(), true)
 }
 
 function buildEmotionOption() {
   return {
     animationDuration: 700,
     radar: {
-      indicator: (emotionData.value.dimensions || []).map((name) => ({ name, max: 100 })),
+      indicator: (currentEmotion.value.dimensions || []).map((name) => ({ name, max: 100 })),
       splitNumber: 5,
       radius: '68%',
-      axisName: {
-        color: '#6b7280',
-        fontSize: 14,
-      },
-      splitLine: {
-        lineStyle: {
-          color: 'rgba(148, 163, 184, 0.25)',
-        },
-      },
-      splitArea: {
-        areaStyle: {
-          color: ['rgba(255,255,255,0.85)'],
-        },
-      },
-      axisLine: {
-        lineStyle: {
-          color: 'rgba(148, 163, 184, 0.28)',
-        },
-      },
+      axisName: { color: '#6b7280', fontSize: 14 },
+      splitLine: { lineStyle: { color: 'rgba(148, 163, 184, 0.25)' } },
+      splitArea: { areaStyle: { color: ['rgba(255,255,255,0.85)'] } },
+      axisLine: { lineStyle: { color: 'rgba(148, 163, 184, 0.28)' } },
     },
     series: [
       {
         type: 'radar',
         data: [
           {
-            value: (emotionData.value.scores || []).map((value) => Math.round(value * 100)),
-            areaStyle: {
-              color: 'rgba(139,69,19,0.18)',
-            },
-            lineStyle: {
-              color: '#8B4513',
-              width: 3,
-            },
+            value: (currentEmotion.value.scores || []).map((value) => Math.round(value * 100)),
+            areaStyle: { color: 'rgba(139,69,19,0.18)' },
+            lineStyle: { color: '#8B4513', width: 3 },
             symbol: 'circle',
             symbolSize: 8,
-            itemStyle: {
-              color: '#CD5C5C',
-            },
+            itemStyle: { color: '#CD5C5C' },
           },
         ],
       },
@@ -318,9 +277,8 @@ function renderEmotionChart() {
   emotionChartInstance.setOption(buildEmotionOption(), true)
 }
 
-function emotionScore(dimension, idx) {
-  const score = emotionData.value.scores?.[idx] || 0
-  return Math.round(score * 100)
+function emotionScore(index) {
+  return Math.round((currentEmotion.value.scores?.[index] || 0) * 100)
 }
 
 function zoomIn() {
@@ -336,50 +294,20 @@ function zoomOut() {
 function resetGraph() {
   zoom.value = 1
   selectedNodeName.value = ''
-  renderChart()
-}
-
-async function loadGraph() {
-  try {
-    graph.value = await mockApi('/api/knowledge-graph')
-    await nextTick()
-    renderChart()
-  } catch (error) {
-    console.warn('loadGraph fallback:', error)
-    await nextTick()
-    renderChart()
-  }
-}
-
-async function loadEmotion(line) {
-  try {
-    emotionData.value = await mockApi('/api/emotion', {
-      body: { line, mode: 'fast' },
-    })
-    await nextTick()
-    renderEmotionChart()
-  } catch (error) {
-    console.warn('loadEmotion fallback:', error)
-  }
+  renderGraph()
 }
 
 function selectEmotionLine(line) {
   selectedEmotionLine.value = line
-  loadEmotion(line)
 }
 
-watch(
-  () => graph.value.nodes,
-  (nodes) => {
-    if (!nodes?.length) {
-      selectedNodeName.value = ''
-      return
-    }
-    if (!nodes.find((item) => item.name === selectedNodeName.value)) {
-      selectedNodeName.value = ''
-    }
-  },
-)
+watch(() => currentPoemStore.currentPoemId, async () => {
+  selectedNodeName.value = ''
+  selectedEmotionLine.value = emotionLines.value[0]?.line || ''
+  await nextTick()
+  renderGraph()
+  renderEmotionChart()
+}, { immediate: true })
 
 watch(selectedNodeName, (name) => {
   if (!chartInstance) {
@@ -387,21 +315,28 @@ watch(selectedNodeName, (name) => {
   }
   chartInstance.dispatchAction({ type: 'downplay', seriesIndex: 0 })
   if (name) {
-    const nodeIndex = (graph.value.nodes || []).findIndex((item) => item.name === name)
+    const nodeIndex = (graphData.value.nodes || []).findIndex((item) => item.name === name)
     if (nodeIndex >= 0) {
       chartInstance.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: nodeIndex })
     }
   }
 })
 
-onMounted(() => {
+watch(currentEmotion, async () => {
+  await nextTick()
+  renderEmotionChart()
+})
+
+onMounted(async () => {
+  currentPoemStore.initialize()
+  await nextTick()
+  renderGraph()
+  renderEmotionChart()
   resizeHandler = () => {
     chartInstance?.resize()
     emotionChartInstance?.resize()
   }
   window.addEventListener('resize', resizeHandler)
-  loadGraph()
-  loadEmotion(selectedEmotionLine.value)
 })
 
 onBeforeUnmount(() => {

@@ -39,7 +39,7 @@ function buildReplyChunks(reply) {
   let index = 0
 
   while (index < reply.length) {
-    const size = /[，。；：！？]/.test(reply[index]) ? 1 : 3
+    const size = /[，。！？；：、“”《》]/.test(reply[index]) ? 1 : 3
     chunks.push(reply.slice(index, index + size))
     index += size
   }
@@ -48,41 +48,67 @@ function buildReplyChunks(reply) {
 }
 
 function summarizeRouteContext(routeContext = {}) {
-  if (!routeContext.label) {
-    return '当前页面'
+  const poemTitle = routeContext.poemTitle || '当前这首诗'
+  const pageLabel = routeContext.label || '当前页面'
+  return `你现在在“${pageLabel}”页面，当前学习诗歌是《${poemTitle}》`
+}
+
+function buildPoemScopedAdvice(routeContext = {}) {
+  const pageName = routeContext.name
+  const poemTitle = routeContext.poemTitle || '当前这首诗'
+
+  if (pageName === 'poem-appreciation') {
+    return `建议先抓住《${poemTitle}》这一联最关键的词语，再看它如何带出整句的情绪和语气。`
   }
-  return `当前页面是“${routeContext.label}”`
+  if (pageName === 'tone-analysis') {
+    return `可以先看《${poemTitle}》这一句的停顿、收尾和语势变化，再判断这些声音特征如何服务情感表达。`
+  }
+  if (pageName === 'ai-image') {
+    return `在《${poemTitle}》的诗意生图页面，重点不是死记名词，而是判断这一句更偏向典故、场景还是整体氛围。`
+  }
+  if (pageName === 'knowledge-graph') {
+    return `在《${poemTitle}》的知识图谱里，建议先抓中心节点，再看它和典故、意象、情感之间的连接方式。`
+  }
+  if (pageName === 'quiz') {
+    return `如果你是在《${poemTitle}》的小测页面提问，先分清题目是在考诗句理解、意象分析还是整体主旨。`
+  }
+  if (pageName === 'similar-poems') {
+    return `如果你正在比较《${poemTitle}》和其它作品，先确定比较维度：主题、情感、意象还是表达方式。`
+  }
+
+  return `你可以直接围绕《${poemTitle}》提问，我会优先结合当前页面内容来回答。`
 }
 
 function buildReplyByKeyword(message, routeContext = {}) {
   const normalized = String(message || '').trim()
   const routeSummary = summarizeRouteContext(routeContext)
+  const poemTitle = routeContext.poemTitle || '当前这首诗'
 
   if (!normalized) {
-    return '我还没有收到具体问题。你可以告诉我你想从诗句、典故、意象、情感或声律中的哪一部分开始。'
+    return `${routeSummary}。你可以直接问我《${poemTitle}》的诗句、意象、典故、情感、声律，或者当前页面里看不懂的地方。`
   }
 
-  if (/(典故|庄生|蝴蝶|望帝|杜鹃)/.test(normalized)) {
-    return `${routeSummary}。如果你现在正在看《锦瑟》的典故相关内容，可以重点抓住两组核心借典：一是“庄生晓梦迷蝴蝶”，强调真幻难辨与人生迷离；二是“望帝春心托杜鹃”，强调深情、执念与悲怆。它们共同把《锦瑟》的情感推向含蓄而复杂的层次。`
+  if (/(典故|出处|用了什么典|借典)/.test(normalized)) {
+    return `${routeSummary}。如果你是在问《${poemTitle}》里的典故，建议先分清这句是真的在化用传统故事，还是只是借意象营造氛围；不是每句诗都必须硬套典故。`
   }
 
-  if (/(情感|惘然|追忆|伤感|悲伤)/.test(normalized)) {
-    return `${routeSummary}。理解《锦瑟》的情感时，不建议只归结成单一的“爱情”或“伤感”。更稳妥的读法是把它看成追忆、迷惘、惆怅与审美性朦胧交织在一起的复合情绪，而“惘然”正是这种复杂情感的收束点。`
+  if (/(情感|感情|情绪|主旨)/.test(normalized)) {
+    return `${routeSummary}。理解《${poemTitle}》的情感时，最好不要急着压成单一答案。更稳妥的办法是先看关键词、意象组合和收束句，再判断它是偏回忆、孤独、深情、惋惜还是历史反思。`
   }
 
-  if (/(声律|平仄|朗读|韵脚)/.test(normalized)) {
-    return `${routeSummary}。如果你是在声律分析页面提问，可以把重点放在三件事上：句中停顿怎么帮助理解层次，句尾韵脚怎么制造回环感，以及平仄起伏怎么服务于《锦瑟》的低回气质。声律在这里不是单独的规则，而是情绪表达的一部分。`
+  if (/(平仄|声律|朗读|节奏|停顿)/.test(normalized)) {
+    return `${routeSummary}。分析《${poemTitle}》的声律，不必先背规则，先看停顿位置、句尾如何收、语势是上扬还是下沉，再看这些变化怎样服务情绪。`
   }
 
-  if (/(意象|生图|月|珠|玉|烟)/.test(normalized)) {
-    return `${routeSummary}。读《锦瑟》的意象时，最好不要把“沧海月明珠有泪”“蓝田日暖玉生烟”拆成单个名词去背，而是看它们如何共同形成一种清冷、晶莹、可望难即的整体氛围。这也是为什么它很适合转成图像化学习内容。`
+  if (/(意象|画面|生图|图像)/.test(normalized)) {
+    return `${routeSummary}。读《${poemTitle}》的意象时，重点是看几个核心画面如何共同形成整体氛围，而不是把每个词拆开孤立记忆。`
   }
 
   if (/(测验|题目|做题|答案)/.test(normalized)) {
-    return `${routeSummary}。如果你是围绕测验在问，我建议先确认题目是在考诗句理解、典故识别、意象分析还是情感归纳。对《锦瑟》这类多义文本，最常见的问题不是记不住，而是过早把答案收窄成唯一解释。`
+    return `${routeSummary}。做《${poemTitle}》相关题目时，最常见的问题不是不会背，而是过早把多义文本收窄成唯一解释，所以先判断题目到底在考哪一层。`
   }
 
-  return `${routeSummary}。你刚才的问题是“${normalized}”。目前这套聊天能力还是前端阶段的学习助手版本，我可以先从《锦瑟》的诗句、典故、意象、情感、声律或相关诗歌比较几个方向帮你整理思路。你也可以把问题问得更具体一点。`
+  return `${routeSummary}。你刚才的问题是“${normalized}”。${buildPoemScopedAdvice(routeContext)} 如果你愿意，可以继续把问题问得更具体一点，比如直接指出某一句、某个意象，或者某道题。`
 }
 
 export async function streamChatReply({

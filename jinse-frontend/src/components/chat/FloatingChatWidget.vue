@@ -21,15 +21,17 @@
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useChatStore } from '../../stores/chat'
+import { useCurrentPoemStore } from '../../stores/currentPoem'
 import ChatPanel from './ChatPanel.vue'
 
 const route = useRoute()
 const chatStore = useChatStore()
+const currentPoemStore = useCurrentPoemStore()
 
 const routeNameLabelMap = {
   home: '首页',
   'poem-appreciation': '诗句赏析',
-  'tone-analysis': '声律分析',
+  'tone-analysis': '平仄分析',
   'ai-image': '诗意生图',
   'knowledge-graph': '知识图谱',
   quiz: '课堂小测',
@@ -40,6 +42,8 @@ const routeContext = computed(() => ({
   name: route.name,
   path: route.path,
   label: routeNameLabelMap[route.name] || route.meta?.title || route.path,
+  poemId: currentPoemStore.currentPoemId,
+  poemTitle: currentPoemStore.currentPoem?.title || '当前诗歌',
 }))
 
 const isOpen = computed(() => chatStore.isOpen)
@@ -50,5 +54,6 @@ function togglePanel() {
 
 onMounted(() => {
   chatStore.initialize()
+  currentPoemStore.initialize()
 })
 </script>

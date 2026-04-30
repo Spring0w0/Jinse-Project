@@ -2,15 +2,15 @@
   <section class="w-full py-16 sm:py-20">
     <div class="mx-auto w-full max-w-4xl px-4">
       <h1 class="text-center text-3xl font-serif font-bold text-dark sm:text-4xl">
-        <span class="inline-block border-b-2 border-primary pb-2">AI课堂小测</span>
+        <span class="inline-block border-b-2 border-primary pb-2">AI 课堂小测</span>
       </h1>
 
       <article class="mt-12 rounded-2xl border border-primary/10 bg-white/90 p-8 shadow-lg backdrop-blur-sm">
         <div v-if="!resultVisible">
           <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <h2 class="text-xl font-serif font-bold text-primary">《锦瑟》知识测验</h2>
-              <p class="mt-1 text-sm text-dark/60">{{ sourceText }}</p>
+              <h2 class="text-xl font-serif font-bold text-primary">《{{ currentPoem.title }}》知识测验</h2>
+              <p class="mt-1 text-sm text-dark/60">{{ quizData.sourceText }}</p>
             </div>
             <div class="flex items-center gap-2 text-sm text-dark/60">
               <span>进度</span>
@@ -24,10 +24,12 @@
           <div v-if="currentQuestion" class="mb-6 rounded-2xl border border-primary/10 bg-primary/5 p-6">
             <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h3 class="text-lg font-serif font-bold text-primary">问题 {{ currentIndex + 1 }}/{{ questions.length }}</h3>
-                <p class="mt-1 text-xs text-dark/55">知识点：{{ (currentQuestion.knowledge_points || []).join('、') }}</p>
+                <h3 class="text-lg font-serif font-bold text-primary">第 {{ currentIndex + 1 }} / {{ questions.length }} 题</h3>
+                <p class="mt-1 text-xs text-dark/55">知识点：{{ (currentQuestion.knowledgePoints || []).join(' / ') }}</p>
               </div>
-              <span class="rounded-full bg-white px-3 py-1 text-xs text-dark/60 border border-primary/10">难度：{{ currentQuestion.difficulty || 'mixed' }}</span>
+              <span class="rounded-full border border-primary/10 bg-white px-3 py-1 text-xs text-dark/60">
+                难度：{{ currentQuestion.difficulty || 'mixed' }}
+              </span>
             </div>
 
             <p class="mb-6 text-lg leading-8 text-dark/85">{{ currentQuestion.question }}</p>
@@ -52,23 +54,29 @@
             </div>
           </div>
 
-          <div v-if="currentCheckedResult" class="mb-6 rounded-2xl border p-5" :class="currentCheckedResult.correct ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'">
-            <h4 class="text-lg font-bold" :class="currentCheckedResult.correct ? 'text-green-800' : 'text-red-800'">{{ currentCheckedResult.feedback_title }}</h4>
+          <div
+            v-if="currentCheckedResult"
+            class="mb-6 rounded-2xl border p-5"
+            :class="currentCheckedResult.correct ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'"
+          >
+            <h4 class="text-lg font-bold" :class="currentCheckedResult.correct ? 'text-green-800' : 'text-red-800'">
+              {{ currentCheckedResult.correct ? '回答正确' : '再想一想' }}
+            </h4>
             <div class="mt-3 grid gap-3 text-sm md:grid-cols-2">
               <div class="rounded-xl border border-white/70 bg-white/80 p-4">
-                <div class="mb-2 text-dark/60">作答结果</div>
-                <p :class="currentCheckedResult.correct ? 'text-green-700' : 'text-red-700'">你的答案：{{ currentCheckedResult.user_answer || '未作答' }}</p>
+                <div class="mb-2 text-dark/60">答案对照</div>
+                <p :class="currentCheckedResult.correct ? 'text-green-700' : 'text-red-700'">你的答案：{{ currentCheckedResult.userAnswer || '未作答' }}</p>
                 <p :class="currentCheckedResult.correct ? 'text-green-700' : 'text-red-700'">正确答案：{{ currentCheckedResult.answer }}</p>
               </div>
               <div class="rounded-xl border border-white/70 bg-white/80 p-4">
-                <div class="mb-2 text-dark/60">知识点</div>
-                <p class="text-dark/75">{{ (currentCheckedResult.knowledge_points || []).join('、') }}</p>
-                <p class="mt-1 text-dark/50">本题用时：{{ currentCheckedResult.time_spent || 0 }}s</p>
+                <div class="mb-2 text-dark/60">作答信息</div>
+                <p class="text-dark/75">{{ (currentCheckedResult.knowledgePoints || []).join(' / ') }}</p>
+                <p class="mt-1 text-dark/50">用时：{{ currentCheckedResult.timeSpent }}s</p>
               </div>
             </div>
-            <ul class="mt-4 space-y-2 rounded-xl border border-white/70 bg-white/85 p-4 text-sm" :class="currentCheckedResult.correct ? 'text-green-700' : 'text-red-700'">
-              <li v-for="point in currentCheckedResult.explanation_points || []" :key="point">• {{ point }}</li>
-            </ul>
+            <div class="mt-4 rounded-xl border border-white/70 bg-white/85 p-4 text-sm leading-7 text-dark/75">
+              {{ currentCheckedResult.analysis }}
+            </div>
           </div>
 
           <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -77,29 +85,33 @@
               class="rounded-lg bg-primary/10 px-6 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
               :disabled="currentIndex === 0"
               @click="prevQuestion"
-            >上一题</button>
-            <div class="text-sm text-dark/55">先选择答案并提交本题，再进入下一题。</div>
+            >
+              上一题
+            </button>
+            <div class="text-sm text-dark/55">先作答，再查看解析；最后一题批改完成后即可提交本轮测验。</div>
             <button
               type="button"
               class="rounded-lg bg-primary px-6 py-2 text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
-              :disabled="actionLoading"
+              :disabled="actionDisabled"
               @click="handleAction"
-            >{{ actionLabel }}</button>
+            >
+              {{ actionLabel }}
+            </button>
           </div>
         </div>
 
         <div v-else>
           <div class="mb-8 text-center">
             <div class="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-primary/10">
-              <span class="text-4xl font-bold text-primary">{{ resultData.score || 0 }}</span>
+              <span class="text-4xl font-bold text-primary">{{ scoreSummary.score }}</span>
             </div>
-            <h2 class="mb-2 text-2xl font-serif font-bold text-dark/80">测验完成！</h2>
-            <p class="text-dark/60">你的得分是 {{ resultData.score || 0 }}/{{ resultData.total || 0 }}</p>
+            <h2 class="mb-2 text-2xl font-serif font-bold text-dark/80">本轮测验完成</h2>
+            <p class="text-dark/60">总分：{{ scoreSummary.score }}/{{ scoreSummary.total }}</p>
           </div>
 
           <div class="mb-8 space-y-6 rounded-lg bg-primary/5 p-6">
             <div>
-              <h3 class="mb-4 font-bold text-dark/80">成绩概览</h3>
+              <h3 class="mb-4 font-bold text-dark/80">结果概览</h3>
               <div class="grid gap-3 md:grid-cols-4">
                 <div v-for="card in summaryCards" :key="card.label" class="rounded-xl border border-primary/15 bg-white p-4">
                   <div class="text-sm text-dark/60">{{ card.label }}</div>
@@ -109,12 +121,12 @@
             </div>
 
             <div>
-              <h3 class="mb-3 font-bold text-dark/80">知识点掌握情况</h3>
+              <h3 class="mb-3 font-bold text-dark/80">知识点掌握</h3>
               <div class="space-y-3">
-                <div v-for="item in resultData.knowledge_stats || []" :key="item.name">
+                <div v-for="item in knowledgeStats" :key="item.name">
                   <div class="mb-1 flex justify-between text-sm text-dark/70">
                     <span>{{ item.name }}</span>
-                    <span>{{ item.mastery }}% · {{ item.label }}</span>
+                    <span>{{ item.mastery }}%</span>
                   </div>
                   <div class="h-2.5 w-full overflow-hidden rounded-full bg-primary/20">
                     <div class="h-2.5 rounded-full bg-primary" :style="{ width: `${item.mastery}%` }"></div>
@@ -124,13 +136,15 @@
             </div>
 
             <div>
-              <h3 class="mb-3 font-bold text-dark/80">AI 学情分析</h3>
-              <div class="whitespace-pre-wrap rounded-lg border border-primary/15 bg-white p-4 leading-7 text-dark/70">{{ resultData.analysis_text || '暂无学情分析。' }}</div>
+              <h3 class="mb-3 font-bold text-dark/80">AI 学习反馈</h3>
+              <div class="whitespace-pre-wrap rounded-lg border border-primary/15 bg-white p-4 leading-7 text-dark/70">{{ analysisText }}</div>
             </div>
           </div>
 
           <div class="flex justify-center gap-4">
-            <button type="button" class="rounded-lg bg-primary px-6 py-3 text-white transition hover:bg-primary/90" @click="generateQuiz">重新测验</button>
+            <button type="button" class="rounded-lg bg-primary px-6 py-3 text-white transition hover:bg-primary/90" @click="resetState">
+              重新测验
+            </button>
           </div>
         </div>
       </article>
@@ -139,21 +153,22 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
-import { mockApi } from '../mocks/jinseMockApi'
+import { computed, onMounted, ref, watch } from 'vue'
+import { getPoemQuiz } from '../services/poemDataService'
+import { useCurrentPoemStore } from '../stores/currentPoem'
 
-const quizSessionId = ref('')
-const questions = ref([])
+const currentPoemStore = useCurrentPoemStore()
+
 const currentIndex = ref(0)
 const userAnswers = ref({})
 const checkedResults = ref({})
-const quizTimeSpent = ref({})
+const timeSpent = ref({})
 const resultVisible = ref(false)
-const resultData = ref({})
-const sourceText = ref('AI 正在准备本轮题目...')
 const questionEnterAt = ref(0)
-const actionLoading = ref(false)
 
+const currentPoem = computed(() => currentPoemStore.currentPoem)
+const quizData = computed(() => getPoemQuiz(currentPoemStore.currentPoemId))
+const questions = computed(() => quizData.value.questions || [])
 const currentQuestion = computed(() => questions.value[currentIndex.value] || null)
 const currentCheckedResult = computed(() => {
   const qid = currentQuestion.value?.id
@@ -161,10 +176,61 @@ const currentCheckedResult = computed(() => {
 })
 const checkedCount = computed(() => Object.keys(checkedResults.value).length)
 const progress = computed(() => (questions.value.length ? (checkedCount.value / questions.value.length) * 100 : 0))
+const actionDisabled = computed(() => !currentQuestion.value || (!currentCheckedResult.value && !userAnswers.value[currentQuestion.value.id]))
+
+const scoreSummary = computed(() => {
+  const total = questions.value.length * 25
+  const score = Object.values(checkedResults.value).reduce((sum, item) => sum + (item.correct ? 25 : 0), 0)
+  return { score, total }
+})
+
+const knowledgeStats = computed(() => {
+  const stats = new Map()
+  Object.values(checkedResults.value).forEach((result) => {
+    ;(result.knowledgePoints || []).forEach((point) => {
+      const current = stats.get(point) || { name: point, total: 0, correct: 0 }
+      current.total += 1
+      if (result.correct) {
+        current.correct += 1
+      }
+      stats.set(point, current)
+    })
+  })
+
+  return Array.from(stats.values()).map((item) => ({
+    name: item.name,
+    mastery: item.total ? Math.round((item.correct / item.total) * 100) : 0,
+  }))
+})
+
+const averageTime = computed(() => {
+  const values = Object.values(timeSpent.value)
+  if (!values.length) {
+    return 0
+  }
+  return Number((values.reduce((sum, item) => sum + item, 0) / values.length).toFixed(1))
+})
+
+const summaryCards = computed(() => [
+  { label: '总分', value: `${scoreSummary.value.score}/${scoreSummary.value.total}` },
+  { label: '答对题数', value: `${Object.values(checkedResults.value).filter((item) => item.correct).length}/${questions.value.length}` },
+  { label: '总用时', value: `${Object.values(timeSpent.value).reduce((sum, item) => sum + item, 0).toFixed(1)}s` },
+  { label: '平均用时', value: `${averageTime.value}s` },
+])
+
+const analysisText = computed(() => {
+  const correctCount = Object.values(checkedResults.value).filter((item) => item.correct).length
+  const total = questions.value.length
+  const weakPoint = [...knowledgeStats.value].sort((a, b) => a.mastery - b.mastery)[0]
+  if (!total) {
+    return '当前没有可分析的测验数据。'
+  }
+  return `你已完成《${currentPoem.value.title}》的本轮测验，共答对 ${correctCount} / ${total} 题。${weakPoint ? `当前最需要回看的知识点是“${weakPoint.name}”。` : ''} 建议先回到对应页面复习，再重新测一轮。`
+})
 
 const actionLabel = computed(() => {
   if (!currentQuestion.value) {
-    return '加载中...'
+    return '暂无题目'
   }
   if (!currentCheckedResult.value) {
     return '提交本题'
@@ -175,48 +241,17 @@ const actionLabel = computed(() => {
   return '查看结果'
 })
 
-const summaryCards = computed(() => {
-  const summary = resultData.value.time_summary || {}
-  return [
-    { label: '得分', value: `${summary.score || resultData.value.score || 0}/${summary.total || resultData.value.total || 0}` },
-    { label: '正确题数', value: `${summary.correct_count || 0}/${summary.question_count || 0}` },
-    { label: '总用时', value: `${summary.total_time || 0}s` },
-    { label: '平均每题', value: `${summary.avg_time || 0}s` },
-  ]
-})
-
 function resetState() {
   currentIndex.value = 0
   userAnswers.value = {}
   checkedResults.value = {}
-  quizTimeSpent.value = {}
+  timeSpent.value = {}
   resultVisible.value = false
-  resultData.value = {}
-}
-
-async function generateQuiz() {
-  resetState()
-  actionLoading.value = true
-  try {
-    const data = await mockApi('/api/quiz/generate', {
-      body: { count: 5, difficulty: 'mixed', source: 'hybrid' },
-    })
-    quizSessionId.value = data.session_id || ''
-    questions.value = data.questions || []
-    sourceText.value = data.source === 'bank'
-      ? '本轮题目由本地题库随机生成，已避免固定顺序。'
-      : '本轮题目已结合大模型与题库生成，题目将保持动态变化。'
-  } catch (error) {
-    questions.value = []
-    sourceText.value = `题目加载失败：${error.message}`
-  } finally {
-    questionEnterAt.value = Date.now()
-    actionLoading.value = false
-  }
+  questionEnterAt.value = Date.now()
 }
 
 function setAnswer(option) {
-  if (!currentQuestion.value) {
+  if (!currentQuestion.value || checkedResults.value[currentQuestion.value.id]) {
     return
   }
   userAnswers.value = { ...userAnswers.value, [currentQuestion.value.id]: option }
@@ -229,6 +264,7 @@ function optionClass(option) {
 
   const selected = userAnswers.value[currentQuestion.value.id] === option
   const checked = currentCheckedResult.value
+
   if (!checked) {
     return selected ? 'border-primary bg-primary/10' : 'border-primary/20 bg-white hover:bg-primary/5'
   }
@@ -242,13 +278,14 @@ function optionClass(option) {
 }
 
 function prevQuestion() {
-  if (currentIndex.value > 0) {
-    currentIndex.value -= 1
-    questionEnterAt.value = Date.now()
+  if (currentIndex.value === 0) {
+    return
   }
+  currentIndex.value -= 1
+  questionEnterAt.value = Date.now()
 }
 
-async function checkCurrentQuestion() {
+function checkCurrentQuestion() {
   if (!currentQuestion.value) {
     return
   }
@@ -258,51 +295,30 @@ async function checkCurrentQuestion() {
     return
   }
 
-  const elapsed = Math.max(0.5, Math.round(((Date.now() - questionEnterAt.value) / 1000) * 100) / 100)
-  quizTimeSpent.value = { ...quizTimeSpent.value, [currentQuestion.value.id]: elapsed }
-  actionLoading.value = true
-  try {
-    const result = await mockApi('/api/quiz/check', {
-      body: {
-        session_id: quizSessionId.value,
-        question_id: currentQuestion.value.id,
-        answer: selected,
-        time_spent: elapsed,
-      },
-    })
-    checkedResults.value = { ...checkedResults.value, [currentQuestion.value.id]: result }
-  } catch (error) {
-    sourceText.value = `判题失败：${error.message}`
-  } finally {
-    actionLoading.value = false
+  const elapsed = Math.max(0.5, Math.round(((Date.now() - questionEnterAt.value) / 1000) * 10) / 10)
+  const correct = selected === currentQuestion.value.answer
+
+  timeSpent.value = { ...timeSpent.value, [currentQuestion.value.id]: elapsed }
+  checkedResults.value = {
+    ...checkedResults.value,
+    [currentQuestion.value.id]: {
+      correct,
+      userAnswer: selected,
+      answer: currentQuestion.value.answer,
+      analysis: currentQuestion.value.analysis,
+      knowledgePoints: currentQuestion.value.knowledgePoints,
+      timeSpent: elapsed,
+    },
   }
 }
 
-async function submitQuiz() {
-  actionLoading.value = true
-  try {
-    resultData.value = await mockApi('/api/quiz/submit', {
-      body: {
-        session_id: quizSessionId.value,
-        answers: userAnswers.value,
-        time_spent: quizTimeSpent.value,
-      },
-    })
-    resultVisible.value = true
-  } catch (error) {
-    sourceText.value = `提交失败：${error.message}`
-  } finally {
-    actionLoading.value = false
-  }
-}
-
-async function handleAction() {
+function handleAction() {
   if (!currentQuestion.value) {
     return
   }
 
   if (!currentCheckedResult.value) {
-    await checkCurrentQuestion()
+    checkCurrentQuestion()
     return
   }
 
@@ -312,10 +328,14 @@ async function handleAction() {
     return
   }
 
-  await submitQuiz()
+  resultVisible.value = true
 }
 
+watch(() => currentPoemStore.currentPoemId, () => {
+  resetState()
+}, { immediate: true })
+
 onMounted(() => {
-  generateQuiz()
+  currentPoemStore.initialize()
 })
 </script>

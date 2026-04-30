@@ -19,7 +19,7 @@
         rows="2"
         class="min-h-[76px] flex-1 resize-none rounded-2xl border border-primary/20 px-4 py-3 text-sm leading-6 text-dark/80 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-dark/55"
         :disabled="disabled"
-        :placeholder="disabled ? '智能体正在思考中，暂时不能继续发送消息' : '输入你的问题...'"
+        :placeholder="disabled ? '智能体正在思考或输出中，请先等待或点击停止生成。' : '继续追问当前诗歌内容...'"
         @input="$emit('update:modelValue', $event.target.value)"
         @keydown.enter.exact.prevent="$emit('send')"
       ></textarea>
@@ -29,11 +29,7 @@
         :disabled="disabled || !modelValue.trim()"
         @click="$emit('send')"
       >
-        <i
-          class="fa"
-          :class="disabled ? 'fa-spinner fa-spin' : 'fa-paper-plane'"
-          aria-hidden="true"
-        ></i>
+        <i class="fa" :class="disabled ? 'fa-spinner fa-spin' : 'fa-paper-plane'" aria-hidden="true"></i>
       </button>
     </div>
   </div>
@@ -54,8 +50,8 @@ defineProps({
 defineEmits(['quick-question', 'send', 'update:modelValue'])
 
 const quickQuestions = [
-  '《锦瑟》的核心情感是什么？',
-  '庄生梦蝶这个典故怎么理解？',
-  '这句诗为什么显得朦胧？',
+  '这首诗的核心情感是什么？',
+  '这一句最值得抓住的意象是什么？',
+  '我应该从哪个角度理解这首诗？',
 ]
 </script>
