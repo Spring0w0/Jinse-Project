@@ -94,7 +94,7 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { getPoemAiImage } from '../services/poemDataService'
+import { getPoemAiImage, loadPoemAiImage } from '../services/poemDataService'
 import { useCurrentPoemStore } from '../stores/currentPoem'
 
 const currentPoemStore = useCurrentPoemStore()
@@ -128,6 +128,10 @@ function goNext() {
 watch(() => currentPoemStore.currentPoemId, () => {
   imageIndex.value = 0
   currentPageIndex.value = 0
+}, { immediate: true })
+
+watch(() => currentPoemStore.currentPoemId, (poemId) => {
+  loadPoemAiImage(poemId)
 }, { immediate: true })
 
 onMounted(() => {

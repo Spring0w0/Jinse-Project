@@ -54,14 +54,18 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue'
-import { getPoemToneAnalysis } from '../services/poemDataService'
+import { computed, onMounted, watch } from 'vue'
+import { getPoemToneAnalysis, loadPoemToneAnalysis } from '../services/poemDataService'
 import { useCurrentPoemStore } from '../stores/currentPoem'
 
 const currentPoemStore = useCurrentPoemStore()
 
 const currentPoem = computed(() => currentPoemStore.currentPoem)
 const toneData = computed(() => getPoemToneAnalysis(currentPoemStore.currentPoemId))
+
+watch(() => currentPoemStore.currentPoemId, (poemId) => {
+  loadPoemToneAnalysis(poemId)
+}, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()

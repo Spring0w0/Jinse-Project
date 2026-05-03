@@ -59,7 +59,7 @@
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
 import { useCurrentPoemStore } from '../stores/currentPoem'
-import { getPoemAppreciation } from '../services/poemDataService'
+import { getPoemAppreciation, loadPoemAppreciation } from '../services/poemDataService'
 
 const currentPoemStore = useCurrentPoemStore()
 const selectedLineId = ref('')
@@ -81,6 +81,10 @@ const currentLine = computed(() => {
 
 watch(poemLines, (lines) => {
   selectedLineId.value = lines[0]?.id || ''
+}, { immediate: true })
+
+watch(() => currentPoemStore.currentPoemId, (poemId) => {
+  loadPoemAppreciation(poemId)
 }, { immediate: true })
 
 onMounted(() => {

@@ -154,7 +154,7 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { getPoemQuiz } from '../services/poemDataService'
+import { getPoemQuiz, loadPoemQuiz } from '../services/poemDataService'
 import { useCurrentPoemStore } from '../stores/currentPoem'
 
 const currentPoemStore = useCurrentPoemStore()
@@ -333,6 +333,7 @@ function handleAction() {
 
 watch(() => currentPoemStore.currentPoemId, () => {
   resetState()
+  loadPoemQuiz(currentPoemStore.currentPoemId)
 }, { immediate: true })
 
 onMounted(() => {

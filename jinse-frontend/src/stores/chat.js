@@ -35,6 +35,13 @@ function createWelcomeMessage() {
   return createAssistantMessage('我是古诗词学习助手。你可以随时围绕当前学习诗歌提问，也可以直接追问当前页面里的诗句、意象、典故、情感或声律。')
 }
 
+function createThinkingMessage() {
+  return createAssistantMessage('正在思考...', {
+    pending: true,
+    streaming: true,
+  })
+}
+
 function buildSessionTitle(firstUserMessage) {
   const normalized = String(firstUserMessage || '').trim()
   if (!normalized) {
@@ -266,6 +273,23 @@ export const useChatStore = defineStore('chat', () => {
     session.updatedAt = new Date().toISOString()
   }
 
+  function patchMessage(sessionId, messageId, patch) {
+    sessions.value = sessions.value.map((session) => {
+      if (session.id !== sessionId) {
+        return session
+      }
+
+      return {
+        ...session,
+        messages: (session.messages || []).map((message) => (
+          message.id === messageId
+            ? { ...message, ...patch }
+            : message
+        )),
+      }
+    })
+  }
+
   function applySessionTitle(session, firstUserMessage) {
     if (!session) {
       return
@@ -287,10 +311,7 @@ export const useChatStore = defineStore('chat', () => {
 
     const session = ensureSession()
     const userMessage = createUserMessage(messageText)
-    const pendingAssistantMessage = createAssistantMessage('', {
-      pending: true,
-      streaming: true,
-    })
+    const pendingAssistantMessage = createThinkingMessage()
     const responseId = pendingAssistantMessage.id
     session.messages.push(userMessage, pendingAssistantMessage)
     applySessionTitle(session, messageText)
@@ -310,31 +331,38 @@ export const useChatStore = defineStore('chat', () => {
         routeContext,
         signal: activeAbortController?.signal,
         onChunk(fullText) {
-          pendingAssistantMessage.text = fullText
-          pendingAssistantMessage.pending = true
-          pendingAssistantMessage.streaming = true
+          patchMessage(session.id, responseId, {
+            text: fullText,
+            pending: true,
+            streaming: true,
+          })
         },
       })
 
-      pendingAssistantMessage.text = response.reply || '我先整理一下这首诗的相关思路，你也可以继续把问题问得更具体。'
-      pendingAssistantMessage.pending = false
-      pendingAssistantMessage.streaming = false
-      pendingAssistantMessage.mode = response.mode || 'mock-stream'
+      patchMessage(session.id, responseId, {
+        text: response.reply || '我先整理一下这首诗的相关思路，你也可以继续把问题问得更具体。',
+        pending: false,
+        streaming: false,
+        mode: response.mode || 'backend-stream',
+      })
       updateSessionTimestamp(session.id)
     } catch (error) {
       if (error?.name === 'AbortError') {
-        pendingAssistantMessage.pending = false
-        pendingAssistantMessage.streaming = false
-        pendingAssistantMessage.aborted = true
-        if (!pendingAssistantMessage.text) {
-          pendingAssistantMessage.text = '本次生成已停止。'
-        }
+        const currentText = currentSession.value?.messages.find((message) => message.id === responseId)?.text
+        patchMessage(session.id, responseId, {
+          text: currentText && currentText !== '正在思考...' ? currentText : '本次生成已停止。',
+          pending: false,
+          streaming: false,
+          aborted: true,
+        })
         updateSessionTimestamp(session.id)
       } else {
-        pendingAssistantMessage.text = '当前这条回复没有成功生成，你可以重新发送，或者把问题缩小到某一句再试一次。'
-        pendingAssistantMessage.pending = false
-        pendingAssistantMessage.streaming = false
-        pendingAssistantMessage.error = true
+        patchMessage(session.id, responseId, {
+          text: '当前这条回复没有成功生成，你可以重新发送，或者把问题缩小到某一句再试一次。',
+          pending: false,
+          streaming: false,
+          error: true,
+        })
         updateSessionTimestamp(session.id)
         console.error('chat send failed:', error)
       }

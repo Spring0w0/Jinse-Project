@@ -129,7 +129,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import * as echarts from 'echarts'
-import { getPoemKnowledgeGraph } from '../services/poemDataService'
+import { getPoemKnowledgeGraph, loadPoemKnowledgeGraph } from '../services/poemDataService'
 import { useCurrentPoemStore } from '../stores/currentPoem'
 
 const currentPoemStore = useCurrentPoemStore()
@@ -304,6 +304,7 @@ function selectEmotionLine(line) {
 watch(() => currentPoemStore.currentPoemId, async () => {
   selectedNodeName.value = ''
   selectedEmotionLine.value = emotionLines.value[0]?.line || ''
+  loadPoemKnowledgeGraph(currentPoemStore.currentPoemId)
   await nextTick()
   renderGraph()
   renderEmotionChart()

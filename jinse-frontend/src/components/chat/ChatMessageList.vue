@@ -59,4 +59,12 @@ watch(
   },
   { immediate: true },
 )
+
+watch(
+  () => props.messages.map((message) => message.text).join('\u0000'),
+  () => {
+    scrollToBottom()
+  },
+  { flush: 'post' },
+)
 </script>

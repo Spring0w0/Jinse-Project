@@ -94,7 +94,7 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { getPoemSimilarPoems } from '../services/poemDataService'
+import { getPoemSimilarPoems, loadPoemSimilarPoems } from '../services/poemDataService'
 import { useCurrentPoemStore } from '../stores/currentPoem'
 
 const currentPoemStore = useCurrentPoemStore()
@@ -124,6 +124,7 @@ watch(() => currentPoemStore.currentPoemId, () => {
   const firstDimension = dimensionTabs.value[0]?.key || 'theme'
   dimension.value = firstDimension
   detailOpen.value = {}
+  loadPoemSimilarPoems(currentPoemStore.currentPoemId)
 }, { immediate: true })
 
 onMounted(() => {

@@ -1,6 +1,6 @@
 import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
-import { getPoemCatalog, getPoemMeta } from '../services/poemDataService'
+import { getPoemCatalog, getPoemMeta, loadPoemCatalog } from '../services/poemDataService'
 
 const STORAGE_KEY = 'jinse-current-poem-id'
 const DEFAULT_POEM_ID = 'jinse'
@@ -25,6 +25,7 @@ export const useCurrentPoemStore = defineStore('currentPoem', () => {
     }
 
     initialized.value = true
+    loadPoemCatalog()
   }
 
   function setCurrentPoem(poemId) {

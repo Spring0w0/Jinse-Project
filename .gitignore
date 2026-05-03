@@ -1,0 +1,10 @@
+.DS_Store
+
+# Python backend local runtime
+jinse-backend/.env
+jinse-backend/.venv/
+jinse-backend/**/__pycache__/
+jinse-backend/.pytest_cache/
+
+# Frontend local install cache
+jinse-frontend/.npm-cache/
