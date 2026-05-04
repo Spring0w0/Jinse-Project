@@ -35,7 +35,7 @@ def create_app():
 
     @app.get("/api/pictures/<path:filename>")
     def serve_picture(filename):
-        picture_dir = Path(__file__).resolve().parent.parent.parent / "picture"
+        picture_dir = Path(__file__).resolve().parent / "data" / "pictures"
         return send_from_directory(picture_dir, filename)
 
     @app.get("/api/poems")

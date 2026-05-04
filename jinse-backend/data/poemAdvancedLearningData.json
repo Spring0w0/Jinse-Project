@@ -181,121 +181,114 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "典故",
-        "诗人",
         "意象",
-        "情感"
+        "情感",
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《锦瑟》",
+          "name": "锦瑟",
           "category": 0,
-          "symbolSize": 72,
-          "info": "李商隐代表作，以多义、朦胧、惘然著称。",
-          "role": "全诗中心节点。",
-          "source": "晚唐诗歌",
-          "images": [
-            "锦瑟",
-            "华年"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
+          "name": "沧海月明珠有泪",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "沧海、明珠、泪，共同构成了一幅悲凉的景象，象征着诗人内心的哀伤。",
+          "role": "意象元素",
+          "source": "沧海月明珠有泪，蓝田日暖玉生烟。",
+          "images": []
+        },
+        {
+          "name": "蓝田日暖玉生烟",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "蓝田、日暖、玉生烟，描绘了一幅温暖而神秘的画面，象征着诗人对美好事物的向往。",
+          "role": "意象元素",
+          "source": "沧海月明珠有泪，蓝田日暖玉生烟。",
+          "images": []
+        },
+        {
+          "name": "哀婉缠绵",
           "category": 2,
-          "symbolSize": 44,
-          "info": "晚唐诗人，擅长含蓄绮丽的表达。",
-          "role": "创作者与情感源头。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐",
-            "无题诗"
-          ]
-        },
-        {
-          "name": "庄周梦蝶",
-          "category": 1,
-          "symbolSize": 46,
-          "info": "真幻难辨、人生如梦。",
-          "role": "强化诗歌迷离感。",
-          "source": "《庄子》",
-          "images": [
-            "蝴蝶",
-            "梦境"
-          ]
-        },
-        {
-          "name": "望帝啼鹃",
-          "category": 1,
-          "symbolSize": 46,
-          "info": "借悲鸣寄托执念与哀情。",
-          "role": "强化深情与悲感。",
-          "source": "蜀地传说",
-          "images": [
-            "杜鹃",
-            "春心"
-          ]
-        },
-        {
-          "name": "珠泪",
-          "category": 3,
-          "symbolSize": 38,
-          "info": "晶莹而哀婉的视觉意象。",
-          "role": "承载清冷凄美感。",
-          "source": "诗句意象",
-          "images": [
-            "明月",
-            "沧海"
-          ]
-        },
-        {
-          "name": "玉烟",
-          "category": 3,
-          "symbolSize": 38,
-          "info": "若即若离、可望难即。",
-          "role": "承载温润而朦胧的美感。",
-          "source": "诗句意象",
-          "images": [
-            "蓝田",
-            "暖烟"
-          ]
+          "symbolSize": 36,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
         },
         {
           "name": "惘然",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "表达了诗人对过去美好时光的怀念和对现实的无奈。",
+          "role": "情感表达",
+          "source": "只是当时已惘然。",
+          "images": []
+        },
+        {
+          "name": "庄生晓梦迷蝴蝶",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "引用庄周梦蝶的典故，表达人生如梦的哲理。",
+          "role": "典故运用",
+          "source": "庄生晓梦迷蝴蝶，望帝春心托杜鹃。",
+          "images": []
+        },
+        {
+          "name": "望帝春心托杜鹃",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "引用望帝化鹃的典故，表达对故国的思念和哀愁。",
+          "role": "典故运用",
+          "source": "庄生晓梦迷蝴蝶，望帝春心托杜鹃。",
+          "images": []
+        },
+        {
+          "name": "思华年",
           "category": 4,
-          "symbolSize": 34,
-          "info": "全诗最终的情绪落点。",
-          "role": "统摄追忆、梦幻与失落。",
-          "source": "尾联",
-          "images": [
-            "回望",
-            "余韵"
-          ]
+          "symbolSize": 33,
+          "info": "对美好青春岁月的回忆。",
+          "role": "主题表达",
+          "source": "一弦一柱思华年。",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《锦瑟》",
-          "target": "李商隐"
+          "source": "锦瑟",
+          "target": "哀婉缠绵"
         },
         {
-          "source": "《锦瑟》",
-          "target": "庄周梦蝶"
-        },
-        {
-          "source": "《锦瑟》",
-          "target": "望帝啼鹃"
-        },
-        {
-          "source": "《锦瑟》",
-          "target": "珠泪"
-        },
-        {
-          "source": "《锦瑟》",
-          "target": "玉烟"
-        },
-        {
-          "source": "《锦瑟》",
+          "source": "锦瑟",
           "target": "惘然"
+        },
+        {
+          "source": "锦瑟",
+          "target": "沧海月明珠有泪"
+        },
+        {
+          "source": "锦瑟",
+          "target": "蓝田日暖玉生烟"
+        },
+        {
+          "source": "锦瑟",
+          "target": "思华年"
+        },
+        {
+          "source": "锦瑟",
+          "target": "庄生晓梦迷蝴蝶"
+        },
+        {
+          "source": "锦瑟",
+          "target": "望帝春心托杜鹃"
         }
       ],
       "emotionAnalyses": [
@@ -485,105 +478,114 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "诗人",
         "意象",
         "情感",
-        "结构"
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《夜雨寄北》",
+          "name": "夜雨寄北",
           "category": 0,
-          "symbolSize": 70,
-          "info": "以夜雨为线索，把现实离愁与未来团聚想象连在一起。",
-          "role": "作品中心。",
-          "source": "晚唐诗歌",
-          "images": [
-            "夜雨",
-            "西窗烛"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
+          "name": "夜雨",
           "category": 1,
-          "symbolSize": 42,
-          "info": "晚唐诗人，善于用简洁语言承载深情。",
-          "role": "作者。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐",
-            "羁旅"
-          ]
+          "symbolSize": 33,
+          "info": "诗中反复出现的意象，象征着诗人对远方亲友的思念。",
+          "role": "意象元素",
+          "source": "巴山夜雨涨秋池",
+          "images": []
         },
         {
-          "name": "巴山夜雨",
+          "name": "秋池",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中指被夜雨填满的池塘，象征着诗人内心的孤寂与思念。",
+          "role": "意象元素",
+          "source": "巴山夜雨涨秋池",
+          "images": []
+        },
+        {
+          "name": "西窗",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中指与亲友共聚时的温馨场景。",
+          "role": "意象元素",
+          "source": "何当共剪西窗烛",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
           "category": 2,
-          "symbolSize": 44,
-          "info": "环境意象，渲染冷清与羁旅。",
-          "role": "现实层情境。",
-          "source": "第二句",
-          "images": [
-            "秋池",
-            "山雨"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
         },
         {
-          "name": "西窗烛",
+          "name": "思念",
           "category": 2,
-          "symbolSize": 44,
-          "info": "团聚夜谈的温暖生活意象。",
-          "role": "想象层情境。",
-          "source": "第三句",
-          "images": [
-            "灯火",
-            "夜谈"
-          ]
+          "symbolSize": 36,
+          "info": "诗中传达了对远方人的深深思念。",
+          "role": "情感表达",
+          "source": "何当共剪西窗烛，却话巴山夜雨时",
+          "images": []
         },
         {
-          "name": "时间回环",
+          "name": "思乡",
           "category": 4,
           "symbolSize": 36,
-          "info": "未来团聚时再回忆今日夜雨。",
-          "role": "全诗结构核心。",
-          "source": "尾联",
-          "images": [
-            "未来",
-            "回望"
-          ]
+          "info": "诗中表达了诗人对家乡的思念。",
+          "role": "主题表达",
+          "source": "君问归期未有期，巴山夜雨涨秋池",
+          "images": []
         },
         {
-          "name": "相思",
-          "category": 3,
-          "symbolSize": 36,
-          "info": "离愁中含有盼望。",
-          "role": "全诗情感中心。",
-          "source": "全诗主旨",
-          "images": [
-            "思念",
-            "等待"
-          ]
+          "name": "巴山",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "位于中国西南地区，诗中指李商隐当时所在的巴蜀地区。",
+          "role": "诗中地点",
+          "source": "巴山夜雨涨秋池",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《夜雨寄北》",
-          "target": "李商隐"
+          "source": "夜雨寄北",
+          "target": "孤寂清冷"
         },
         {
-          "source": "《夜雨寄北》",
-          "target": "巴山夜雨"
+          "source": "夜雨寄北",
+          "target": "思念"
         },
         {
-          "source": "《夜雨寄北》",
-          "target": "西窗烛"
+          "source": "夜雨寄北",
+          "target": "西窗"
         },
         {
-          "source": "《夜雨寄北》",
-          "target": "时间回环"
+          "source": "夜雨寄北",
+          "target": "夜雨"
         },
         {
-          "source": "《夜雨寄北》",
-          "target": "相思"
+          "source": "夜雨寄北",
+          "target": "秋池"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "巴山"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "思乡"
         }
       ],
       "emotionAnalyses": [
@@ -773,105 +775,205 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "诗人",
         "意象",
         "情感",
-        "手法"
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《无题》",
+          "name": "无题·相见时难别亦难",
           "category": 0,
-          "symbolSize": 68,
-          "info": "李商隐名篇，以深情难言和比喻精警著称。",
-          "role": "作品中心。",
-          "source": "晚唐诗歌",
-          "images": [
-            "相见",
-            "别难"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
+          "name": "东风",
           "category": 1,
-          "symbolSize": 42,
-          "info": "擅长绮丽含蓄的情诗书写。",
-          "role": "作者。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐",
-            "无题诗"
-          ]
+          "symbolSize": 39,
+          "info": "诗中的东风象征着春天的气息，与柳树的轻盈舞动相呼应。",
+          "role": "意象元素",
+          "source": "东风无力百花残",
+          "images": []
+        },
+        {
+          "name": "云鬓",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "晓镜但愁云鬓改",
+          "images": []
+        },
+        {
+          "name": "夜吟",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "夜吟应觉月光寒",
+          "images": []
         },
         {
           "name": "春蚕",
-          "category": 2,
-          "symbolSize": 42,
-          "info": "借吐丝写思念绵长。",
-          "role": "深情比喻。",
-          "source": "颔联",
-          "images": [
-            "丝",
-            "思"
-          ]
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "春蚕到死丝方尽",
+          "images": []
+        },
+        {
+          "name": "晓镜",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "晓镜但愁云鬓改",
+          "images": []
+        },
+        {
+          "name": "月光",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "夜吟应觉月光寒",
+          "images": []
+        },
+        {
+          "name": "百花",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "东风无力百花残",
+          "images": []
         },
         {
           "name": "蜡炬",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "蜡炬成灰泪始干",
+          "images": []
+        },
+        {
+          "name": "青鸟",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "",
+          "role": "意象元素",
+          "source": "青鸟殷勤为探看",
+          "images": []
+        },
+        {
+          "name": "哀怨缠绵",
           "category": 2,
-          "symbolSize": 42,
-          "info": "借燃烧与蜡泪写情感耗损。",
-          "role": "深情比喻。",
-          "source": "颔联",
-          "images": [
-            "烛泪",
-            "余灰"
-          ]
-        },
-        {
-          "name": "深情执着",
-          "category": 3,
           "symbolSize": 36,
-          "info": "全诗最强情绪核心。",
-          "role": "统摄全篇。",
-          "source": "主旨",
-          "images": [
-            "坚贞",
-            "难言"
-          ]
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
         },
         {
-          "name": "比喻双关",
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 54,
+          "info": "诗中表达的对荷花凋谢的哀愁。",
+          "role": "情感表达",
+          "source": "晓镜但愁云鬓改，夜吟应觉月光寒",
+          "images": []
+        },
+        {
+          "name": "青鸟殷勤为探看",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "",
+          "role": "典故运用",
+          "source": "青鸟殷勤为探看",
+          "images": []
+        },
+        {
+          "name": "离别",
           "category": 4,
           "symbolSize": 36,
-          "info": "“丝”与“思”的双关让情感更浓。",
-          "role": "语言关键手法。",
-          "source": "颔联",
-          "images": [
-            "比喻",
-            "双关"
-          ]
+          "info": "诗中表达了与心上人离别的主题。",
+          "role": "主题表达",
+          "source": "相见时难别亦难",
+          "images": []
+        },
+        {
+          "name": "蓬山",
+          "category": 5,
+          "symbolSize": 36,
+          "info": "传说中的仙山，这里象征着遥远的地方。",
+          "role": "诗中地点",
+          "source": "蓬山此去无多路",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《无题》",
-          "target": "李商隐"
+          "source": "无题·相见时难别亦难",
+          "target": "哀怨缠绵"
         },
         {
-          "source": "《无题》",
+          "source": "无题·相见时难别亦难",
+          "target": "忧愁"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "东风"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "百花"
+        },
+        {
+          "source": "无题·相见时难别亦难",
           "target": "春蚕"
         },
         {
-          "source": "《无题》",
+          "source": "无题·相见时难别亦难",
           "target": "蜡炬"
         },
         {
-          "source": "《无题》",
-          "target": "深情执着"
+          "source": "无题·相见时难别亦难",
+          "target": "晓镜"
         },
         {
-          "source": "《无题》",
-          "target": "比喻双关"
+          "source": "无题·相见时难别亦难",
+          "target": "云鬓"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "夜吟"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "月光"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "青鸟"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "蓬山"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "离别"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "青鸟殷勤为探看"
         }
       ],
       "emotionAnalyses": [
@@ -1061,88 +1163,114 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "神话",
-        "诗人",
         "意象",
-        "情感"
+        "情感",
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《嫦娥》",
+          "name": "嫦娥",
           "category": 0,
-          "symbolSize": 68,
-          "info": "借月宫神话写高洁而孤独的生命处境。",
-          "role": "作品中心。",
-          "source": "晚唐诗歌",
-          "images": [
-            "月宫",
-            "长夜"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
-          "category": 2,
-          "symbolSize": 42,
-          "info": "晚唐诗人。",
-          "role": "作者。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐"
-          ]
-        },
-        {
-          "name": "嫦娥奔月",
+          "name": "云母屏风",
           "category": 1,
-          "symbolSize": 48,
-          "info": "核心神话背景。",
-          "role": "支撑人物心理。",
-          "source": "中国神话",
-          "images": [
-            "嫦娥",
-            "灵药"
-          ]
+          "symbolSize": 33,
+          "info": "诗中描述的云母制成的屏风，象征着宫廷的奢华。",
+          "role": "意象元素",
+          "source": "云母屏风烛影深",
+          "images": []
+        },
+        {
+          "name": "晓星",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中提到的早晨的星星，象征着短暂的美丽。",
+          "role": "意象元素",
+          "source": "长河渐落晓星沉",
+          "images": []
         },
         {
           "name": "碧海青天",
-          "category": 3,
-          "symbolSize": 40,
-          "info": "宏阔而冷寂的空间意象。",
-          "role": "放大孤独。",
-          "source": "尾联",
-          "images": [
-            "青天",
-            "月色"
-          ]
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中描述的广阔无垠的海洋和天空，象征着孤独和寂寞。",
+          "role": "意象元素",
+          "source": "碧海青天夜夜心",
+          "images": []
         },
         {
-          "name": "孤清",
-          "category": 4,
+          "name": "长河",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中提到的长河，可能象征时间的流逝。",
+          "role": "意象元素",
+          "source": "长河渐落晓星沉",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 60,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
+        },
+        {
+          "name": "孤独",
+          "category": 2,
           "symbolSize": 36,
-          "info": "全诗情绪核心。",
-          "role": "统摄景与人。",
-          "source": "全诗主旨",
-          "images": [
-            "清寒",
-            "孤心"
-          ]
+          "info": "诗中通过高远的楼阁和月宫仙女的形象，表达了诗人的孤独情感。",
+          "role": "情感表达",
+          "source": "碧海青天夜夜心",
+          "images": []
+        },
+        {
+          "name": "悔恨",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "诗中暗示嫦娥对偷吃灵药的行为感到悔恨。",
+          "role": "情感表达",
+          "source": "嫦娥应悔偷灵药",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《嫦娥》",
-          "target": "李商隐"
+          "source": "嫦娥",
+          "target": "孤寂清冷"
         },
         {
-          "source": "《嫦娥》",
-          "target": "嫦娥奔月"
+          "source": "嫦娥",
+          "target": "孤独"
         },
         {
-          "source": "《嫦娥》",
+          "source": "嫦娥",
+          "target": "悔恨"
+        },
+        {
+          "source": "嫦娥",
+          "target": "云母屏风"
+        },
+        {
+          "source": "嫦娥",
+          "target": "长河"
+        },
+        {
+          "source": "嫦娥",
+          "target": "晓星"
+        },
+        {
+          "source": "嫦娥",
           "target": "碧海青天"
-        },
-        {
-          "source": "《嫦娥》",
-          "target": "孤清"
         }
       ],
       "emotionAnalyses": [
@@ -1332,88 +1460,114 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "诗人",
         "意象",
         "情感",
-        "时间"
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《乐游原》",
+          "name": "乐游原",
           "category": 0,
-          "symbolSize": 66,
-          "info": "用极少文字写出盛景与将逝并存的感受。",
-          "role": "作品中心。",
-          "source": "晚唐诗歌",
-          "images": [
-            "古原",
-            "夕阳"
-          ]
-        },
-        {
-          "name": "李商隐",
-          "category": 1,
-          "symbolSize": 42,
-          "info": "晚唐诗人。",
-          "role": "作者。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
           "name": "夕阳",
-          "category": 2,
-          "symbolSize": 46,
-          "info": "视觉高峰意象。",
-          "role": "美感载体。",
-          "source": "第三句",
-          "images": [
-            "晚照",
-            "金光"
-          ]
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中描绘的黄昏时分的太阳，象征美好但短暂的时光。",
+          "role": "意象元素",
+          "source": "夕阳无限好",
+          "images": []
         },
         {
           "name": "黄昏",
-          "category": 4,
-          "symbolSize": 40,
-          "info": "时间阴影，提示美即将逝去。",
-          "role": "形成反转。",
-          "source": "第四句",
-          "images": [
-            "暮色",
-            "流逝"
-          ]
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中提到的时间点，象征美好事物的结束。",
+          "role": "意象元素",
+          "source": "只是近黄昏",
+          "images": []
         },
         {
-          "name": "惋惜",
-          "category": 3,
-          "symbolSize": 34,
-          "info": "赞叹之后立刻生出的失落感。",
-          "role": "情绪归宿。",
-          "source": "尾联",
-          "images": [
-            "短暂",
-            "余叹"
-          ]
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 54,
+          "info": "诗中表达的对荷花凋谢的哀愁。",
+          "role": "情感表达",
+          "source": "向晚意不适",
+          "images": []
+        },
+        {
+          "name": "感慨、忧郁",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
+        },
+        {
+          "name": "个人仕途不顺",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "李商隐个人生活背景，可能影响了诗的情感。",
+          "role": "历史背景",
+          "source": "李商隐生活在晚唐时期，个人仕途不顺",
+          "images": []
+        },
+        {
+          "name": "社会动荡",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "李商隐创作此诗时的社会背景。",
+          "role": "历史背景",
+          "source": "李商隐生活在晚唐时期，社会动荡",
+          "images": []
+        },
+        {
+          "name": "古原",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "诗中提到的登高之处，具体指乐游原。",
+          "role": "诗中地点",
+          "source": "驱车登古原",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《乐游原》",
-          "target": "李商隐"
+          "source": "乐游原",
+          "target": "忧愁"
         },
         {
-          "source": "《乐游原》",
+          "source": "乐游原",
+          "target": "感慨、忧郁"
+        },
+        {
+          "source": "乐游原",
           "target": "夕阳"
         },
         {
-          "source": "《乐游原》",
+          "source": "乐游原",
           "target": "黄昏"
         },
         {
-          "source": "《乐游原》",
-          "target": "惋惜"
+          "source": "乐游原",
+          "target": "古原"
+        },
+        {
+          "source": "乐游原",
+          "target": "社会动荡"
+        },
+        {
+          "source": "乐游原",
+          "target": "个人仕途不顺"
         }
       ],
       "emotionAnalyses": [
@@ -1603,104 +1757,153 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "历史",
-        "诗人",
         "意象",
-        "批判"
+        "情感",
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "《隋宫》",
+          "name": "隋宫",
           "category": 0,
-          "symbolSize": 66,
-          "info": "借隋炀帝旧事写王朝奢靡与覆亡教训。",
-          "role": "作品中心。",
-          "source": "咏史诗",
-          "images": [
-            "隋宫",
-            "锦帆"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
-          "category": 2,
-          "symbolSize": 42,
-          "info": "晚唐诗人。",
-          "role": "作者。",
-          "source": "诗人生平",
-          "images": [
-            "晚唐"
-          ]
-        },
-        {
-          "name": "南游",
+          "name": "日角",
           "category": 1,
-          "symbolSize": 44,
-          "info": "象征统治者纵情游乐。",
-          "role": "历史情境。",
-          "source": "首句",
-          "images": [
-            "车驾",
-            "巡游"
-          ]
+          "symbolSize": 33,
+          "info": "古代相术中认为帝王有日角，这里指李唐皇室。",
+          "role": "意象元素",
+          "source": "玉玺不缘归日角",
+          "images": []
         },
         {
-          "name": "谏书",
+          "name": "玉玺",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "皇帝的印玺，象征皇权。",
+          "role": "意象元素",
+          "source": "玉玺不缘归日角",
+          "images": []
+        },
+        {
+          "name": "紫泉宫殿",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "指隋炀帝的宫殿，象征着奢华与权力。",
+          "role": "意象元素",
+          "source": "紫泉宫殿锁烟霞",
+          "images": []
+        },
+        {
+          "name": "锦帆",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "隋炀帝的龙舟，象征其奢侈的生活。",
+          "role": "意象元素",
+          "source": "锦帆应是到天涯",
+          "images": []
+        },
+        {
+          "name": "忧国忧民",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "表达了诗人对国家命运的担忧。",
+          "role": "情感表达",
+          "source": "背景补充：此诗作于唐武宗会昌年间，李商隐借隋炀帝杨广的奢侈生活和亡国之恨，讽刺当朝统治者的荒淫无度。",
+          "images": []
+        },
+        {
+          "name": "讽刺、哀伤",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
+        },
+        {
+          "name": "后庭花",
           "category": 3,
-          "symbolSize": 38,
-          "info": "忠言无人采纳。",
-          "role": "突出政治失察。",
-          "source": "第二句",
-          "images": [
-            "奏章",
-            "宫门"
-          ]
+          "symbolSize": 33,
+          "info": "陈后主的宠妃张丽华所唱的歌曲，后成为亡国之音的代名词。",
+          "role": "典故运用",
+          "source": "岂宜重问后庭花",
+          "images": []
         },
         {
-          "name": "宫锦",
+          "name": "地下若逢陈后主",
           "category": 3,
-          "symbolSize": 38,
-          "info": "奢靡资源消耗的可视化符号。",
-          "role": "形成强烈讽刺。",
-          "source": "后两句",
-          "images": [
-            "锦缎",
-            "帆"
-          ]
+          "symbolSize": 33,
+          "info": "引用了陈后主（陈叔宝）亡国后被俘至长安，与隋炀帝相似的命运。",
+          "role": "典故运用",
+          "source": "地下若逢陈后主",
+          "images": []
         },
         {
-          "name": "兴亡教训",
+          "name": "讽刺当朝统治者的荒淫无度",
           "category": 4,
-          "symbolSize": 34,
-          "info": "全诗真正指向。",
-          "role": "统摄历史反思。",
-          "source": "全诗主旨",
-          "images": [
-            "盛衰",
-            "反思"
-          ]
+          "symbolSize": 33,
+          "info": "通过隋炀帝的奢侈生活来讽刺当朝统治者的荒淫无度。",
+          "role": "主题表达",
+          "source": "背景补充：此诗作于唐武宗会昌年间，李商隐借隋炀帝杨广的奢侈生活和亡国之恨，讽刺当朝统治者的荒淫无度。",
+          "images": []
+        },
+        {
+          "name": "芜城",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "即扬州，隋炀帝曾在此建行宫。",
+          "role": "诗中地点",
+          "source": "欲取芜城作帝家",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "《隋宫》",
-          "target": "李商隐"
+          "source": "隋宫",
+          "target": "讽刺、哀伤"
         },
         {
-          "source": "《隋宫》",
-          "target": "南游"
+          "source": "隋宫",
+          "target": "忧国忧民"
         },
         {
-          "source": "《隋宫》",
-          "target": "谏书"
+          "source": "隋宫",
+          "target": "紫泉宫殿"
         },
         {
-          "source": "《隋宫》",
-          "target": "宫锦"
+          "source": "隋宫",
+          "target": "玉玺"
         },
         {
-          "source": "《隋宫》",
-          "target": "兴亡教训"
+          "source": "隋宫",
+          "target": "日角"
+        },
+        {
+          "source": "隋宫",
+          "target": "锦帆"
+        },
+        {
+          "source": "隋宫",
+          "target": "芜城"
+        },
+        {
+          "source": "隋宫",
+          "target": "讽刺当朝统治者的荒淫无度"
+        },
+        {
+          "source": "隋宫",
+          "target": "地下若逢陈后主"
+        },
+        {
+          "source": "隋宫",
+          "target": "后庭花"
         }
       ],
       "emotionAnalyses": [
@@ -1962,140 +2165,178 @@
       "categories": [
         "作品",
         "意象",
+        "情感",
         "典故",
-        "诗人",
-        "情感"
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "飒飒东风",
+          "name": "无题·飒飒东风细雨来",
           "category": 0,
-          "symbolSize": 72,
-          "info": "全诗的核心作品节点，以东风细雨春雷开启一幅丽密而绝望的爱情画卷。",
-          "role": "全诗的情感与意象汇聚点。",
-          "source": "诗歌本身",
-          "images": [
-            "东风",
-            "细雨"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
-          "name": "李商隐",
-          "category": 3,
-          "symbolSize": 44,
-          "info": "晚唐诗人，无题诗的代表作者，以丽密意象与含蓄深情著称。",
-          "role": "创作主体，所有隐秘情感的书写者。",
-          "source": "诗人传记",
-          "images": [
-            "诗人",
-            "无题"
-          ]
-        },
-        {
-          "name": "金蟾香炉",
+          "name": "东风",
           "category": 1,
-          "symbolSize": 46,
-          "info": "金属蟾形香炉，全诗的核心意象——香在炉中焚烧，暗喻相思在心中的焚烧。",
-          "role": "连接全诗意象的枢纽：焚烧的起点。",
-          "source": "颔联",
-          "images": [
-            "金蟾",
-            "香炉"
-          ]
+          "symbolSize": 39,
+          "info": "诗中的东风象征着春天的气息，与柳树的轻盈舞动相呼应。",
+          "role": "意象元素",
+          "source": "飒飒东风细雨来",
+          "images": []
         },
         {
-          "name": "贾氏窥帘",
-          "category": 2,
-          "symbolSize": 40,
-          "info": "贾充之女从帘后偷看韩寿，因爱其美貌而与之私通。",
-          "role": "以女子主动追求爱情写渴望被爱的心愿。",
-          "source": "《世说新语》",
-          "images": [
-            "珠帘",
-            "窥视"
-          ]
-        },
-        {
-          "name": "宓妃留枕",
-          "category": 2,
-          "symbolSize": 40,
-          "info": "宓妃（洛神）将香枕留给曹植，寄托深情。",
-          "role": "以神话爱情的悲剧暗示无善终的结局。",
-          "source": "《文选·洛神赋》",
-          "images": [
-            "洛水",
-            "香枕"
-          ]
-        },
-        {
-          "name": "相思成灰",
-          "category": 4,
-          "symbolSize": 48,
-          "info": "「一寸相思一寸灰」——爱情的过程就是自我焚毁的过程，从燃烧到寂灭。",
-          "role": "全诗的终极意象与情感终点。",
-          "source": "尾联",
-          "images": [
-            "灰烬",
-            "寂灭"
-          ]
-        },
-        {
-          "name": "春花",
+          "name": "玉虎",
           "category": 1,
+          "symbolSize": 33,
+          "info": "诗中提到的井栏，象征着纯洁与高雅。",
+          "role": "意象元素",
+          "source": "玉虎牵丝汲井回",
+          "images": []
+        },
+        {
+          "name": "细雨",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中用来营造一种细腻、缠绵的氛围。",
+          "role": "意象元素",
+          "source": "飒飒东风细雨来",
+          "images": []
+        },
+        {
+          "name": "轻雷",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中用来象征远处的声响，增添神秘感。",
+          "role": "意象元素",
+          "source": "芙蓉塘外有轻雷",
+          "images": []
+        },
+        {
+          "name": "金蟾",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗中提到的香炉，象征着珍贵与美好。",
+          "role": "意象元素",
+          "source": "金蟾啮锁烧香入",
+          "images": []
+        },
+        {
+          "name": "哀怨缠绵",
+          "category": 2,
           "symbolSize": 36,
-          "info": "春天怒放的花朵——生命力的极致，也是盛极而衰的预兆。",
-          "role": "春心莫与争发的对比物——开得越盛，凋得越快。",
-          "source": "尾联",
-          "images": [
-            "繁花",
-            "凋零"
-          ]
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
+        },
+        {
+          "name": "相思",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "诗中表达的对友人的深深思念。",
+          "role": "情感表达",
+          "source": "春心莫共花争发，一寸相思一寸灰！",
+          "images": []
+        },
+        {
+          "name": "绝望",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "诗中表达的对爱情的绝望与痛苦。",
+          "role": "情感表达",
+          "source": "春心莫共花争发，一寸相思一寸灰！",
+          "images": []
+        },
+        {
+          "name": "宓妃留枕魏王才",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "典故出自《洛神赋》，描述了曹植与洛神宓妃之间的爱情故事。",
+          "role": "典故运用",
+          "source": "宓妃留枕魏王才",
+          "images": []
+        },
+        {
+          "name": "贾氏窥帘韩掾少",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "典故出自《世说新语》，描述了贾充的女儿对韩寿的爱慕。",
+          "role": "典故运用",
+          "source": "贾氏窥帘韩掾少",
+          "images": []
+        },
+        {
+          "name": "爱情",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "诗中探讨的爱情主题，包括渴望与绝望。",
+          "role": "主题表达",
+          "source": "春心莫共花争发，一寸相思一寸灰！",
+          "images": []
+        },
+        {
+          "name": "芙蓉塘",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "诗中提到的地点，可能指代诗人的居所或相思之地。",
+          "role": "诗中地点",
+          "source": "芙蓉塘外有轻雷",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "飒飒东风",
-          "target": "李商隐"
+          "source": "无题·飒飒东风细雨来",
+          "target": "哀怨缠绵"
         },
         {
-          "source": "飒飒东风",
-          "target": "金蟾香炉"
+          "source": "无题·飒飒东风细雨来",
+          "target": "相思"
         },
         {
-          "source": "飒飒东风",
-          "target": "贾氏窥帘"
+          "source": "无题·飒飒东风细雨来",
+          "target": "绝望"
         },
         {
-          "source": "飒飒东风",
-          "target": "宓妃留枕"
+          "source": "无题·飒飒东风细雨来",
+          "target": "东风"
         },
         {
-          "source": "飒飒东风",
-          "target": "相思成灰"
+          "source": "无题·飒飒东风细雨来",
+          "target": "细雨"
         },
         {
-          "source": "飒飒东风",
-          "target": "春花"
+          "source": "无题·飒飒东风细雨来",
+          "target": "轻雷"
         },
         {
-          "source": "金蟾香炉",
-          "target": "相思成灰"
+          "source": "无题·飒飒东风细雨来",
+          "target": "金蟾"
         },
         {
-          "source": "贾氏窥帘",
-          "target": "宓妃留枕"
+          "source": "无题·飒飒东风细雨来",
+          "target": "玉虎"
         },
         {
-          "source": "春花",
-          "target": "相思成灰"
+          "source": "无题·飒飒东风细雨来",
+          "target": "芙蓉塘"
         },
         {
-          "source": "李商隐",
-          "target": "相思成灰"
+          "source": "无题·飒飒东风细雨来",
+          "target": "爱情"
         },
         {
-          "source": "贾氏窥帘",
-          "target": "相思成灰"
+          "source": "无题·飒飒东风细雨来",
+          "target": "贾氏窥帘韩掾少"
+        },
+        {
+          "source": "无题·飒飒东风细雨来",
+          "target": "宓妃留枕魏王才"
         }
       ],
       "emotionAnalyses": [
@@ -2697,140 +2938,100 @@
       "categories": [
         "作品",
         "意象",
-        "诗人",
+        "情感",
         "典故",
-        "情感"
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
-          "name": "宿骆氏亭",
+          "name": "宿骆氏亭寄怀崔雍崔衮",
           "category": 0,
-          "symbolSize": 72,
-          "info": "全诗的时空载体，旅途中的清幽驿站，触发怀人之思的起点。",
-          "role": "全诗的核心时空节点。",
-          "source": "诗歌本身",
-          "images": [
-            "竹坞",
-            "水槛"
-          ]
-        },
-        {
-          "name": "李商隐",
-          "category": 2,
-          "symbolSize": 44,
-          "info": "晚唐诗人，漂泊幕府途中寄宿骆氏亭，怀念友人崔雍崔衮。",
-          "role": "创作主体与情感源泉。",
-          "source": "诗人传记",
-          "images": [
-            "诗人",
-            "旅途"
-          ]
+          "symbolSize": 60,
+          "info": "",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
         },
         {
           "name": "枯荷",
           "category": 1,
-          "symbolSize": 50,
-          "info": "全诗核心意象。秋末凋残的荷叶，被诗人刻意保留，成为雨声的媒介。",
-          "role": "将衰败转化为诗意的关键意象。",
-          "source": "末句",
-          "images": [
-            "残荷",
-            "池塘"
-          ]
+          "symbolSize": 33,
+          "info": "诗中提到的枯萎的荷叶，象征着秋天的萧瑟和诗人内心的孤寂。",
+          "role": "意象元素",
+          "source": "留得枯荷听雨声",
+          "images": []
         },
         {
-          "name": "秋雨",
+          "name": "竹坞",
           "category": 1,
-          "symbolSize": 40,
-          "info": "秋夜之雨，打在枯荷上发出清脆声响，是孤独中唯一的陪伴。",
-          "role": "将视觉意象转化为听觉体验的媒介。",
-          "source": "末句",
-          "images": [
-            "雨丝",
-            "涟漪"
-          ]
+          "symbolSize": 33,
+          "info": "诗中描述的竹林环绕的亭子，象征着清幽的环境。",
+          "role": "意象元素",
+          "source": "竹坞无尘水槛清",
+          "images": []
         },
         {
           "name": "重城",
           "category": 1,
-          "symbolSize": 38,
-          "info": "重重城阙，既是物理阻隔，也暗含身份与命运的距离。",
-          "role": "强化思念中的阻隔感。",
-          "source": "第二句",
-          "images": [
-            "城墙",
-            "远山"
-          ]
+          "symbolSize": 33,
+          "info": "诗中提到的重重城郭，象征着诗人与友人之间的距离。",
+          "role": "意象元素",
+          "source": "相思迢递隔重城",
+          "images": []
         },
         {
-          "name": "崔雍崔衮",
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 60,
+          "info": "",
+          "role": "情感表达",
+          "source": "",
+          "images": []
+        },
+        {
+          "name": "相思",
           "category": 2,
           "symbolSize": 36,
-          "info": "李商隐的友人兄弟，出身名门，与漂泊幕府的诗人形成对照。",
-          "role": "思念的对象，友谊的承载者。",
-          "source": "诗题",
-          "images": [
-            "友人",
-            "书信"
-          ]
+          "info": "诗中表达的对友人的深深思念。",
+          "role": "情感表达",
+          "source": "相思迢递隔重城",
+          "images": []
         },
         {
-          "name": "孤寂中的诗意",
+          "name": "思友",
           "category": 4,
-          "symbolSize": 34,
-          "info": "全诗终极情感：在孤独中主动发现美，将寂寥化为审美的力量。",
-          "role": "统摄全诗的终极情感内核。",
-          "source": "末句",
-          "images": [
-            "孤独",
-            "慰藉"
-          ]
+          "symbolSize": 33,
+          "info": "诗中主要表达了对友人的思念。",
+          "role": "主题表达",
+          "source": "相思迢递隔重城",
+          "images": []
         }
       ],
       "links": [
         {
-          "source": "宿骆氏亭",
-          "target": "李商隐"
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "孤寂清冷"
         },
         {
-          "source": "宿骆氏亭",
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "相思"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "竹坞"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
           "target": "枯荷"
         },
         {
-          "source": "宿骆氏亭",
-          "target": "秋雨"
-        },
-        {
-          "source": "宿骆氏亭",
+          "source": "宿骆氏亭寄怀崔雍崔衮",
           "target": "重城"
         },
         {
-          "source": "宿骆氏亭",
-          "target": "崔雍崔衮"
-        },
-        {
-          "source": "宿骆氏亭",
-          "target": "孤寂中的诗意"
-        },
-        {
-          "source": "李商隐",
-          "target": "崔雍崔衮"
-        },
-        {
-          "source": "枯荷",
-          "target": "秋雨"
-        },
-        {
-          "source": "枯荷",
-          "target": "孤寂中的诗意"
-        },
-        {
-          "source": "重城",
-          "target": "崔雍崔衮"
-        },
-        {
-          "source": "秋雨",
-          "target": "孤寂中的诗意"
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "思友"
         }
       ],
       "emotionAnalyses": [
