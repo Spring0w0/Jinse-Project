@@ -31,7 +31,10 @@ PICTURE_MAP = {
         4: ["青年/安定城楼/腐鼠成滋味 猜意鹓雏竟未休"],
     },
     "chunri-jihuai": {
-        0: ["青年/春日寄怀"],
+        0: ["青年/春日寄怀/1.png"],
+        1: ["青年/春日寄怀/2.png"],
+        2: ["青年/春日寄怀/3.png"],
+        3: ["青年/春日寄怀/4.png"],
     },
     "wuti-sasasa-dongfeng": {
         2: [
@@ -65,13 +68,16 @@ def _inject_picture_urls(poem_id, data):
         return data
 
     lines = data.get("lines", [])
-    for line_idx, folders in line_map.items():
+    for line_idx, entries in line_map.items():
         if line_idx >= len(lines):
             continue
         urls = []
-        for folder in folders:
-            for i in range(1, 5):
-                urls.append(f"/api/pictures/{folder}/{i}.png")
+        for entry in entries:
+            if entry.endswith(".png"):
+                urls.append(f"/api/pictures/{entry}")
+            else:
+                for i in range(1, 5):
+                    urls.append(f"/api/pictures/{entry}/{i}.png")
         lines[line_idx]["images"] = urls
 
     return data
