@@ -41,51 +41,84 @@
           </div>
 
           <div>
-            <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">分镜提示词</h3>
-            <div class="mb-4 flex items-center justify-between">
-              <span class="text-sm text-dark/60">共 {{ pages.length }} 页</span>
-              <div class="flex gap-2">
+            <template v-if="currentLine.images?.length">
+              <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">诗意生图</h3>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="text-sm text-dark/60">共 {{ currentLine.images.length }} 张</span>
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    :disabled="currentImageIndex === 0"
+                    @click="goPrevImage"
+                  >
+                    上一张
+                  </button>
+                  <button
+                    type="button"
+                    class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    :disabled="currentImageIndex >= currentLine.images.length - 1"
+                    @click="goNextImage"
+                  >
+                    下一张
+                  </button>
+                </div>
+              </div>
+              <div class="overflow-hidden rounded-lg border border-primary/10">
+                <img :src="currentImageUrl" alt="诗意生图" class="h-full w-full object-contain" />
+              </div>
+              <div class="mt-4 flex justify-center gap-2">
                 <button
+                  v-for="(img, idx) in currentLine.images"
+                  :key="`img-${idx}`"
                   type="button"
-                  class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-                  :disabled="currentPageIndex === 0"
-                  @click="goPrev"
-                >
-                  上一页
-                </button>
+                  class="h-3 rounded-full transition"
+                  :class="idx === currentImageIndex ? 'w-6 bg-primary' : 'w-3 bg-primary/30 hover:bg-primary/50'"
+                  @click="currentImageIndex = idx"
+                ></button>
+              </div>
+            </template>
+            <template v-else>
+              <h3 class="mb-4 text-xl font-serif font-bold text-dark/80">分镜提示词</h3>
+              <div class="mb-4 flex items-center justify-between">
+                <span class="text-sm text-dark/60">共 {{ pages.length }} 页</span>
+                <div class="flex gap-2">
+                  <button
+                    type="button"
+                    class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    :disabled="currentPageIndex === 0"
+                    @click="goPrev"
+                  >
+                    上一页
+                  </button>
+                  <button
+                    type="button"
+                    class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    :disabled="currentPageIndex >= pages.length - 1"
+                    @click="goNext"
+                  >
+                    下一页
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-primary/15 bg-white p-6 shadow-sm">
+                <div class="mb-3 text-sm text-dark/55">第 {{ currentPageIndex + 1 }} 页</div>
+                <p class="leading-8 text-dark/75">{{ currentPage.prompt }}</p>
+              </div>
+
+              <div class="mt-4 flex justify-center gap-2">
                 <button
+                  v-for="(page, idx) in pages"
+                  :key="`page-${idx}`"
                   type="button"
-                  class="rounded-lg bg-primary/10 px-4 py-2 text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-                  :disabled="currentPageIndex >= pages.length - 1"
-                  @click="goNext"
-                >
-                  下一页
-                </button>
+                  class="h-3 rounded-full transition"
+                  :class="idx === currentPageIndex ? 'w-6 bg-primary' : 'w-3 bg-primary/30 hover:bg-primary/50'"
+                  :title="page.prompt"
+                  @click="currentPageIndex = idx"
+                ></button>
               </div>
-            </div>
-
-            <div class="rounded-lg border border-primary/15 bg-white p-6 shadow-sm">
-              <div class="mb-3 text-sm text-dark/55">第 {{ currentPageIndex + 1 }} 页</div>
-              <p class="leading-8 text-dark/75">{{ currentPage.prompt }}</p>
-              <div v-if="currentPage.image_url" class="mt-4 overflow-hidden rounded-lg border border-primary/10">
-                <img :src="currentPage.image_url" alt="诗意生图结果" class="h-full w-full object-contain" />
-              </div>
-              <div v-else class="mt-4 rounded-lg bg-primary/5 p-4 text-sm text-dark/60">
-                当前阶段未接入真实出图，这里先展示可直接用于 mock 或后续图像生成的分镜提示词。
-              </div>
-            </div>
-
-            <div class="mt-4 flex justify-center gap-2">
-              <button
-                v-for="(page, idx) in pages"
-                :key="`page-${idx}`"
-                type="button"
-                class="h-3 rounded-full transition"
-                :class="idx === currentPageIndex ? 'w-6 bg-primary' : 'w-3 bg-primary/30 hover:bg-primary/50'"
-                :title="page.prompt"
-                @click="currentPageIndex = idx"
-              ></button>
-            </div>
+            </template>
           </div>
         </div>
       </article>
@@ -101,6 +134,7 @@ import { useCurrentPoemStore } from '../stores/currentPoem'
 const currentPoemStore = useCurrentPoemStore()
 const imageIndex = ref(0)
 const currentPageIndex = ref(0)
+const currentImageIndex = ref(0)
 
 const currentPoem = computed(() => currentPoemStore.currentPoem)
 const aiImageData = computed(() => getPoemAiImage(currentPoemStore.currentPoemId))
@@ -108,6 +142,7 @@ const lines = computed(() => aiImageData.value.lines || [])
 const currentLine = computed(() => lines.value[imageIndex.value] || { text: '', pinyin: '', story: '', pages: [] })
 const pages = computed(() => currentLine.value.pages || [])
 const currentPage = computed(() => pages.value[currentPageIndex.value] || { prompt: '' })
+const currentImageUrl = computed(() => currentLine.value.images?.[currentImageIndex.value] || '')
 
 function refreshAiImage() {
   void loadPoemAiImage(currentPoemStore.currentPoemId)
@@ -116,6 +151,7 @@ function refreshAiImage() {
 function selectLine(idx) {
   imageIndex.value = idx
   currentPageIndex.value = 0
+  currentImageIndex.value = 0
 }
 
 function goPrev() {
@@ -130,9 +166,22 @@ function goNext() {
   }
 }
 
+function goPrevImage() {
+  if (currentImageIndex.value > 0) {
+    currentImageIndex.value -= 1
+  }
+}
+
+function goNextImage() {
+  if (currentImageIndex.value < (currentLine.value.images?.length || 0) - 1) {
+    currentImageIndex.value += 1
+  }
+}
+
 watch(() => currentPoemStore.currentPoemId, () => {
   imageIndex.value = 0
   currentPageIndex.value = 0
+  currentImageIndex.value = 0
 }, { immediate: true })
 
 watch(() => currentPoemStore.currentPoemId, (poemId) => {

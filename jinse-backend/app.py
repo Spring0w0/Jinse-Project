@@ -1,7 +1,8 @@
 import os
+from pathlib import Path
 from typing import Iterable, cast
 
-from flask import Flask, Response, jsonify, request, stream_with_context
+from flask import Flask, Response, jsonify, request, send_from_directory, stream_with_context
 
 from jinse_backend.chat_service import ChatPayloadError, stream_chat_reply
 from jinse_backend.config import load_backend_env, get_database_url
@@ -31,6 +32,11 @@ def create_app():
     @app.get("/api/health")
     def health():
         return jsonify({"ok": True})
+
+    @app.get("/api/pictures/<path:filename>")
+    def serve_picture(filename):
+        picture_dir = Path(__file__).resolve().parent.parent.parent / "picture"
+        return send_from_directory(picture_dir, filename)
 
     @app.get("/api/poems")
     def poems():
