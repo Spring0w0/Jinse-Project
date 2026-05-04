@@ -55,6 +55,22 @@ Useful environment variables:
 
 If `OPENAI_API_KEY` is not set, `/api/chat` still streams a deterministic local reply so the frontend can be tested end to end.
 
+## Import current project data into PostgreSQL
+
+If you already created a PostgreSQL database named `jinse_db`, you can import the current backend-owned JSON data into it with:
+
+```powershell
+cd D:\jinse\Jinse-Project\jinse-backend
+$env:DATABASE_URL = "postgresql://jinse_user:jinse_pass@localhost:5432/jinse_db"
+python scripts\import_static_to_db.py
+```
+
+If you prefer not to set `DATABASE_URL`, the script also accepts `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_HOST`, `POSTGRES_PORT`, and `POSTGRES_DB`.
+
+The script reads from `jinse-backend/data/poemCatalog.json`, `poemLearningData.json`, and `poemAdvancedLearningData.json`.
+
+By default, the script truncates the `poems` and `learning_modules` tables before re-importing, so you can run it again safely.
+
 ## API
 
 - `GET /api/health`

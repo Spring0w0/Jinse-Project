@@ -83,11 +83,16 @@ watch(poemLines, (lines) => {
   selectedLineId.value = lines[0]?.id || ''
 }, { immediate: true })
 
+function refreshAppreciation() {
+  void loadPoemAppreciation(currentPoemStore.currentPoemId)
+}
+
 watch(() => currentPoemStore.currentPoemId, (poemId) => {
-  loadPoemAppreciation(poemId)
+  void loadPoemAppreciation(poemId)
 }, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()
+  refreshAppreciation()
 })
 </script>

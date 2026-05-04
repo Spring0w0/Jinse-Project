@@ -1,9 +1,22 @@
 import unittest
 
+from app import create_app
+from jinse_backend.db import db
 from jinse_backend.learning_data import get_learning_module, get_poem_catalog, get_poem_meta, get_poem_timeline
 
 
 class LearningDataTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.app = create_app()
+        cls.ctx = cls.app.app_context()
+        cls.ctx.push()
+
+    @classmethod
+    def tearDownClass(cls):
+        db.session.remove()
+        cls.ctx.pop()
+
     def test_poem_catalog_and_meta(self):
         catalog = get_poem_catalog()
 

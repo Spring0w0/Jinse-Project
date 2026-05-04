@@ -145,7 +145,7 @@ const currentPoemStore = useCurrentPoemStore()
 
 const currentPoem = computed(() => currentPoemStore.currentPoem)
 const currentPoemId = computed(() => currentPoemStore.currentPoemId)
-const timelinePoems = getPoemTimeline()
+const timelinePoems = computed(() => getPoemTimeline())
 
 onMounted(() => {
   currentPoemStore.initialize()

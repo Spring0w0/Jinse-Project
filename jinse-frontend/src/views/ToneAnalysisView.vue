@@ -63,11 +63,16 @@ const currentPoemStore = useCurrentPoemStore()
 const currentPoem = computed(() => currentPoemStore.currentPoem)
 const toneData = computed(() => getPoemToneAnalysis(currentPoemStore.currentPoemId))
 
+function refreshToneAnalysis() {
+  void loadPoemToneAnalysis(currentPoemStore.currentPoemId)
+}
+
 watch(() => currentPoemStore.currentPoemId, (poemId) => {
-  loadPoemToneAnalysis(poemId)
+  void loadPoemToneAnalysis(poemId)
 }, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()
+  refreshToneAnalysis()
 })
 </script>

@@ -24,8 +24,8 @@
               :class="idx === imageIndex ? 'bg-primary/10 text-primary' : 'bg-primary/5 text-dark/80 hover:bg-primary/15'"
               @click="selectLine(idx)"
             >
-              <div class="font-serif text-lg">{{ line.text }}</div>
-              <div class="mt-2 text-xs text-dark/55">{{ line.pinyin }}</div>
+              <span class="block font-serif text-lg">{{ line.text }}</span>
+              <span class="mt-2 block text-xs text-dark/55">{{ line.pinyin }}</span>
             </button>
           </div>
         </div>
@@ -77,11 +77,12 @@
 
             <div class="mt-4 flex justify-center gap-2">
               <button
-                v-for="(_, idx) in pages"
+                v-for="(page, idx) in pages"
                 :key="`page-${idx}`"
                 type="button"
                 class="h-3 rounded-full transition"
                 :class="idx === currentPageIndex ? 'w-6 bg-primary' : 'w-3 bg-primary/30 hover:bg-primary/50'"
+                :title="page.prompt"
                 @click="currentPageIndex = idx"
               ></button>
             </div>
@@ -108,6 +109,10 @@ const currentLine = computed(() => lines.value[imageIndex.value] || { text: '', 
 const pages = computed(() => currentLine.value.pages || [])
 const currentPage = computed(() => pages.value[currentPageIndex.value] || { prompt: '' })
 
+function refreshAiImage() {
+  void loadPoemAiImage(currentPoemStore.currentPoemId)
+}
+
 function selectLine(idx) {
   imageIndex.value = idx
   currentPageIndex.value = 0
@@ -131,10 +136,11 @@ watch(() => currentPoemStore.currentPoemId, () => {
 }, { immediate: true })
 
 watch(() => currentPoemStore.currentPoemId, (poemId) => {
-  loadPoemAiImage(poemId)
+  void loadPoemAiImage(poemId)
 }, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()
+  refreshAiImage()
 })
 </script>

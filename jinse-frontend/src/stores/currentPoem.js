@@ -5,12 +5,27 @@ import { getPoemCatalog, getPoemMeta, loadPoemCatalog } from '../services/poemDa
 const STORAGE_KEY = 'jinse-current-poem-id'
 const DEFAULT_POEM_ID = 'jinse'
 
+function createFallbackPoem() {
+  return {
+    id: DEFAULT_POEM_ID,
+    title: '锦瑟',
+    author: '李商隐',
+    dynasty: '唐',
+    stageKey: 'late',
+    stageLabel: '',
+    yearRange: '',
+    summary: '',
+    fullText: '',
+    heroLines: [],
+  }
+}
+
 export const useCurrentPoemStore = defineStore('currentPoem', () => {
   const currentPoemId = ref(DEFAULT_POEM_ID)
   const initialized = ref(false)
 
   const catalog = computed(() => getPoemCatalog())
-  const currentPoem = computed(() => getPoemMeta(currentPoemId.value))
+  const currentPoem = computed(() => getPoemMeta(currentPoemId.value) || createFallbackPoem())
 
   function initialize() {
     if (initialized.value) {
@@ -25,7 +40,7 @@ export const useCurrentPoemStore = defineStore('currentPoem', () => {
     }
 
     initialized.value = true
-    loadPoemCatalog()
+    void loadPoemCatalog()
   }
 
   function setCurrentPoem(poemId) {

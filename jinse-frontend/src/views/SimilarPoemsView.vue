@@ -120,14 +120,18 @@ function toggleDetail(id) {
   detailOpen.value = { ...detailOpen.value, [id]: !detailOpen.value[id] }
 }
 
+function refreshSimilarPoems() {
+  void loadPoemSimilarPoems(currentPoemStore.currentPoemId)
+}
+
 watch(() => currentPoemStore.currentPoemId, () => {
-  const firstDimension = dimensionTabs.value[0]?.key || 'theme'
-  dimension.value = firstDimension
+  dimension.value = dimensionTabs.value[0]?.key || 'theme'
   detailOpen.value = {}
-  loadPoemSimilarPoems(currentPoemStore.currentPoemId)
+  void loadPoemSimilarPoems(currentPoemStore.currentPoemId)
 }, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()
+  refreshSimilarPoems()
 })
 </script>

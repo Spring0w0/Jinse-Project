@@ -241,6 +241,10 @@ const actionLabel = computed(() => {
   return '查看结果'
 })
 
+function refreshQuiz() {
+  void loadPoemQuiz(currentPoemStore.currentPoemId)
+}
+
 function resetState() {
   currentIndex.value = 0
   userAnswers.value = {}
@@ -333,10 +337,11 @@ function handleAction() {
 
 watch(() => currentPoemStore.currentPoemId, () => {
   resetState()
-  loadPoemQuiz(currentPoemStore.currentPoemId)
+  void loadPoemQuiz(currentPoemStore.currentPoemId)
 }, { immediate: true })
 
 onMounted(() => {
   currentPoemStore.initialize()
+  refreshQuiz()
 })
 </script>

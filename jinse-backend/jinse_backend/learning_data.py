@@ -1,13 +1,9 @@
-import json
-import re
-import subprocess
-from functools import lru_cache
-from pathlib import Path
+from sqlalchemy import select
 
-from .config import BACKEND_DIR
+from .db import db
+from .models import LearningModule, Poem
 
 
-FRONTEND_DIR = BACKEND_DIR.parent / "jinse-frontend"
 DEFAULT_POEM_ID = "jinse"
 
 MODULE_MAP = {
@@ -21,92 +17,71 @@ MODULE_MAP = {
 
 
 def get_poem_catalog():
-    return _frontend_export("src/mocks/poemCatalog.js", "poemCatalog")
+    poems = db.session.scalars(select(Poem).order_by(Poem.id.asc())).all()
+    return [_serialize_poem(poem) for poem in poems]
 
 
 def get_poem_meta(poem_id):
-    catalog = get_poem_catalog()
-    return next((item for item in catalog if item.get("id") == poem_id), catalog[0])
+    poem = _get_poem_or_default(poem_id)
+    return _serialize_poem(poem)
 
 
 def get_poem_timeline():
+    catalog = list(reversed(get_poem_catalog()))
     return [
         {
             **item,
             "timelineIndex": index,
             "side": "left" if index % 2 == 0 else "right",
         }
-        for index, item in enumerate(reversed(get_poem_catalog()))
+        for index, item in enumerate(catalog)
     ]
 
 
 def get_learning_module(poem_id, module_name):
-    dataset_name, key = MODULE_MAP[module_name]
-    dataset = _basic_data() if dataset_name == "basic" else _advanced_data()
-    poem_data = dataset.get(poem_id) or dataset[DEFAULT_POEM_ID]
-    return poem_data[key]
+    if module_name not in MODULE_MAP:
+        raise KeyError(f"unknown module: {module_name}")
+
+    poem = _get_poem_or_default(poem_id)
+    module = db.session.scalar(select(LearningModule).filter_by(poem_id=poem.id, name=module_name))
+
+    if module is None and poem.external_id != DEFAULT_POEM_ID:
+        default_poem = db.session.scalar(select(Poem).filter_by(external_id=DEFAULT_POEM_ID))
+        if default_poem is not None:
+            module = db.session.scalar(select(LearningModule).filter_by(poem_id=default_poem.id, name=module_name))
+
+    if module is None:
+        raise KeyError(f"module not found: {module_name}")
+
+    return module.data
 
 
-@lru_cache(maxsize=1)
-def _basic_data():
-    return _frontend_export("src/mocks/poemLearningData.js", "poemLearningData")
+def _get_poem_or_default(poem_id):
+    poem = db.session.scalar(select(Poem).filter_by(external_id=poem_id))
+    if poem is not None:
+        return poem
+
+    poem = db.session.scalar(select(Poem).filter_by(external_id=DEFAULT_POEM_ID))
+    if poem is not None:
+        return poem
+
+    poem = db.session.scalar(select(Poem).order_by(Poem.id.asc()))
+    if poem is not None:
+        return poem
+
+    raise KeyError("no poems found in database")
 
 
-@lru_cache(maxsize=1)
-def _advanced_data():
-    return _frontend_export("src/mocks/poemAdvancedLearningData.js", "poemAdvancedLearningData")
-
-
-@lru_cache(maxsize=8)
-def _frontend_export(relative_path, export_name):
-    source_path = FRONTEND_DIR / relative_path
-    source = source_path.read_text(encoding="utf-8")
-    expression = _extract_export_expression(source, export_name)
-    script = f"console.log(JSON.stringify({expression}))"
-    result = subprocess.run(
-        ["node", "-e", script],
-        capture_output=True,
-        check=True,
-        text=True,
-        timeout=10,
-    )
-    return json.loads(result.stdout)
-
-
-def _extract_export_expression(source, export_name):
-    match = re.search(rf"export\s+const\s+{re.escape(export_name)}\s*=", source)
-    if not match:
-        raise KeyError(f"export not found: {export_name}")
-
-    index = match.end()
-    while index < len(source) and source[index].isspace():
-        index += 1
-
-    opener = source[index]
-    closer = {"{": "}", "[": "]"}[opener]
-    depth = 0
-    in_string = None
-    escaped = False
-
-    for current_index in range(index, len(source)):
-        char = source[current_index]
-
-        if in_string:
-            if escaped:
-                escaped = False
-            elif char == "\\":
-                escaped = True
-            elif char == in_string:
-                in_string = None
-            continue
-
-        if char in ("'", '"', "`"):
-            in_string = char
-        elif char == opener:
-            depth += 1
-        elif char == closer:
-            depth -= 1
-            if depth == 0:
-                return source[index:current_index + 1]
-
-    raise ValueError(f"could not parse export: {export_name}")
+def _serialize_poem(poem):
+    return {
+        "id": poem.external_id,
+        "title": poem.title,
+        "author": poem.author,
+        "dynasty": poem.dynasty,
+        "stageKey": poem.stage_key,
+        "stageLabel": poem.stage_label,
+        "yearRange": poem.year_range,
+        "summary": poem.summary,
+        "fullText": poem.full_text,
+        "heroLines": poem.hero_lines or [],
+    }

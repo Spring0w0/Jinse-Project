@@ -165,6 +165,10 @@ const currentEmotion = computed(() => {
   }
 })
 
+function refreshKnowledgeGraph() {
+  void loadPoemKnowledgeGraph(currentPoemStore.currentPoemId)
+}
+
 function buildGraphOption() {
   return {
     tooltip: {
@@ -304,7 +308,7 @@ function selectEmotionLine(line) {
 watch(() => currentPoemStore.currentPoemId, async () => {
   selectedNodeName.value = ''
   selectedEmotionLine.value = emotionLines.value[0]?.line || ''
-  loadPoemKnowledgeGraph(currentPoemStore.currentPoemId)
+  void loadPoemKnowledgeGraph(currentPoemStore.currentPoemId)
   await nextTick()
   renderGraph()
   renderEmotionChart()
@@ -330,6 +334,7 @@ watch(currentEmotion, async () => {
 
 onMounted(async () => {
   currentPoemStore.initialize()
+  refreshKnowledgeGraph()
   await nextTick()
   renderGraph()
   renderEmotionChart()
