@@ -50,50 +50,44 @@
         </span>
       </h2>
       <p class="mx-auto mt-5 max-w-3xl text-center leading-8 text-dark/65">
-        时间线如瀑布般展开。中轴代表人生阶段，两侧卡片展示这一时期的代表诗歌全文。点击卡片即可把它设为当前学习诗歌。
+        从上到下按李商隐人生阶段展开。左侧标注阶段，右侧展示该时期的代表诗歌。点击卡片即可切换当前学习诗歌。
       </p>
 
       <div class="relative mx-auto mt-14 max-w-6xl">
-        <div class="absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-primary/10 via-primary/40 to-primary/10 lg:block"></div>
+        <div class="space-y-16">
+          <div v-for="group in timelineGroups" :key="group.stageKey" class="relative grid gap-8 lg:grid-cols-[200px_1fr]">
+            <!-- Left: Stage label -->
+            <div class="flex flex-col items-center justify-start pt-4 lg:items-end lg:pr-10">
+              <div class="sticky top-24 flex flex-col items-center gap-3 lg:items-end">
+                <span class="rounded-full bg-primary/10 px-3 py-1 text-xs tracking-[0.2em] text-primary">{{ group.stageOrder }}</span>
+                <h3 class="font-serif text-2xl font-bold text-primary lg:text-3xl">{{ group.stageLabel }}</h3>
+                <p class="hidden text-sm text-dark/50 lg:block">{{ group.description }}</p>
+              </div>
+            </div>
 
-        <div class="space-y-8 lg:space-y-10">
-          <div
-            v-for="item in timelinePoems"
-            :key="item.id"
-            class="relative grid items-center gap-6 lg:grid-cols-2 lg:gap-12"
-          >
-            <div
-              class="order-2 lg:order-none"
-              :class="item.side === 'left' ? 'lg:pr-12' : 'lg:col-start-2 lg:pl-12'"
-            >
+            <!-- Right: Poem cards -->
+            <div class="space-y-6">
               <article
+                v-for="poem in group.poems"
+                :key="poem.id"
                 class="group cursor-pointer rounded-[28px] border border-primary/10 bg-white/88 p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-xl"
-                @click="handleSelectPoem(item.id)"
+                @click="handleSelectPoem(poem.id)"
               >
                 <div class="flex items-start justify-between gap-4">
                   <div>
-                    <div class="text-sm text-dark/50">{{ item.stageLabel }} · {{ item.yearRange }}</div>
-                    <h3 class="mt-2 font-serif text-3xl font-bold text-primary">{{ item.title }}</h3>
+                    <div class="text-sm text-dark/50">{{ poem.yearRange || poem.dynasty }}</div>
+                    <h3 class="mt-2 font-serif text-3xl font-bold text-primary">{{ poem.title }}</h3>
                   </div>
                   <span
-                    class="rounded-full px-3 py-1 text-xs"
-                    :class="item.id === currentPoemId ? 'bg-primary text-white' : 'bg-primary/10 text-primary'"
+                    class="shrink-0 rounded-full px-3 py-1 text-xs"
+                    :class="poem.id === currentPoemId ? 'bg-primary text-white' : 'bg-primary/10 text-primary'"
                   >
-                    {{ item.id === currentPoemId ? '当前学习中' : '点击学习' }}
+                    {{ poem.id === currentPoemId ? '当前学习中' : '点击学习' }}
                   </span>
                 </div>
-                <p class="mt-4 whitespace-pre-line text-base leading-8 text-dark/75">{{ item.fullText }}</p>
-                <p class="mt-4 text-sm leading-7 text-dark/60">{{ item.summary }}</p>
+                <p class="mt-4 whitespace-pre-line text-base leading-8 text-dark/75">{{ poem.fullText }}</p>
+                <p class="mt-4 text-sm leading-7 text-dark/60">{{ poem.summary }}</p>
               </article>
-            </div>
-
-            <div class="order-1 flex justify-center lg:order-none">
-              <div class="relative flex h-24 w-24 items-center justify-center rounded-full border border-primary/15 bg-light shadow-md">
-                <div class="text-center">
-                  <div class="text-[11px] tracking-[0.22em] text-dark/45">阶段</div>
-                  <div class="mt-1 text-sm font-semibold text-primary">{{ item.stageLabel }}</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -145,7 +139,30 @@ const currentPoemStore = useCurrentPoemStore()
 
 const currentPoem = computed(() => currentPoemStore.currentPoem)
 const currentPoemId = computed(() => currentPoemStore.currentPoemId)
-const timelinePoems = computed(() => getPoemTimeline())
+
+const STAGE_ORDER = Object.freeze([
+  { key: 'young', order: '第一阶段', label: '早期', desc: '年少游历，初入文坛，崭露诗才' },
+  { key: 'middle', order: '第二阶段', label: '壮年', desc: '宦海浮沉，辗转幕府，诗艺大成' },
+  { key: 'late', order: '第三阶段', label: '晚期', desc: '阅尽沧桑，诗境愈深，绝唱传世' },
+])
+
+const timelineGroups = computed(() => {
+  const catalog = getPoemTimeline()
+  const groups = []
+  for (const stage of STAGE_ORDER) {
+    const poems = catalog.filter(p => p.stageKey === stage.key)
+    if (poems.length) {
+      groups.push({
+        stageKey: stage.key,
+        stageOrder: stage.order,
+        stageLabel: stage.label,
+        description: stage.desc,
+        poems,
+      })
+    }
+  }
+  return groups
+})
 
 onMounted(() => {
   currentPoemStore.initialize()
