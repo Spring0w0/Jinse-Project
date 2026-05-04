@@ -327,6 +327,12 @@ watch(selectedNodeName, (name) => {
   }
 })
 
+watch(graphData, async () => {
+  await nextTick()
+  renderGraph()
+  renderEmotionChart()
+})
+
 watch(currentEmotion, async () => {
   await nextTick()
   renderEmotionChart()
