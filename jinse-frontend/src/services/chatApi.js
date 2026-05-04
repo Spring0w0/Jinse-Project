@@ -25,6 +25,16 @@ function normalizeHistory(history = []) {
     }))
 }
 
+function normalizeRouteContext(routeContext = {}) {
+  return {
+    name: routeContext.name || '',
+    path: routeContext.path || '',
+    label: routeContext.label || '',
+    poemId: routeContext.poemId || '',
+    poemTitle: routeContext.poemTitle || '',
+  }
+}
+
 async function readTextStream(response, signal, onChunk) {
   const reader = response.body?.getReader()
   if (!reader) {
@@ -104,9 +114,9 @@ export async function streamChatReply({
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      message,
+      message: String(message || '').trim(),
       history: normalizeHistory(history),
-      routeContext,
+      routeContext: normalizeRouteContext(routeContext),
     }),
     signal,
   })
