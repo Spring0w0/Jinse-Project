@@ -4,6 +4,9 @@ from .db import db
 from .models import LearningModule, Poem
 
 
+
+
+
 DEFAULT_POEM_ID = "jinse"
 
 MODULE_MAP = {
@@ -72,10 +75,10 @@ def _inject_picture_urls(poem_id, data):
         urls = []
         for entry in entries:
             if entry.endswith(".png"):
-                urls.append(f"/api/pictures/{entry}")
+                urls.append(f"/api/pictures/{entry[:-4]}.webp")
             else:
                 for i in range(1, 5):
-                    urls.append(f"/api/pictures/{entry}/{i}.png")
+                    urls.append(f"/api/pictures/{entry}/{i}.webp")
         lines[line_idx]["images"] = urls
 
     return data
