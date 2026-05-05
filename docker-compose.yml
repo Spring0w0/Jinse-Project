@@ -1,0 +1,72 @@
+services:
+  caddy:
+    build:
+      context: .
+      target: caddy
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_started
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN:-localhost}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+  backend:
+    build:
+      context: .
+      target: backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      JINSE_BACKEND_HOST: 0.0.0.0
+      JINSE_BACKEND_PORT: 5001
+      JINSE_CORS_ORIGIN: ${JINSE_CORS_ORIGIN:-*}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4.1-mini}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      OPENAI_TIMEOUT: ${OPENAI_TIMEOUT:-20}
+      OPENAI_MAX_TOKENS: ${OPENAI_MAX_TOKENS:-320}
+      OPENAI_TEMPERATURE: ${OPENAI_TEMPERATURE:-0.25}
+      OPENAI_MAX_RETRIES: ${OPENAI_MAX_RETRIES:-0}
+      JINSE_FALLBACK_STREAM_DELAY: ${JINSE_FALLBACK_STREAM_DELAY:-0.08}
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-jinse}:${POSTGRES_PASSWORD:-change-me}@db:5432/${POSTGRES_DB:-jinse}
+      GUNICORN_WORKERS: ${GUNICORN_WORKERS:-2}
+      GUNICORN_THREADS: ${GUNICORN_THREADS:-4}
+      GUNICORN_TIMEOUT: ${GUNICORN_TIMEOUT:-120}
+    expose:
+      - "5001"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5001/api/health', timeout=5).read()"
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-jinse}
+      POSTGRES_USER: ${POSTGRES_USER:-jinse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-jinse} -d ${POSTGRES_DB:-jinse}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  caddy_data:
+  caddy_config:
+  postgres_data:

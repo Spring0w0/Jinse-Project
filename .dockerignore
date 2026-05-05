@@ -1,0 +1,14 @@
+.git
+.DS_Store
+
+jinse-backend/.env
+jinse-backend/.venv
+jinse-backend/**/__pycache__
+jinse-backend/.pytest_cache
+jinse-backend/jinse_dev.db
+
+jinse-frontend/node_modules
+jinse-frontend/dist
+jinse-frontend/.npm-cache
+
+*.log
