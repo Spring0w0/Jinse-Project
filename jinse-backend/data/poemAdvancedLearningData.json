@@ -259,6 +259,132 @@
           "role": "主题表达",
           "source": "一弦一柱思华年。",
           "images": []
+        },
+        {
+          "name": "五十弦",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "古瑟本为五十弦，后改为二十五弦。以繁弦起兴，暗示诗人心绪纷繁。",
+          "role": "意象元素",
+          "source": "锦瑟无端五十弦",
+          "images": []
+        },
+        {
+          "name": "华年",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "美好的青春年华，是全诗追忆的核心对象。",
+          "role": "意象元素",
+          "source": "一弦一柱思华年",
+          "images": []
+        },
+        {
+          "name": "沧海",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "辽阔的大海，与明月、珠泪共同构成清冷宏阔的意象空间。",
+          "role": "意象元素",
+          "source": "沧海月明珠有泪",
+          "images": []
+        },
+        {
+          "name": "明月",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "海上明月，清冷光芒照亮珠泪。",
+          "role": "意象元素",
+          "source": "沧海月明珠有泪",
+          "images": []
+        },
+        {
+          "name": "珠泪",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "珍珠带泪，暗用鲛人泣珠传说，写美丽与哀伤的交融。",
+          "role": "意象元素",
+          "source": "沧海月明珠有泪",
+          "images": []
+        },
+        {
+          "name": "蓝田",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "蓝田山以产玉闻名，日暖之时玉气如烟。",
+          "role": "意象元素",
+          "source": "蓝田日暖玉生烟",
+          "images": []
+        },
+        {
+          "name": "玉烟",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "暖日照耀下玉石升腾的烟气，象征美好事物若即若离。",
+          "role": "意象元素",
+          "source": "蓝田日暖玉生烟",
+          "images": []
+        },
+        {
+          "name": "追忆",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "全诗最核心的情感动作——此情可待成追忆。",
+          "role": "情感表达",
+          "source": "此情可待成追忆",
+          "images": []
+        },
+        {
+          "name": "迷惘",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "只是当时已惘然——面对过去无法言说的迷惘。",
+          "role": "情感表达",
+          "source": "只是当时已惘然",
+          "images": []
+        },
+        {
+          "name": "庄周梦蝶",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "《庄子·齐物论》载庄周梦为蝴蝶，不知周也。写人生如梦、真幻难辨。",
+          "role": "典故运用",
+          "source": "庄生晓梦迷蝴蝶",
+          "images": []
+        },
+        {
+          "name": "望帝啼鹃",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "望帝杜宇化鹃的传说。啼血杜鹃象征至死不渝的深情。",
+          "role": "典故运用",
+          "source": "望帝春心托杜鹃",
+          "images": []
+        },
+        {
+          "name": "鲛人泣珠",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "《博物志》载鲛人泣而成珠。暗合沧海月明珠有泪之意。",
+          "role": "典故运用",
+          "source": "沧海月明珠有泪",
+          "images": []
+        },
+        {
+          "name": "人生如梦",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "庄周梦蝶所引发的对人生如梦的哲思。",
+          "role": "主题表达",
+          "source": "庄生晓梦迷蝴蝶",
+          "images": []
+        },
+        {
+          "name": "美好易逝",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "华年不再、此情可待成追忆——对美好事物易逝的感叹。",
+          "role": "主题表达",
+          "source": "此情可待成追忆",
+          "images": []
         }
       ],
       "links": [
@@ -289,6 +415,126 @@
         {
           "source": "锦瑟",
           "target": "望帝春心托杜鹃"
+        },
+        {
+          "source": "锦瑟",
+          "target": "五十弦"
+        },
+        {
+          "source": "锦瑟",
+          "target": "追忆"
+        },
+        {
+          "source": "锦瑟",
+          "target": "迷惘"
+        },
+        {
+          "source": "锦瑟",
+          "target": "庄周梦蝶"
+        },
+        {
+          "source": "锦瑟",
+          "target": "望帝啼鹃"
+        },
+        {
+          "source": "锦瑟",
+          "target": "鲛人泣珠"
+        },
+        {
+          "source": "锦瑟",
+          "target": "人生如梦"
+        },
+        {
+          "source": "锦瑟",
+          "target": "美好易逝"
+        },
+        {
+          "source": "五十弦",
+          "target": "华年"
+        },
+        {
+          "source": "华年",
+          "target": "追忆"
+        },
+        {
+          "source": "沧海",
+          "target": "明月"
+        },
+        {
+          "source": "明月",
+          "target": "珠泪"
+        },
+        {
+          "source": "沧海月明珠有泪",
+          "target": "沧海"
+        },
+        {
+          "source": "沧海月明珠有泪",
+          "target": "明月"
+        },
+        {
+          "source": "沧海月明珠有泪",
+          "target": "珠泪"
+        },
+        {
+          "source": "蓝田",
+          "target": "玉烟"
+        },
+        {
+          "source": "蓝田日暖玉生烟",
+          "target": "蓝田"
+        },
+        {
+          "source": "蓝田日暖玉生烟",
+          "target": "玉烟"
+        },
+        {
+          "source": "庄周梦蝶",
+          "target": "庄生晓梦迷蝴蝶"
+        },
+        {
+          "source": "庄周梦蝶",
+          "target": "人生如梦"
+        },
+        {
+          "source": "庄周梦蝶",
+          "target": "迷惘"
+        },
+        {
+          "source": "望帝啼鹃",
+          "target": "望帝春心托杜鹃"
+        },
+        {
+          "source": "望帝啼鹃",
+          "target": "哀婉缠绵"
+        },
+        {
+          "source": "鲛人泣珠",
+          "target": "珠泪"
+        },
+        {
+          "source": "鲛人泣珠",
+          "target": "哀婉缠绵"
+        },
+        {
+          "source": "追忆",
+          "target": "惘然"
+        },
+        {
+          "source": "追忆",
+          "target": "华年"
+        },
+        {
+          "source": "迷惘",
+          "target": "惘然"
+        },
+        {
+          "source": "人生如梦",
+          "target": "美好易逝"
+        },
+        {
+          "source": "美好易逝",
+          "target": "追忆"
         }
       ],
       "emotionAnalyses": [
@@ -556,6 +802,114 @@
           "role": "诗中地点",
           "source": "巴山夜雨涨秋池",
           "images": []
+        },
+        {
+          "name": "归期",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "归家的日期——君问归期未有期，是全诗悬念的起点。",
+          "role": "意象元素",
+          "source": "君问归期未有期",
+          "images": []
+        },
+        {
+          "name": "秋雨",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "巴山夜雨涨秋池——秋夜的雨，渲染孤寂氛围。",
+          "role": "意象元素",
+          "source": "巴山夜雨涨秋池",
+          "images": []
+        },
+        {
+          "name": "西窗烛",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "未来团聚时西窗下的烛光——是全诗最温暖的意象，与夜雨形成鲜明对照。",
+          "role": "意象元素",
+          "source": "何当共剪西窗烛",
+          "images": []
+        },
+        {
+          "name": "剪烛",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "剪烛心的动作，暗示长夜深谈，亲密无间。",
+          "role": "意象元素",
+          "source": "何当共剪西窗烛",
+          "images": []
+        },
+        {
+          "name": "时间回环",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "却话巴山夜雨时——未来回望现在，时间结构形成回环。",
+          "role": "结构意象",
+          "source": "却话巴山夜雨时",
+          "images": []
+        },
+        {
+          "name": "期盼",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "何当共剪西窗烛——对未来团聚的热切期盼。",
+          "role": "情感表达",
+          "source": "何当共剪西窗烛",
+          "images": []
+        },
+        {
+          "name": "无奈",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "君问归期未有期——答非所愿的无奈。",
+          "role": "情感表达",
+          "source": "君问归期未有期",
+          "images": []
+        },
+        {
+          "name": "羁旅",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "全诗核心主题——客居巴蜀的羁旅生涯。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "友情",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "诗人与北方友人的深厚情谊——全诗即是寄给友人的。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "虚实交错",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "现实夜雨与未来回忆交叠，形成虚实相生的诗意结构。",
+          "role": "主题表达",
+          "source": "何当共剪西窗烛，却话巴山夜雨时",
+          "images": []
+        },
+        {
+          "name": "巴蜀",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "诗人当时所在的巴蜀地区。",
+          "role": "诗中地点",
+          "source": "巴山夜雨涨秋池",
+          "images": []
+        },
+        {
+          "name": "北方",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "诗人思念的友人所居之处，与巴山遥遥相对。",
+          "role": "诗中地点",
+          "source": "君问归期未有期",
+          "images": []
         }
       ],
       "links": [
@@ -585,6 +939,90 @@
         },
         {
           "source": "夜雨寄北",
+          "target": "思乡"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "归期"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "期盼"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "无奈"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "羁旅"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "友情"
+        },
+        {
+          "source": "夜雨寄北",
+          "target": "虚实交错"
+        },
+        {
+          "source": "夜雨",
+          "target": "秋雨"
+        },
+        {
+          "source": "秋雨",
+          "target": "秋池"
+        },
+        {
+          "source": "西窗",
+          "target": "西窗烛"
+        },
+        {
+          "source": "西窗烛",
+          "target": "期盼"
+        },
+        {
+          "source": "西窗烛",
+          "target": "剪烛"
+        },
+        {
+          "source": "剪烛",
+          "target": "期盼"
+        },
+        {
+          "source": "归期",
+          "target": "无奈"
+        },
+        {
+          "source": "归期",
+          "target": "思念"
+        },
+        {
+          "source": "巴山",
+          "target": "巴蜀"
+        },
+        {
+          "source": "巴蜀",
+          "target": "羁旅"
+        },
+        {
+          "source": "羁旅",
+          "target": "思念"
+        },
+        {
+          "source": "时间回环",
+          "target": "虚实交错"
+        },
+        {
+          "source": "期盼",
+          "target": "思念"
+        },
+        {
+          "source": "无奈",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "北方",
           "target": "思乡"
         }
       ],
@@ -916,6 +1354,51 @@
           "role": "诗中地点",
           "source": "蓬山此去无多路",
           "images": []
+        },
+        {
+          "name": "丝尽",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "春蚕到死丝方尽——以蚕丝谐音'思'，写至死方休的深情。",
+          "role": "意象元素",
+          "source": "春蚕到死丝方尽",
+          "images": []
+        },
+        {
+          "name": "灰泪",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "蜡炬成灰泪始干——以烛泪写人泪，写尽付出与伤痛。",
+          "role": "意象元素",
+          "source": "蜡炬成灰泪始干",
+          "images": []
+        },
+        {
+          "name": "蓬山·典故",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "传说中的蓬莱仙山，诗中指对方所在之处——可望而难即。",
+          "role": "典故运用",
+          "source": "蓬山此去无多路",
+          "images": []
+        },
+        {
+          "name": "青鸟使者",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "《山海经》中西王母的信使，诗中希望青鸟代为探望。",
+          "role": "典故运用",
+          "source": "青鸟殷勤为探看",
+          "images": []
+        },
+        {
+          "name": "至死不渝",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "春蚕到死、蜡炬成灰——以生命相许的深情。",
+          "role": "情感表达",
+          "source": "春蚕到死丝方尽，蜡炬成灰泪始干",
+          "images": []
         }
       ],
       "links": [
@@ -965,7 +1448,7 @@
         },
         {
           "source": "无题·相见时难别亦难",
-          "target": "蓬山"
+          "target": "蓬山·典故"
         },
         {
           "source": "无题·相见时难别亦难",
@@ -974,6 +1457,54 @@
         {
           "source": "无题·相见时难别亦难",
           "target": "青鸟殷勤为探看"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "至死不渝"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "蓬山·典故"
+        },
+        {
+          "source": "无题·相见时难别亦难",
+          "target": "青鸟使者"
+        },
+        {
+          "source": "春蚕",
+          "target": "丝尽"
+        },
+        {
+          "source": "丝尽",
+          "target": "至死不渝"
+        },
+        {
+          "source": "蜡炬",
+          "target": "灰泪"
+        },
+        {
+          "source": "灰泪",
+          "target": "至死不渝"
+        },
+        {
+          "source": "青鸟",
+          "target": "青鸟使者"
+        },
+        {
+          "source": "青鸟使者",
+          "target": "蓬山·典故"
+        },
+        {
+          "source": "蓬山·典故",
+          "target": "青鸟"
+        },
+        {
+          "source": "至死不渝",
+          "target": "春蚕"
+        },
+        {
+          "source": "至死不渝",
+          "target": "蜡炬"
         }
       ],
       "emotionAnalyses": [
@@ -1198,7 +1729,7 @@
           "images": []
         },
         {
-          "name": "碧海青天",
+          "name": "碧海青天·意象",
           "category": 1,
           "symbolSize": 33,
           "info": "诗中描述的广阔无垠的海洋和天空，象征着孤独和寂寞。",
@@ -1234,12 +1765,102 @@
           "images": []
         },
         {
-          "name": "悔恨",
+          "name": "悔恨·情感",
           "category": 2,
           "symbolSize": 33,
           "info": "诗中暗示嫦娥对偷吃灵药的行为感到悔恨。",
           "role": "情感表达",
           "source": "嫦娥应悔偷灵药",
+          "images": []
+        },
+        {
+          "name": "云母屏风·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "以云母装饰的华美屏风，烛影深暗示夜深人静。",
+          "role": "意象元素",
+          "source": "云母屏风烛影深",
+          "images": []
+        },
+        {
+          "name": "长河·意象",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "银河——长河渐落晓星沉，写长夜将尽。",
+          "role": "意象元素",
+          "source": "长河渐落晓星沉",
+          "images": []
+        },
+        {
+          "name": "晓星·意象",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "拂晓的星辰沉落，暗示漫漫长夜的终结。",
+          "role": "意象元素",
+          "source": "长河渐落晓星沉",
+          "images": []
+        },
+        {
+          "name": "碧海青天",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "嫦娥所处的月宫环境——碧海般的青天，写高寒孤寂。",
+          "role": "意象元素",
+          "source": "碧海青天夜夜心",
+          "images": []
+        },
+        {
+          "name": "悔恨",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "嫦娥应悔偷灵药——以嫦娥之悔写自身的悔恨之情。",
+          "role": "情感表达",
+          "source": "嫦娥应悔偷灵药",
+          "images": []
+        },
+        {
+          "name": "高寒孤寂",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "全诗核心情感——碧海青天中的永恒孤独。",
+          "role": "情感表达",
+          "source": "碧海青天夜夜心",
+          "images": []
+        },
+        {
+          "name": "嫦娥奔月",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "《淮南子》载嫦娥窃不死药奔月。诗中以此典故写高处的孤寂。",
+          "role": "典故运用",
+          "source": "嫦娥应悔偷灵药",
+          "images": []
+        },
+        {
+          "name": "长生之代价",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "嫦娥得长生却永世孤寂——以神话写追求不朽的代价。",
+          "role": "主题表达",
+          "source": "嫦娥应悔偷灵药，碧海青天夜夜心",
+          "images": []
+        },
+        {
+          "name": "清冷之美",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "全诗以烛影、长河、晓星、碧海青天营造清冷孤寂的审美境界。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "月宫",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "嫦娥所居之处。",
+          "role": "诗中地点",
+          "source": "碧海青天夜夜心",
           "images": []
         }
       ],
@@ -1254,23 +1875,83 @@
         },
         {
           "source": "嫦娥",
-          "target": "悔恨"
+          "target": "悔恨·情感"
         },
         {
           "source": "嫦娥",
-          "target": "云母屏风"
+          "target": "云母屏风·意象"
         },
         {
           "source": "嫦娥",
-          "target": "长河"
+          "target": "长河·意象"
         },
         {
           "source": "嫦娥",
-          "target": "晓星"
+          "target": "晓星·意象"
         },
         {
           "source": "嫦娥",
-          "target": "碧海青天"
+          "target": "碧海青天·意象"
+        },
+        {
+          "source": "嫦娥",
+          "target": "云母屏风·意象"
+        },
+        {
+          "source": "嫦娥",
+          "target": "悔恨·情感"
+        },
+        {
+          "source": "嫦娥",
+          "target": "高寒孤寂"
+        },
+        {
+          "source": "嫦娥",
+          "target": "嫦娥奔月"
+        },
+        {
+          "source": "嫦娥",
+          "target": "长生之代价"
+        },
+        {
+          "source": "嫦娥",
+          "target": "清冷之美"
+        },
+        {
+          "source": "云母屏风·意象",
+          "target": "长河·意象"
+        },
+        {
+          "source": "长河·意象",
+          "target": "晓星·意象"
+        },
+        {
+          "source": "碧海青天·意象",
+          "target": "高寒孤寂"
+        },
+        {
+          "source": "碧海青天·意象",
+          "target": "月宫"
+        },
+        {
+          "source": "悔恨·情感",
+          "target": "嫦娥奔月"
+        },
+        {
+          "source": "嫦娥奔月",
+          "target": "长生之代价"
+        },
+        {
+          "source": "长生之代价",
+          "target": "高寒孤寂"
+        },
+        {
+          "source": "高寒孤寂",
+          "target": "悔恨·情感"
+        },
+        {
+          "source": "清冷之美",
+          "target": "高寒孤寂"
         }
       ],
       "emotionAnalyses": [
@@ -1477,7 +2158,7 @@
           "images": []
         },
         {
-          "name": "夕阳",
+          "name": "夕阳·意象",
           "category": 1,
           "symbolSize": 33,
           "info": "诗中描绘的黄昏时分的太阳，象征美好但短暂的时光。",
@@ -1486,7 +2167,7 @@
           "images": []
         },
         {
-          "name": "黄昏",
+          "name": "黄昏·意象",
           "category": 1,
           "symbolSize": 33,
           "info": "诗中提到的时间点，象征美好事物的结束。",
@@ -1531,10 +2212,100 @@
           "images": []
         },
         {
-          "name": "古原",
+          "name": "古原·地点",
           "category": 5,
           "symbolSize": 33,
           "info": "诗中提到的登高之处，具体指乐游原。",
+          "role": "诗中地点",
+          "source": "驱车登古原",
+          "images": []
+        },
+        {
+          "name": "向晚",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "傍晚时分——向晚意不适，以时间起兴。",
+          "role": "意象元素",
+          "source": "向晚意不适",
+          "images": []
+        },
+        {
+          "name": "古原",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "乐游原，汉代以来的长安游览胜地，登高可俯瞰长安城。",
+          "role": "意象元素",
+          "source": "驱车登古原",
+          "images": []
+        },
+        {
+          "name": "夕阳",
+          "category": 1,
+          "symbolSize": 44,
+          "info": "无限好的夕阳——既是自然景观，也是人生晚景的象征。",
+          "role": "核心意象",
+          "source": "夕阳无限好",
+          "images": []
+        },
+        {
+          "name": "黄昏",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "只是近黄昏——无限美好与即将消逝的尖锐矛盾。",
+          "role": "意象元素",
+          "source": "只是近黄昏",
+          "images": []
+        },
+        {
+          "name": "不适",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "向晚时分心中的不适感，是驱车登古原的动因。",
+          "role": "情感表达",
+          "source": "向晚意不适",
+          "images": []
+        },
+        {
+          "name": "惋惜",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "全诗核心情感——对夕阳无限好却近黄昏的深沉惋惜。",
+          "role": "情感表达",
+          "source": "只是近黄昏",
+          "images": []
+        },
+        {
+          "name": "开阔",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "驱车登古原后视野豁然开朗的畅快。",
+          "role": "情感表达",
+          "source": "驱车登古原",
+          "images": []
+        },
+        {
+          "name": "时间之悲",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "夕阳近黄昏——对时间无情流逝的深沉感慨。",
+          "role": "主题表达",
+          "source": "夕阳无限好，只是近黄昏",
+          "images": []
+        },
+        {
+          "name": "乐极生悲",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "夕阳愈是无限好，近黄昏的悲哀愈深——乐与悲的辩证。",
+          "role": "主题表达",
+          "source": "夕阳无限好，只是近黄昏",
+          "images": []
+        },
+        {
+          "name": "乐游原·地点",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "长安城南的游览胜地，地势高旷可俯瞰长安。",
           "role": "诗中地点",
           "source": "驱车登古原",
           "images": []
@@ -1542,32 +2313,100 @@
       ],
       "links": [
         {
-          "source": "乐游原",
+          "source": "乐游原·地点",
           "target": "忧愁"
         },
         {
-          "source": "乐游原",
+          "source": "乐游原·地点",
           "target": "感慨、忧郁"
         },
         {
-          "source": "乐游原",
-          "target": "夕阳"
+          "source": "乐游原·地点",
+          "target": "夕阳·意象"
         },
         {
-          "source": "乐游原",
-          "target": "黄昏"
+          "source": "乐游原·地点",
+          "target": "黄昏·意象"
         },
         {
-          "source": "乐游原",
-          "target": "古原"
+          "source": "乐游原·地点",
+          "target": "古原·地点"
         },
         {
-          "source": "乐游原",
+          "source": "乐游原·地点",
           "target": "社会动荡"
         },
         {
-          "source": "乐游原",
+          "source": "乐游原·地点",
           "target": "个人仕途不顺"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "向晚"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "夕阳·意象"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "黄昏·意象"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "不适"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "惋惜"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "开阔"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "时间之悲"
+        },
+        {
+          "source": "乐游原·地点",
+          "target": "乐极生悲"
+        },
+        {
+          "source": "向晚",
+          "target": "不适"
+        },
+        {
+          "source": "古原·地点",
+          "target": "乐游原·地点"
+        },
+        {
+          "source": "夕阳·意象",
+          "target": "黄昏·意象"
+        },
+        {
+          "source": "夕阳·意象",
+          "target": "开阔"
+        },
+        {
+          "source": "黄昏·意象",
+          "target": "惋惜"
+        },
+        {
+          "source": "黄昏·意象",
+          "target": "时间之悲"
+        },
+        {
+          "source": "惋惜",
+          "target": "时间之悲"
+        },
+        {
+          "source": "时间之悲",
+          "target": "乐极生悲"
+        },
+        {
+          "source": "开阔",
+          "target": "夕阳·意象"
         }
       ],
       "emotionAnalyses": [
@@ -1862,6 +2701,87 @@
           "role": "诗中地点",
           "source": "欲取芜城作帝家",
           "images": []
+        },
+        {
+          "name": "南游",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "隋炀帝乘兴南游江都——穷奢极欲的开端。",
+          "role": "意象元素",
+          "source": "乘兴南游不戒严",
+          "images": []
+        },
+        {
+          "name": "谏书函",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "群臣劝谏的奏章——九重谁省谏书函，写炀帝的拒谏。",
+          "role": "意象元素",
+          "source": "九重谁省谏书函",
+          "images": []
+        },
+        {
+          "name": "宫锦",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "宫廷专用的华美锦缎——春风举国裁宫锦。",
+          "role": "意象元素",
+          "source": "春风举国裁宫锦",
+          "images": []
+        },
+        {
+          "name": "障泥",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "马鞍下的障泥布——半作障泥半作帆，写民力靡费。",
+          "role": "意象元素",
+          "source": "半作障泥半作帆",
+          "images": []
+        },
+        {
+          "name": "船帆",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "用宫锦制作的船帆——与障泥并列，写奢靡之极。",
+          "role": "意象元素",
+          "source": "半作障泥半作帆",
+          "images": []
+        },
+        {
+          "name": "讽刺",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "全诗核心情感——对隋炀帝穷奢极欲的尖锐讽刺。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "愤慨",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "举国之力裁制宫锦却半作障泥半作帆——对民力被滥用的愤慨。",
+          "role": "情感表达",
+          "source": "春风举国裁宫锦",
+          "images": []
+        },
+        {
+          "name": "隋炀帝",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "隋朝末代皇帝杨广，以奢靡南游著称，终至亡国。",
+          "role": "典故运用",
+          "source": "乘兴南游不戒严",
+          "images": []
+        },
+        {
+          "name": "亡国之鉴",
+          "category": 4,
+          "symbolSize": 40,
+          "info": "全诗核心主题——借隋炀帝南游写历史兴亡的教训。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
         }
       ],
       "links": [
@@ -1904,6 +2824,66 @@
         {
           "source": "隋宫",
           "target": "后庭花"
+        },
+        {
+          "source": "隋宫",
+          "target": "南游"
+        },
+        {
+          "source": "隋宫",
+          "target": "讽刺"
+        },
+        {
+          "source": "隋宫",
+          "target": "愤慨"
+        },
+        {
+          "source": "隋宫",
+          "target": "隋炀帝"
+        },
+        {
+          "source": "隋宫",
+          "target": "亡国之鉴"
+        },
+        {
+          "source": "南游",
+          "target": "谏书函"
+        },
+        {
+          "source": "南游",
+          "target": "宫锦"
+        },
+        {
+          "source": "宫锦",
+          "target": "障泥"
+        },
+        {
+          "source": "宫锦",
+          "target": "船帆"
+        },
+        {
+          "source": "障泥",
+          "target": "船帆"
+        },
+        {
+          "source": "谏书函",
+          "target": "隋炀帝"
+        },
+        {
+          "source": "隋炀帝",
+          "target": "亡国之鉴"
+        },
+        {
+          "source": "讽刺",
+          "target": "亡国之鉴"
+        },
+        {
+          "source": "愤慨",
+          "target": "讽刺"
+        },
+        {
+          "source": "宫锦",
+          "target": "愤慨"
         }
       ],
       "emotionAnalyses": [
@@ -2244,7 +3224,7 @@
           "images": []
         },
         {
-          "name": "绝望",
+          "name": "绝望·情感",
           "category": 2,
           "symbolSize": 33,
           "info": "诗中表达的对爱情的绝望与痛苦。",
@@ -2287,6 +3267,69 @@
           "role": "诗中地点",
           "source": "芙蓉塘外有轻雷",
           "images": []
+        },
+        {
+          "name": "芙蓉塘·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "荷花池塘，东风细雨中的幽美背景。",
+          "role": "意象元素",
+          "source": "芙蓉塘外有轻雷",
+          "images": []
+        },
+        {
+          "name": "轻雷·意象",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "远处隐约的雷声，为画面增添层次感。",
+          "role": "意象元素",
+          "source": "芙蓉塘外有轻雷",
+          "images": []
+        },
+        {
+          "name": "金蟾·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "金蟾啮锁——香炉上的金蟾装饰咬住锁链，隐喻幽闭与束缚。",
+          "role": "意象元素",
+          "source": "金蟾啮锁烧香入",
+          "images": []
+        },
+        {
+          "name": "玉虎·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "玉虎牵丝——井栏上的玉虎装饰牵动井绳，隐喻牵动与吸引。",
+          "role": "意象元素",
+          "source": "玉虎牵丝汲井回",
+          "images": []
+        },
+        {
+          "name": "相思灰",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "一寸相思一寸灰——以焚香成灰写相思的毁灭，是全诗最绝望的意象。",
+          "role": "核心意象",
+          "source": "一寸相思一寸灰",
+          "images": []
+        },
+        {
+          "name": "绝望",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "春心莫共花争发——从燃烧到寂灭，一寸相思终成一寸灰。",
+          "role": "情感表达",
+          "source": "一寸相思一寸灰",
+          "images": []
+        },
+        {
+          "name": "贾氏窥帘",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "《世说新语》载贾充之女窥帘见韩寿而悦之。",
+          "role": "典故运用",
+          "source": "贾氏窥帘韩掾少",
+          "images": []
         }
       ],
       "links": [
@@ -2300,7 +3343,7 @@
         },
         {
           "source": "无题·飒飒东风细雨来",
-          "target": "绝望"
+          "target": "绝望·情感"
         },
         {
           "source": "无题·飒飒东风细雨来",
@@ -2312,19 +3355,19 @@
         },
         {
           "source": "无题·飒飒东风细雨来",
-          "target": "轻雷"
+          "target": "轻雷·意象"
         },
         {
           "source": "无题·飒飒东风细雨来",
-          "target": "金蟾"
+          "target": "金蟾·意象"
         },
         {
           "source": "无题·飒飒东风细雨来",
-          "target": "玉虎"
+          "target": "玉虎·意象"
         },
         {
           "source": "无题·飒飒东风细雨来",
-          "target": "芙蓉塘"
+          "target": "芙蓉塘·意象"
         },
         {
           "source": "无题·飒飒东风细雨来",
@@ -2337,6 +3380,30 @@
         {
           "source": "无题·飒飒东风细雨来",
           "target": "宓妃留枕魏王才"
+        },
+        {
+          "source": "无题·飒飒东风细雨来",
+          "target": "芙蓉塘·意象"
+        },
+        {
+          "source": "无题·飒飒东风细雨来",
+          "target": "绝望·情感"
+        },
+        {
+          "source": "无题·飒飒东风细雨来",
+          "target": "贾氏窥帘"
+        },
+        {
+          "source": "芙蓉塘·意象",
+          "target": "轻雷·意象"
+        },
+        {
+          "source": "相思灰",
+          "target": "绝望·情感"
+        },
+        {
+          "source": "金蟾·意象",
+          "target": "玉虎·意象"
         }
       ],
       "emotionAnalyses": [
@@ -2597,10 +3664,11 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "历史人物",
+        "意象",
+        "情感",
         "典故",
-        "诗人",
-        "情感"
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
@@ -2686,12 +3754,129 @@
             "讽刺",
             "苍凉"
           ]
+        },
+        {
+          "name": "海外九州",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "海外徒闻更九州——海外更有九州之说，暗讽玄宗求仙。",
+          "role": "意象元素",
+          "source": "海外徒闻更九州",
+          "images": []
+        },
+        {
+          "name": "他生未卜",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "来世不可预知——对七夕盟誓的否定与讽刺。",
+          "role": "意象元素",
+          "source": "他生未卜此生休",
+          "images": []
+        },
+        {
+          "name": "虎旅宵柝",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "禁军的夜间巡逻梆声——以军营之声写仓皇出逃的狼狈。",
+          "role": "意象元素",
+          "source": "空闻虎旅传宵柝",
+          "images": []
+        },
+        {
+          "name": "鸡人晓筹",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "宫中报晓的鸡人——无复鸡人报晓筹，写盛世不再。",
+          "role": "意象元素",
+          "source": "无复鸡人报晓筹",
+          "images": []
+        },
+        {
+          "name": "七夕笑牵牛",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "唐玄宗与杨贵妃七夕盟誓之事——当时何等恩爱，今日何等凄惶。",
+          "role": "典故运用",
+          "source": "当时七夕笑牵牛",
+          "images": []
+        },
+        {
+          "name": "卢家莫愁",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "梁武帝歌'洛阳女儿名莫愁'——不及卢家有莫愁，以平民之福反讽帝王之祸。",
+          "role": "典故运用",
+          "source": "不及卢家有莫愁",
+          "images": []
+        },
+        {
+          "name": "讽刺",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "全诗核心情感——对唐玄宗荒政误国的尖锐讽刺。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "悲悯",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "在讽刺之余对杨贵妃命运的悲悯。",
+          "role": "情感表达",
+          "source": "他生未卜此生休",
+          "images": []
+        },
+        {
+          "name": "盛衰对比",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "七夕笑牛与六军驻马、鸡人晓筹与虎旅宵柝——盛世与乱世的尖锐对照。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "帝妃之恋",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "唐玄宗与杨贵妃的爱情故事及其悲剧结局。",
+          "role": "主题表达",
+          "source": "七夕笑牵牛",
+          "images": []
+        },
+        {
+          "name": "马嵬坡",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "杨贵妃被赐死之处，今陕西兴平。",
+          "role": "诗中地点",
+          "source": "此日六军同驻马",
+          "images": []
+        },
+        {
+          "name": "长安",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "唐代都城，鸡人报晓之地。",
+          "role": "诗中地点",
+          "source": "无复鸡人报晓筹",
+          "images": []
+        },
+        {
+          "name": "唐玄宗·典故",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "即唐明皇李隆基，与杨贵妃故事的核心人物。",
+          "role": "典故运用",
+          "source": "如何四纪为天子",
+          "images": []
         }
       ],
       "links": [
         {
           "source": "马嵬（其二）",
-          "target": "唐玄宗"
+          "target": "唐玄宗·典故"
         },
         {
           "source": "马嵬（其二）",
@@ -2714,11 +3899,11 @@
           "target": "讽刺与苍凉"
         },
         {
-          "source": "唐玄宗",
+          "source": "唐玄宗·典故",
           "target": "杨贵妃"
         },
         {
-          "source": "唐玄宗",
+          "source": "唐玄宗·典故",
           "target": "马嵬之变"
         },
         {
@@ -2726,12 +3911,88 @@
           "target": "马嵬之变"
         },
         {
-          "source": "唐玄宗",
+          "source": "唐玄宗·典故",
           "target": "七夕盟誓"
         },
         {
           "source": "李商隐",
           "target": "讽刺与苍凉"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "海外九州"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "他生未卜"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "讽刺"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "悲悯"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "盛衰对比"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "帝妃之恋"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "马嵬坡"
+        },
+        {
+          "source": "马嵬（其二）",
+          "target": "唐玄宗·典故"
+        },
+        {
+          "source": "虎旅宵柝",
+          "target": "鸡人晓筹"
+        },
+        {
+          "source": "虎旅宵柝",
+          "target": "讽刺"
+        },
+        {
+          "source": "鸡人晓筹",
+          "target": "长安"
+        },
+        {
+          "source": "七夕笑牵牛",
+          "target": "唐玄宗·典故"
+        },
+        {
+          "source": "七夕笑牵牛",
+          "target": "帝妃之恋"
+        },
+        {
+          "source": "卢家莫愁",
+          "target": "讽刺"
+        },
+        {
+          "source": "他生未卜",
+          "target": "悲悯"
+        },
+        {
+          "source": "海外九州",
+          "target": "讽刺"
+        },
+        {
+          "source": "盛衰对比",
+          "target": "讽刺"
+        },
+        {
+          "source": "马嵬坡",
+          "target": "唐玄宗·典故"
+        },
+        {
+          "source": "唐玄宗·典故",
+          "target": "七夕笑牵牛"
         }
       ],
       "emotionAnalyses": [
@@ -2954,7 +4215,7 @@
           "images": []
         },
         {
-          "name": "枯荷",
+          "name": "枯荷·意象",
           "category": 1,
           "symbolSize": 33,
           "info": "诗中提到的枯萎的荷叶，象征着秋天的萧瑟和诗人内心的孤寂。",
@@ -3006,6 +4267,123 @@
           "role": "主题表达",
           "source": "相思迢递隔重城",
           "images": []
+        },
+        {
+          "name": "竹坞·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "竹林环绕的幽静船坞——竹坞无尘水槛清。",
+          "role": "意象元素",
+          "source": "竹坞无尘水槛清",
+          "images": []
+        },
+        {
+          "name": "水槛",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "水边的栏杆，无尘且清幽。",
+          "role": "意象元素",
+          "source": "竹坞无尘水槛清",
+          "images": []
+        },
+        {
+          "name": "重城·意象",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "相隔的重重城池——相思迢递隔重城，写空间的阻隔。",
+          "role": "意象元素",
+          "source": "相思迢递隔重城",
+          "images": []
+        },
+        {
+          "name": "秋阴",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "秋天的阴云不散——渲染幽暗沉郁的氛围。",
+          "role": "意象元素",
+          "source": "秋阴不散霜飞晚",
+          "images": []
+        },
+        {
+          "name": "霜飞晚",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "秋霜来得晚——暗示秋天的延长与等待的漫长。",
+          "role": "意象元素",
+          "source": "秋阴不散霜飞晚",
+          "images": []
+        },
+        {
+          "name": "枯荷",
+          "category": 1,
+          "symbolSize": 42,
+          "info": "全诗最核心的意象——留得枯荷听雨声，以衰败之物写诗意。",
+          "role": "核心意象",
+          "source": "留得枯荷听雨声",
+          "images": []
+        },
+        {
+          "name": "雨声",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "雨打枯荷的声音——将衰败转化为诗意。",
+          "role": "听觉意象",
+          "source": "留得枯荷听雨声",
+          "images": []
+        },
+        {
+          "name": "怀人",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "全诗核心情感——寄怀崔雍崔衮，对友人的深深怀念。",
+          "role": "情感表达",
+          "source": "相思迢递隔重城",
+          "images": []
+        },
+        {
+          "name": "清幽",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "竹坞水槛的清幽环境所引发的宁静之感。",
+          "role": "情感表达",
+          "source": "竹坞无尘水槛清",
+          "images": []
+        },
+        {
+          "name": "以景结情",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "末句以枯荷雨声收束——不言情而情深无限。",
+          "role": "主题表达",
+          "source": "留得枯荷听雨声",
+          "images": []
+        },
+        {
+          "name": "相思·主题",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "全诗主题——对远方友人的思念。",
+          "role": "主题表达",
+          "source": "相思迢递隔重城",
+          "images": []
+        },
+        {
+          "name": "骆氏亭",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "诗人寄宿之所，以骆氏亭命名。",
+          "role": "诗中地点",
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "images": []
+        },
+        {
+          "name": "崔雍崔衮",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "诗人怀念的两位友人——崔雍与崔衮。",
+          "role": "人物",
+          "source": "诗题",
+          "images": []
         }
       ],
       "links": [
@@ -3015,23 +4393,99 @@
         },
         {
           "source": "宿骆氏亭寄怀崔雍崔衮",
-          "target": "相思"
+          "target": "相思·主题"
         },
         {
           "source": "宿骆氏亭寄怀崔雍崔衮",
-          "target": "竹坞"
+          "target": "竹坞·意象"
         },
         {
           "source": "宿骆氏亭寄怀崔雍崔衮",
-          "target": "枯荷"
+          "target": "枯荷·意象"
         },
         {
           "source": "宿骆氏亭寄怀崔雍崔衮",
-          "target": "重城"
+          "target": "重城·意象"
         },
         {
           "source": "宿骆氏亭寄怀崔雍崔衮",
           "target": "思友"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "竹坞·意象"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "秋阴"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "枯荷·意象"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "怀人"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "以景结情"
+        },
+        {
+          "source": "宿骆氏亭寄怀崔雍崔衮",
+          "target": "崔雍崔衮"
+        },
+        {
+          "source": "竹坞·意象",
+          "target": "水槛"
+        },
+        {
+          "source": "竹坞·意象",
+          "target": "清幽"
+        },
+        {
+          "source": "水槛",
+          "target": "清幽"
+        },
+        {
+          "source": "秋阴",
+          "target": "霜飞晚"
+        },
+        {
+          "source": "秋阴",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "枯荷·意象",
+          "target": "雨声"
+        },
+        {
+          "source": "枯荷·意象",
+          "target": "以景结情"
+        },
+        {
+          "source": "雨声",
+          "target": "以景结情"
+        },
+        {
+          "source": "相思·主题",
+          "target": "怀人"
+        },
+        {
+          "source": "重城·意象",
+          "target": "相思·主题"
+        },
+        {
+          "source": "崔雍崔衮",
+          "target": "怀人"
+        },
+        {
+          "source": "骆氏亭",
+          "target": "竹坞·意象"
+        },
+        {
+          "source": "以景结情",
+          "target": "怀人"
         }
       ],
       "emotionAnalyses": [
@@ -3311,10 +4765,11 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "典故",
-        "诗人",
         "意象",
-        "情感"
+        "情感",
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
@@ -3400,6 +4855,123 @@
             "悲愤",
             "孤绝"
           ]
+        },
+        {
+          "name": "永巷",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "汉代幽禁宫人的长巷——永巷长年怨绮罗，是第一泪。",
+          "role": "典故运用",
+          "source": "永巷长年怨绮罗",
+          "images": []
+        },
+        {
+          "name": "离情",
+          "category": 3,
+          "symbolSize": 30,
+          "info": "思妇念远之泪——离情终日思风波，是第二泪。",
+          "role": "典故运用",
+          "source": "离情终日思风波",
+          "images": []
+        },
+        {
+          "name": "湘江竹痕",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "娥皇女英泣竹成斑——湘江竹上痕无限，是第三泪（舜妃之泪）。",
+          "role": "典故运用",
+          "source": "湘江竹上痕无限",
+          "images": []
+        },
+        {
+          "name": "岘首碑前",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "羊祜堕泪碑——岘首碑前洒几多，是第四泪（怀古之泪）。",
+          "role": "典故运用",
+          "source": "岘首碑前洒几多",
+          "images": []
+        },
+        {
+          "name": "紫台秋入塞",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "昭君出塞之泪——人去紫台秋入塞，是第五泪。",
+          "role": "典故运用",
+          "source": "人去紫台秋入塞",
+          "images": []
+        },
+        {
+          "name": "兵残楚帐",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "项羽四面楚歌之泪——兵残楚帐夜闻歌，是第六泪。",
+          "role": "典故运用",
+          "source": "兵残楚帐夜闻歌",
+          "images": []
+        },
+        {
+          "name": "灞水桥边",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "灞桥送别之泪——朝来灞水桥边问，是第七泪（寒士送别）。",
+          "role": "典故运用",
+          "source": "朝来灞水桥边问",
+          "images": []
+        },
+        {
+          "name": "青袍寒士",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "末联以青袍寒士送别之泪收束——前六泪皆不及此泪之深。",
+          "role": "核心意象",
+          "source": "未抵青袍送玉珂",
+          "images": []
+        },
+        {
+          "name": "悲慨",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "全诗核心情感——前六泪层层铺垫，最终翻出寒士之泪最深一层的悲慨。",
+          "role": "情感表达",
+          "source": "未抵青袍送玉珂",
+          "images": []
+        },
+        {
+          "name": "同情",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "对各种泪的深切同情。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "层层递进",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "六种古今泪典层层递进，最终以寒士之泪翻出最深一层。",
+          "role": "结构主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "人生悲苦",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "全诗主题——以泪为中心写尽人生各种悲苦。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "灞桥",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "长安东灞水上的桥，为送别之地。",
+          "role": "诗中地点",
+          "source": "朝来灞水桥边问",
+          "images": []
         }
       ],
       "links": [
@@ -3446,6 +5018,90 @@
         {
           "source": "青袍玉珂",
           "target": "怀才不遇"
+        },
+        {
+          "source": "泪",
+          "target": "永巷"
+        },
+        {
+          "source": "泪",
+          "target": "离情"
+        },
+        {
+          "source": "泪",
+          "target": "湘江竹痕"
+        },
+        {
+          "source": "泪",
+          "target": "岘首碑前"
+        },
+        {
+          "source": "泪",
+          "target": "紫台秋入塞"
+        },
+        {
+          "source": "泪",
+          "target": "兵残楚帐"
+        },
+        {
+          "source": "泪",
+          "target": "灞水桥边"
+        },
+        {
+          "source": "泪",
+          "target": "悲慨"
+        },
+        {
+          "source": "泪",
+          "target": "人生悲苦"
+        },
+        {
+          "source": "永巷",
+          "target": "离情"
+        },
+        {
+          "source": "离情",
+          "target": "湘江竹痕"
+        },
+        {
+          "source": "湘江竹痕",
+          "target": "岘首碑前"
+        },
+        {
+          "source": "岘首碑前",
+          "target": "紫台秋入塞"
+        },
+        {
+          "source": "紫台秋入塞",
+          "target": "兵残楚帐"
+        },
+        {
+          "source": "兵残楚帐",
+          "target": "灞水桥边"
+        },
+        {
+          "source": "灞水桥边",
+          "target": "青袍寒士"
+        },
+        {
+          "source": "青袍寒士",
+          "target": "悲慨"
+        },
+        {
+          "source": "青袍寒士",
+          "target": "层层递进"
+        },
+        {
+          "source": "悲慨",
+          "target": "人生悲苦"
+        },
+        {
+          "source": "层层递进",
+          "target": "人生悲苦"
+        },
+        {
+          "source": "灞水桥边",
+          "target": "灞桥"
         }
       ],
       "emotionAnalyses": [
@@ -3706,10 +5362,11 @@
     "knowledgeGraph": {
       "categories": [
         "作品",
-        "典故",
-        "诗人",
         "意象",
-        "情感"
+        "情感",
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
@@ -3795,6 +5452,123 @@
             "不平",
             "冷峭"
           ]
+        },
+        {
+          "name": "高城",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "迢递高城百尺楼——安定城楼高耸入云，是登高抒怀的起点。",
+          "role": "意象元素",
+          "source": "迢递高城百尺楼",
+          "images": []
+        },
+        {
+          "name": "绿杨汀洲",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "绿杨枝外尽汀洲——远眺所见的水边平沙与绿杨。",
+          "role": "意象元素",
+          "source": "绿杨枝外尽汀洲",
+          "images": []
+        },
+        {
+          "name": "贾谊垂涕",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "贾谊《治安策》'臣窃惟事势，可为痛哭者一'——以贾谊自比。",
+          "role": "典故运用",
+          "source": "贾生年少虚垂涕",
+          "images": []
+        },
+        {
+          "name": "王粲远游",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "王粲《登楼赋》写羁旅之愁——以王粲自比远游失意。",
+          "role": "典故运用",
+          "source": "王粲春来更远游",
+          "images": []
+        },
+        {
+          "name": "江湖归白发",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "永忆江湖归白发——归隐江湖的夙愿，至老不改。",
+          "role": "意象元素",
+          "source": "永忆江湖归白发",
+          "images": []
+        },
+        {
+          "name": "扁舟天地",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "暗用范蠡泛舟五湖之典——欲回天地入扁舟，功成身退的理想。",
+          "role": "典故运用",
+          "source": "欲回天地入扁舟",
+          "images": []
+        },
+        {
+          "name": "腐鼠",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "《庄子·秋水》'鸱得腐鼠'——以腐鼠喻世俗功名利禄。",
+          "role": "典故运用",
+          "source": "不知腐鼠成滋味",
+          "images": []
+        },
+        {
+          "name": "鹓雏",
+          "category": 3,
+          "symbolSize": 36,
+          "info": "《庄子》中凤凰一类的鸟——以鹓雏自喻清高。",
+          "role": "典故运用",
+          "source": "猜意鹓雏竟未休",
+          "images": []
+        },
+        {
+          "name": "壮志难酬",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "全诗核心情感——贾谊垂涕、王粲远游，写才华不得施展的悲愤。",
+          "role": "情感表达",
+          "source": "贾生年少虚垂涕",
+          "images": []
+        },
+        {
+          "name": "清高自许",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "以鹓雏自喻，不屑世俗功名之争。",
+          "role": "情感表达",
+          "source": "不知腐鼠成滋味",
+          "images": []
+        },
+        {
+          "name": "怀才不遇",
+          "category": 4,
+          "symbolSize": 40,
+          "info": "全诗核心主题——借贾谊、王粲写自身不遇。",
+          "role": "核心主题",
+          "source": "贾生年少虚垂涕，王粲春来更远游",
+          "images": []
+        },
+        {
+          "name": "功成身退",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "欲回天地入扁舟——扭转乾坤后归隐江湖的理想。",
+          "role": "主题表达",
+          "source": "欲回天地入扁舟",
+          "images": []
+        },
+        {
+          "name": "安定城楼旧址",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "唐代泾州安定城楼，诗人登临抒怀之处。",
+          "role": "诗中地点",
+          "source": "迢递高城百尺楼",
+          "images": []
         }
       ],
       "links": [
@@ -3845,6 +5619,66 @@
         {
           "source": "江湖扁舟",
           "target": "鹓雏腐鼠"
+        },
+        {
+          "source": "安定城楼",
+          "target": "高城"
+        },
+        {
+          "source": "安定城楼",
+          "target": "壮志难酬"
+        },
+        {
+          "source": "安定城楼",
+          "target": "清高自许"
+        },
+        {
+          "source": "安定城楼",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "安定城楼",
+          "target": "功成身退"
+        },
+        {
+          "source": "安定城楼",
+          "target": "安定城楼旧址"
+        },
+        {
+          "source": "贾谊垂涕",
+          "target": "壮志难酬"
+        },
+        {
+          "source": "王粲远游",
+          "target": "壮志难酬"
+        },
+        {
+          "source": "扁舟天地",
+          "target": "功成身退"
+        },
+        {
+          "source": "江湖归白发",
+          "target": "功成身退"
+        },
+        {
+          "source": "鹓雏",
+          "target": "清高自许"
+        },
+        {
+          "source": "腐鼠",
+          "target": "鹓雏"
+        },
+        {
+          "source": "腐鼠",
+          "target": "清高自许"
+        },
+        {
+          "source": "壮志难酬",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "绿杨汀洲",
+          "target": "高城"
         }
       ],
       "emotionAnalyses": [
@@ -4088,7 +5922,9 @@
         "作品",
         "意象",
         "情感",
-        "典故"
+        "典故",
+        "主题",
+        "地点"
       ],
       "nodes": [
         {
@@ -4174,12 +6010,129 @@
             "独坐",
             "空杯"
           ]
+        },
+        {
+          "name": "世间荣落",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "世间荣枯循环——荣落重逡巡，以世事变迁开篇。",
+          "role": "意象元素",
+          "source": "世间荣落重逡巡",
+          "images": []
+        },
+        {
+          "name": "四春",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "四年春光——我独丘园坐四春，写困守之久。",
+          "role": "意象元素",
+          "source": "我独丘园坐四春",
+          "images": []
+        },
+        {
+          "name": "无酒无人",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "有花有月却无酒无人——反衬式写孤独的极致手法。",
+          "role": "意象元素",
+          "source": "可堪无酒又无人",
+          "images": []
+        },
+        {
+          "name": "风波万里",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "欲逐风波千万里——渴望突破现状的激越。",
+          "role": "意象元素",
+          "source": "欲逐风波千万里",
+          "images": []
+        },
+        {
+          "name": "蹉跎",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "青袍似草年年定——官场沉沦、时光虚度的蹉跎之感。",
+          "role": "情感表达",
+          "source": "青袍似草年年定",
+          "images": []
+        },
+        {
+          "name": "衰老之悲",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "白发如丝日日新——衰老加速的悲哀。",
+          "role": "情感表达",
+          "source": "白发如丝日日新",
+          "images": []
+        },
+        {
+          "name": "迷茫",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "未知何路到龙津——前路迷茫的苍凉。",
+          "role": "情感表达",
+          "source": "未知何路到龙津",
+          "images": []
+        },
+        {
+          "name": "不遇之愤",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "全诗核心主题——有才而不被用、有志而不成行。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "春光虚度",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "有花有月无酒无人——春光美好却无人共赏。",
+          "role": "主题表达",
+          "source": "纵使有花兼有月",
+          "images": []
+        },
+        {
+          "name": "龙门",
+          "category": 3,
+          "symbolSize": 33,
+          "info": "即龙门，鲤鱼跃龙门典故，喻科举登第。",
+          "role": "典故运用",
+          "source": "未知何路到龙津",
+          "images": []
+        },
+        {
+          "name": "丘园·地点",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "诗人闲居的园林。",
+          "role": "诗中地点",
+          "source": "我独丘园坐四春",
+          "images": []
+        },
+        {
+          "name": "青白对照",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "青袍的停滞与白发的加速形成颜色与时间的双重对照。",
+          "role": "结构主题",
+          "source": "青袍似草年年定，白发如丝日日新",
+          "images": []
+        },
+        {
+          "name": "激越",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "欲逐风波千万里的振奋一瞬。",
+          "role": "情感表达",
+          "source": "欲逐风波千万里",
+          "images": []
         }
       ],
       "links": [
         {
           "source": "《春日寄怀》",
-          "target": "丘园"
+          "target": "丘园·地点"
         },
         {
           "source": "《春日寄怀》",
@@ -4202,7 +6155,7 @@
           "target": "孤独失意"
         },
         {
-          "source": "丘园",
+          "source": "丘园·地点",
           "target": "孤独失意"
         },
         {
@@ -4220,6 +6173,94 @@
         {
           "source": "龙津",
           "target": "孤独失意"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "世间荣落"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "蹉跎"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "衰老之悲"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "迷茫"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "不遇之愤"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "春光虚度"
+        },
+        {
+          "source": "《春日寄怀》",
+          "target": "青白对照"
+        },
+        {
+          "source": "四春",
+          "target": "丘园·地点"
+        },
+        {
+          "source": "四春",
+          "target": "蹉跎"
+        },
+        {
+          "source": "无酒无人",
+          "target": "春光虚度"
+        },
+        {
+          "source": "花月",
+          "target": "无酒无人"
+        },
+        {
+          "source": "青袍",
+          "target": "蹉跎"
+        },
+        {
+          "source": "白发",
+          "target": "衰老之悲"
+        },
+        {
+          "source": "风波万里",
+          "target": "迷茫"
+        },
+        {
+          "source": "龙津",
+          "target": "龙门"
+        },
+        {
+          "source": "龙门",
+          "target": "迷茫"
+        },
+        {
+          "source": "蹉跎",
+          "target": "孤独失意"
+        },
+        {
+          "source": "衰老之悲",
+          "target": "孤独失意"
+        },
+        {
+          "source": "迷茫",
+          "target": "孤独失意"
+        },
+        {
+          "source": "青白对照",
+          "target": "青袍"
+        },
+        {
+          "source": "青白对照",
+          "target": "白发"
+        },
+        {
+          "source": "激越",
+          "target": "风波万里"
         }
       ],
       "emotionAnalyses": [
@@ -4277,6 +6318,3672 @@
             0.6,
             0.9,
             0.85
+          ]
+        }
+      ]
+    }
+  },
+  "shuangyue": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "初闻征雁已无蝉",
+          "pinyin": "chū wén zhēng yàn yǐ wú chán",
+          "story": "以听觉起笔，征雁南飞、蝉声断绝，从声音的消失写秋意已深。",
+          "pages": [
+            {
+              "prompt": "秋夜天空，雁阵南飞，地面寒蝉无声，百尺高楼直入云霄。",
+              "image_url": ""
+            },
+            {
+              "prompt": "楼上远眺，水天一色，月光与霜色交融，画面冷寂而高远。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "青女素娥俱耐冷",
+          "pinyin": "qīng nǚ sù é jù nài lěng",
+          "story": "青女是神话中主管霜雪的女神，素娥即嫦娥。诗人借两位女神写霜月之夜的清寒高洁。",
+          "pages": [
+            {
+              "prompt": "霜雪女神青女与月中素娥并肩而立，寒光中衣袂飘举，神态冷傲。",
+              "image_url": ""
+            },
+            {
+              "prompt": "两位女神在月光与霜色交织的天地间，画面清冷华美。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "月中霜里斗婵娟",
+          "pinyin": "yuè zhōng shuāng lǐ dòu chán juān",
+          "story": "月在霜中、霜在月里，互相争艳。诗人将自然景象提升为神话境界的审美较量。",
+          "pages": [
+            {
+              "prompt": "月光与霜华交相辉映，天地间一片银白，宛如仙境比美。",
+              "image_url": ""
+            },
+            {
+              "prompt": "特写霜月交辉的晶莹质感，画面空灵澄澈。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《霜月》以七言绝句写秋夜霜月，声调由听觉起笔、视觉展开、神话收束，层层递进。",
+      "lines": [
+        {
+          "text": "初闻征雁已无蝉",
+          "rhythm": "初闻 / 征雁 / 已无蝉",
+          "tonePattern": "平平 / 平仄 / 仄平平",
+          "readingTip": "语速宜缓，读出秋意渐深的寂寥感。",
+          "emotionLink": "声音的消失暗示清冷氛围。"
+        },
+        {
+          "text": "百尺楼高水接天",
+          "rhythm": "百尺 / 楼高 / 水接天",
+          "tonePattern": "仄仄 / 平平 / 仄仄平",
+          "readingTip": "视野陡然升高，读得开阔舒展。",
+          "emotionLink": "由听觉转入视觉，境界蓦然开阔。"
+        },
+        {
+          "text": "青女素娥俱耐冷",
+          "rhythm": "青女 / 素娥 / 俱耐冷",
+          "tonePattern": "平仄 / 仄平 / 平仄仄",
+          "readingTip": "语气转坚定，读出女神的冷傲风骨。",
+          "emotionLink": "从自然景物转入神话人格。"
+        },
+        {
+          "text": "月中霜里斗婵娟",
+          "rhythm": "月中 / 霜里 / 斗婵娟",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "收束要轻盈华美，留下余韵。",
+          "emotionLink": "以美的较量收束全篇。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两句",
+          "text": "从听觉到视觉，由低到高，先抑后扬地展开秋夜画面。"
+        },
+        {
+          "range": "后两句",
+          "text": "由实入虚，以神话人物赋予霜月人格，境界拔到最高处。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《霜月》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐七言绝句，借霜月写秋夜清寒高洁之美。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "征雁",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "南飞的大雁，以雁鸣写秋深，以声音的远去暗示季节流转与孤寂。",
+          "role": "听觉意象",
+          "source": "初闻征雁已无蝉",
+          "images": []
+        },
+        {
+          "name": "蝉声已绝",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "蝉声断绝暗示秋意已深，万物趋于沉寂。",
+          "role": "听觉意象",
+          "source": "初闻征雁已无蝉",
+          "images": []
+        },
+        {
+          "name": "百尺楼",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "高楼百尺，既是实写登高远眺之处，也象征诗人孤高清寒的精神境界。",
+          "role": "空间意象",
+          "source": "百尺楼高水接天",
+          "images": []
+        },
+        {
+          "name": "水天相接",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "水与天连成一片，写秋夜高远空旷的视觉感受。",
+          "role": "视觉意象",
+          "source": "百尺楼高水接天",
+          "images": []
+        },
+        {
+          "name": "秋霜",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "秋夜之霜，清冷洁白，既是自然物象也是高洁品格的象征。",
+          "role": "核心意象",
+          "source": "月中霜里斗婵娟",
+          "images": []
+        },
+        {
+          "name": "明月",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "秋夜明月，与霜交相辉映，共同营造清寒空灵的意境。",
+          "role": "核心意象",
+          "source": "月中霜里斗婵娟",
+          "images": []
+        },
+        {
+          "name": "婵娟",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "月色美好的样子，此处亦暗指青女素娥的美丽姿态。",
+          "role": "审美意象",
+          "source": "月中霜里斗婵娟",
+          "images": []
+        },
+        {
+          "name": "青女",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "神话中主管霜雪的女神。《淮南子》载：'青女乃出，以降霜雪。'",
+          "role": "神话典故",
+          "source": "青女素娥俱耐冷",
+          "images": []
+        },
+        {
+          "name": "素娥",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "即嫦娥，月中女神。借嫦娥写月的清冷高洁。",
+          "role": "神话典故",
+          "source": "青女素娥俱耐冷",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗笼罩在秋夜的清冷氛围中，雁去蝉绝、霜月交寒。",
+          "role": "情感基调",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "高洁傲岸",
+          "category": 2,
+          "symbolSize": 42,
+          "info": "借青女素娥'俱耐冷'写出不畏清寒、孤高自许的精神品格。",
+          "role": "情感表达",
+          "source": "青女素娥俱耐冷",
+          "images": []
+        },
+        {
+          "name": "孤独",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "登高远望、独对霜月的孤寂之感。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "秋夜之景",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "以征雁、霜月、高楼写秋夜的清寒之美。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "美丽与高洁",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "霜月争辉的审美境界，象征高洁的人格理想。",
+          "role": "主题表达",
+          "source": "月中霜里斗婵娟",
+          "images": []
+        },
+        {
+          "name": "神话想象",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "借青女素娥的神话将自然景象提升为超现实的审美境界。",
+          "role": "主题表达",
+          "source": "后两句",
+          "images": []
+        },
+        {
+          "name": "高楼",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "诗人登临远眺之处。",
+          "role": "诗中地点",
+          "source": "百尺楼高水接天",
+          "images": []
+        },
+        {
+          "name": "秋夜",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "初闻征雁已无蝉——以听觉写秋夜的来临。",
+          "role": "意象元素",
+          "source": "初闻征雁已无蝉",
+          "images": []
+        },
+        {
+          "name": "斗婵娟",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "青女与素娥在霜月之中争艳——将自然景象人格化为美的较量。",
+          "role": "核心意象",
+          "source": "月中霜里斗婵娟",
+          "images": []
+        },
+        {
+          "name": "清冷之美",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "全诗审美情感——霜月交辉带来的清冷而华美的审美体验。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《霜月》",
+          "target": "征雁"
+        },
+        {
+          "source": "《霜月》",
+          "target": "蝉声已绝"
+        },
+        {
+          "source": "《霜月》",
+          "target": "百尺楼"
+        },
+        {
+          "source": "《霜月》",
+          "target": "水天相接"
+        },
+        {
+          "source": "《霜月》",
+          "target": "秋霜"
+        },
+        {
+          "source": "《霜月》",
+          "target": "明月"
+        },
+        {
+          "source": "《霜月》",
+          "target": "青女"
+        },
+        {
+          "source": "《霜月》",
+          "target": "素娥"
+        },
+        {
+          "source": "《霜月》",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《霜月》",
+          "target": "高洁傲岸"
+        },
+        {
+          "source": "《霜月》",
+          "target": "秋夜之景"
+        },
+        {
+          "source": "《霜月》",
+          "target": "美丽与高洁"
+        },
+        {
+          "source": "《霜月》",
+          "target": "神话想象"
+        },
+        {
+          "source": "征雁",
+          "target": "蝉声已绝"
+        },
+        {
+          "source": "征雁",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "秋霜",
+          "target": "明月"
+        },
+        {
+          "source": "秋霜",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "明月",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "青女",
+          "target": "秋霜"
+        },
+        {
+          "source": "素娥",
+          "target": "明月"
+        },
+        {
+          "source": "青女",
+          "target": "高洁傲岸"
+        },
+        {
+          "source": "素娥",
+          "target": "高洁傲岸"
+        },
+        {
+          "source": "青女",
+          "target": "素娥"
+        },
+        {
+          "source": "婵娟",
+          "target": "美丽与高洁"
+        },
+        {
+          "source": "百尺楼",
+          "target": "高楼"
+        },
+        {
+          "source": "高楼",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《霜月》",
+          "target": "秋夜"
+        },
+        {
+          "source": "《霜月》",
+          "target": "清冷之美"
+        },
+        {
+          "source": "《霜月》",
+          "target": "斗婵娟"
+        },
+        {
+          "source": "秋夜",
+          "target": "征雁"
+        },
+        {
+          "source": "秋夜",
+          "target": "蝉声已绝"
+        },
+        {
+          "source": "征雁",
+          "target": "秋夜"
+        },
+        {
+          "source": "斗婵娟",
+          "target": "婵娟"
+        },
+        {
+          "source": "斗婵娟",
+          "target": "美丽与高洁"
+        },
+        {
+          "source": "斗婵娟",
+          "target": "清冷之美"
+        },
+        {
+          "source": "青女",
+          "target": "斗婵娟"
+        },
+        {
+          "source": "素娥",
+          "target": "斗婵娟"
+        },
+        {
+          "source": "清冷之美",
+          "target": "孤寂清冷"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "初闻征雁已无蝉",
+          "explanation": "以听觉写秋深，雁鸣初闻而蝉声已绝，在一片静寂中传达季节流转的清冷之感。",
+          "dimensions": [
+            "清冷感",
+            "孤寂感",
+            "时间流逝感"
+          ],
+          "scores": [
+            0.82,
+            0.75,
+            0.6
+          ]
+        },
+        {
+          "line": "百尺楼高水接天",
+          "explanation": "登高望远，水天相接，境界豁然开朗，但在空旷无垠中更显人之渺小与孤独。",
+          "dimensions": [
+            "清冷感",
+            "孤寂感",
+            "开阔感"
+          ],
+          "scores": [
+            0.7,
+            0.78,
+            0.85
+          ]
+        },
+        {
+          "line": "青女素娥俱耐冷",
+          "explanation": "借两位女神写霜月之夜的清寒精神，'俱耐冷'三字写出孤高自许、不畏清寒的人格力量。",
+          "dimensions": [
+            "清冷感",
+            "高洁感",
+            "孤傲感"
+          ],
+          "scores": [
+            0.85,
+            0.9,
+            0.8
+          ]
+        },
+        {
+          "line": "月中霜里斗婵娟",
+          "explanation": "霜月竞相争艳，在最美的意象中收束全诗，将自然之景升华为审美的巅峰。",
+          "dimensions": [
+            "清冷感",
+            "审美愉悦",
+            "超逸感"
+          ],
+          "scores": [
+            0.65,
+            0.88,
+            0.82
+          ]
+        }
+      ]
+    }
+  },
+  "wuti-zuoyexingchen": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "昨夜星辰昨夜风",
+          "pinyin": "zuó yè xīng chén zuó yè fēng",
+          "story": "以'昨夜'二字反复起兴，星辰与风都是美好而不可留的瞬间。",
+          "pages": [
+            {
+              "prompt": "昨夜星空璀璨，微风轻拂，画楼桂堂在夜色中隐约可见。",
+              "image_url": ""
+            },
+            {
+              "prompt": "星光与灯火交织，画面充满浪漫而又怅惘的氛围。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "画楼西畔桂堂东",
+          "pinyin": "huà lóu xī pàn guì táng dōng",
+          "story": "画楼与桂堂暗示了一场华美宴会的地点，在建筑空间的对称中写相遇之美。",
+          "pages": [
+            {
+              "prompt": "精美的画楼与桂堂之间，灯火通明，宾朋满座。",
+              "image_url": ""
+            },
+            {
+              "prompt": "建筑细节精美，唐代风格的楼阁在夜色中流光溢彩。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "身无彩凤双飞翼",
+          "pinyin": "shēn wú cǎi fèng shuāng fēi yì",
+          "story": "自叹没有彩凤的双翼可以飞到对方身边，以华丽的神话意象写无法相见的遗憾。",
+          "pages": [
+            {
+              "prompt": "彩凤展翅，而诗人困于地上仰望，形成强烈的对比。",
+              "image_url": ""
+            },
+            {
+              "prompt": "彩凤的翅膀在夜空中闪耀，地面的人影孤独。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "心有灵犀一点通",
+          "pinyin": "xīn yǒu líng xī yì diǎn tōng",
+          "story": "传说犀牛角中有白纹贯通两端，被视为感应之物。此句写心灵的默契相通，是全诗最温暖的一笔。",
+          "pages": [
+            {
+              "prompt": "特写犀角中白纹贯通，象征心灵的灵犀相通。",
+              "image_url": ""
+            },
+            {
+              "prompt": "温暖的色调，两颗心通过光的丝线相连。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《无题·昨夜星辰昨夜风》以七律写宴饮欢会与别后相思，声调在华丽与失意间波动。",
+      "lines": [
+        {
+          "text": "昨夜星辰昨夜风",
+          "rhythm": "昨夜 / 星辰 / 昨夜风",
+          "tonePattern": "仄仄 / 平平 / 仄仄平",
+          "readingTip": "反复咏叹'昨夜'，读出追忆的绵长感。",
+          "emotionLink": "以追忆口吻开篇。"
+        },
+        {
+          "text": "画楼西畔桂堂东",
+          "rhythm": "画楼 / 西畔 / 桂堂东",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "读出空间的对称与华美。",
+          "emotionLink": "建筑之美暗示欢会之盛。"
+        },
+        {
+          "text": "身无彩凤双飞翼",
+          "rhythm": "身无 / 彩凤 / 双飞翼",
+          "tonePattern": "平平 / 仄仄 / 平平仄",
+          "readingTip": "'身无'略顿，读出遗憾感。",
+          "emotionLink": "从欢会跌落至分离的现实。"
+        },
+        {
+          "text": "心有灵犀一点通",
+          "rhythm": "心有 / 灵犀 / 一点通",
+          "tonePattern": "平仄 / 平平 / 仄仄平",
+          "readingTip": "语气转温暖坚定，读出信念感。",
+          "emotionLink": "在遗憾中升起精神层面的慰藉。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两联",
+          "text": "由追忆起笔，在星辰画楼的美好中转入身无双翼的失落。"
+        },
+        {
+          "range": "后两联",
+          "text": "以灵犀相通的温暖对抗分离，最终收束于应官走马的现实无奈。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《无题·昨夜星辰昨夜风》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐无题诗中最具画面感的一首，写宴饮欢会与别后相思。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "星辰",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "昨夜星辰，既是自然之景也是美好时光的象征，以'昨夜'的反复咏叹写追忆。",
+          "role": "核心意象",
+          "source": "昨夜星辰昨夜风",
+          "images": []
+        },
+        {
+          "name": "风",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "昨夜之风轻拂，与星辰共同构成美好回忆的氛围。",
+          "role": "氛围意象",
+          "source": "昨夜星辰昨夜风",
+          "images": []
+        },
+        {
+          "name": "画楼",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "精美的楼阁，暗示宴会场所的华贵。",
+          "role": "空间意象",
+          "source": "画楼西畔桂堂东",
+          "images": []
+        },
+        {
+          "name": "桂堂",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "桂花厅堂，与画楼对举，建筑空间之美暗示相逢之美。",
+          "role": "空间意象",
+          "source": "画楼西畔桂堂东",
+          "images": []
+        },
+        {
+          "name": "彩凤",
+          "category": 3,
+          "symbolSize": 42,
+          "info": "神话中的彩色凤凰，其双翼象征飞越阻隔的能力。诗人自叹无此双翼。",
+          "role": "神话典故",
+          "source": "身无彩凤双飞翼",
+          "images": []
+        },
+        {
+          "name": "灵犀",
+          "category": 3,
+          "symbolSize": 42,
+          "info": "传说犀牛角中有白纹贯通两端，被视为心灵感应的象征。",
+          "role": "神话典故",
+          "source": "心有灵犀一点通",
+          "images": []
+        },
+        {
+          "name": "春酒",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "隔座送钩时饮用的暖酒，暗示宴会的温馨与欢洽。",
+          "role": "宴会意象",
+          "source": "隔座送钩春酒暖",
+          "images": []
+        },
+        {
+          "name": "蜡灯",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "分曹射覆时照明的红烛，宴会场景的核心意象。",
+          "role": "宴会意象",
+          "source": "分曹射覆蜡灯红",
+          "images": []
+        },
+        {
+          "name": "转蓬",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "随风飘转的蓬草，象征诗人漂泊不定的仕途生涯。",
+          "role": "象征意象",
+          "source": "走马兰台类转蓬",
+          "images": []
+        },
+        {
+          "name": "爱情",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗核心情感——对美好相遇的追忆与不能相守的遗憾。",
+          "role": "情感主线",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "哀婉缠绵",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "身无双翼的遗憾与灵犀相通的慰藉交织。",
+          "role": "情感表达",
+          "source": "身无彩凤双飞翼，心有灵犀一点通",
+          "images": []
+        },
+        {
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 33,
+          "info": "听鼓应官、走马兰台的无奈。",
+          "role": "情感表达",
+          "source": "嗟余听鼓应官去",
+          "images": []
+        },
+        {
+          "name": "相思",
+          "category": 4,
+          "symbolSize": 40,
+          "info": "全诗主题——对昨夜美好相逢的追忆与相思。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "仕途失意",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "末联以'走马兰台类转蓬'写仕途奔波的无奈。",
+          "role": "主题表达",
+          "source": "嗟余听鼓应官去，走马兰台类转蓬",
+          "images": []
+        },
+        {
+          "name": "欢宴",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "诗中描写的宴饮场景——送钩、射覆、春酒、蜡灯。",
+          "role": "主题表达",
+          "source": "颔联、颈联",
+          "images": []
+        },
+        {
+          "name": "兰台",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "唐代秘书省的别称，诗人任职之处。",
+          "role": "诗中地点",
+          "source": "走马兰台类转蓬",
+          "images": []
+        },
+        {
+          "name": "桂堂·地点",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "宴饮聚会的华美厅堂。",
+          "role": "诗中地点",
+          "source": "画楼西畔桂堂东",
+          "images": []
+        },
+        {
+          "name": "送钩",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "古代宴饮游戏——隔座送钩，以游戏之乐写欢会之盛。",
+          "role": "意象元素",
+          "source": "隔座送钩春酒暖",
+          "images": []
+        },
+        {
+          "name": "射覆",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "古代猜物游戏——分曹射覆，与送钩对举写宴会欢乐。",
+          "role": "意象元素",
+          "source": "分曹射覆蜡灯红",
+          "images": []
+        },
+        {
+          "name": "听鼓",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "嗟余听鼓应官去——更鼓响起，不得不应官而去。",
+          "role": "意象元素",
+          "source": "嗟余听鼓应官去",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "星辰"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "风"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "画楼"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "桂堂·地点"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "彩凤"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "灵犀"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "春酒"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "蜡灯"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "转蓬"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "爱情"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "哀婉缠绵"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "相思"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "仕途失意"
+        },
+        {
+          "source": "星辰",
+          "target": "爱情"
+        },
+        {
+          "source": "彩凤",
+          "target": "哀婉缠绵"
+        },
+        {
+          "source": "灵犀",
+          "target": "爱情"
+        },
+        {
+          "source": "转蓬",
+          "target": "仕途失意"
+        },
+        {
+          "source": "春酒",
+          "target": "蜡灯"
+        },
+        {
+          "source": "画楼",
+          "target": "桂堂·地点"
+        },
+        {
+          "source": "兰台",
+          "target": "仕途失意"
+        },
+        {
+          "source": "转蓬",
+          "target": "忧愁"
+        },
+        {
+          "source": "灵犀",
+          "target": "彩凤"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "送钩"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "射覆"
+        },
+        {
+          "source": "《无题·昨夜星辰昨夜风》",
+          "target": "听鼓"
+        },
+        {
+          "source": "送钩",
+          "target": "春酒"
+        },
+        {
+          "source": "射覆",
+          "target": "蜡灯"
+        },
+        {
+          "source": "送钩",
+          "target": "射覆"
+        },
+        {
+          "source": "听鼓",
+          "target": "转蓬"
+        },
+        {
+          "source": "听鼓",
+          "target": "忧愁"
+        },
+        {
+          "source": "听鼓",
+          "target": "兰台"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "昨夜星辰昨夜风",
+          "explanation": "'昨夜'二字反复咏叹，以星辰与风的意象营造追忆的美好与怅惘。",
+          "dimensions": [
+            "追忆感",
+            "美好感",
+            "怅惘感"
+          ],
+          "scores": [
+            0.9,
+            0.85,
+            0.65
+          ]
+        },
+        {
+          "line": "身无彩凤双飞翼，心有灵犀一点通",
+          "explanation": "从身无双翼的遗憾到灵犀相通的温暖，一抑一扬之间写出爱情的复杂层次。",
+          "dimensions": [
+            "遗憾",
+            "温暖",
+            "深情"
+          ],
+          "scores": [
+            0.8,
+            0.9,
+            0.88
+          ]
+        },
+        {
+          "line": "隔座送钩春酒暖，分曹射覆蜡灯红",
+          "explanation": "以宴会场景的温暖与热闹反衬内心的相思之苦。",
+          "dimensions": [
+            "温暖",
+            "热闹",
+            "暗含忧伤"
+          ],
+          "scores": [
+            0.85,
+            0.75,
+            0.55
+          ]
+        },
+        {
+          "line": "嗟余听鼓应官去，走马兰台类转蓬",
+          "explanation": "从宴会欢愉跌落至应官奔波的现实，以转蓬自喻写出身不由己的无奈。",
+          "dimensions": [
+            "无奈",
+            "失落",
+            "漂泊感"
+          ],
+          "scores": [
+            0.88,
+            0.82,
+            0.85
+          ]
+        }
+      ]
+    }
+  },
+  "liu": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "曾逐东风拂舞筵",
+          "pinyin": "céng zhú dōng fēng fú wǔ yán",
+          "story": "写春天的柳树——追逐东风、轻拂舞筵，一派青春繁华。",
+          "pages": [
+            {
+              "prompt": "春日柳树轻拂宴席，东风和煦，绿丝袅袅。",
+              "image_url": ""
+            },
+            {
+              "prompt": "柳枝在春风中舞动，舞筵上人影绰约。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "如何肯到清秋日",
+          "pinyin": "rú hé kěn dào qīng qiū rì",
+          "story": "以反问写柳树从春到秋的变化，'如何肯'三字充满惋惜。",
+          "pages": [
+            {
+              "prompt": "同一棵柳树，从春日的翠绿过渡到秋日的萧瑟，时光流转。",
+              "image_url": ""
+            },
+            {
+              "prompt": "柳叶枯黄，斜阳映照，蝉声凄切。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《柳》以七言绝句写柳树从春到秋的变化，借物写人，声调由繁华跌入萧瑟。",
+      "lines": [
+        {
+          "text": "曾逐东风拂舞筵",
+          "rhythm": "曾逐 / 东风 / 拂舞筵",
+          "tonePattern": "平仄 / 平平 / 仄仄平",
+          "readingTip": "语速轻快，读出春日的繁华与生机。",
+          "emotionLink": "追忆昔日的繁华。"
+        },
+        {
+          "text": "乐游春苑断肠天",
+          "rhythm": "乐游 / 春苑 / 断肠天",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "'断肠天'三字宜稍重，在繁华中暗含伤感。",
+          "emotionLink": "乐极生悲的预感。"
+        },
+        {
+          "text": "如何肯到清秋日",
+          "rhythm": "如何 / 肯到 / 清秋日",
+          "tonePattern": "平平 / 仄仄 / 平平仄",
+          "readingTip": "读出反问中的惋惜与不忍。",
+          "emotionLink": "从繁华跌入衰败的过渡。"
+        },
+        {
+          "text": "已带斜阳又带蝉",
+          "rhythm": "已带 / 斜阳 / 又带蝉",
+          "tonePattern": "仄仄 / 平平 / 仄仄平",
+          "readingTip": "收束要慢而沉重，读出暮色苍凉。",
+          "emotionLink": "斜阳与蝉声叠加出最深沉的萧瑟。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两句",
+          "text": "写昔日春日柳树的繁华，但'断肠天'已埋下哀伤的伏笔。"
+        },
+        {
+          "range": "后两句",
+          "text": "以反问带出秋日柳树的衰败，斜阳与蝉声双重叠加萧瑟之感。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《柳》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐七言绝句，借柳树从春到秋的变化写时光流逝与身世飘零。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "柳",
+          "category": 1,
+          "symbolSize": 48,
+          "info": "全诗的核心意象，春日曾拂舞筵、秋日已带斜阳，是时光流逝的见证者与承受者。",
+          "role": "核心意象",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "东风",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "春风，象征昔日的美好时光与青春繁华。",
+          "role": "时间意象",
+          "source": "曾逐东风拂舞筵",
+          "images": []
+        },
+        {
+          "name": "舞筵",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "春日宴席上的歌舞场景，代表曾经的繁华与欢乐。",
+          "role": "场景意象",
+          "source": "曾逐东风拂舞筵",
+          "images": []
+        },
+        {
+          "name": "斜阳",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "秋日斜阳，象征迟暮与衰落，是全诗最沉重的视觉意象。",
+          "role": "核心意象",
+          "source": "已带斜阳又带蝉",
+          "images": []
+        },
+        {
+          "name": "蝉",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "秋蝉的鸣叫，与斜阳共同构成萧瑟的秋日氛围。",
+          "role": "听觉意象",
+          "source": "已带斜阳又带蝉",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "秋日柳树带斜阳与蝉声的萧瑟之感，也是诗人内心孤寂的投射。",
+          "role": "情感基调",
+          "source": "后两句",
+          "images": []
+        },
+        {
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "从春日繁华到秋日萧瑟的变化所引发的深沉忧愁。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "断肠",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "'乐游春苑断肠天'——在春日繁华中已暗含极度的伤感。",
+          "role": "情感表达",
+          "source": "乐游春苑断肠天",
+          "images": []
+        },
+        {
+          "name": "时光流逝",
+          "category": 4,
+          "symbolSize": 44,
+          "info": "柳树从春到秋的变化象征时光无情流逝，是全诗的核心主题。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "身世之感",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "借柳自喻——昔日才华受赏、今朝沦落漂泊。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "今昔对比",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "以昔日春风舞筵与今日斜阳秋蝉形成尖锐对比。",
+          "role": "结构主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "乐游春苑",
+          "category": 5,
+          "symbolSize": 33,
+          "info": "即乐游原，长安游览胜地，春日柳树曾在此拂舞筵。",
+          "role": "诗中地点",
+          "source": "乐游春苑断肠天",
+          "images": []
+        },
+        {
+          "name": "春苑",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "乐游春苑——柳树曾在春日舞筵上拂动之地。",
+          "role": "意象元素",
+          "source": "乐游春苑断肠天",
+          "images": []
+        },
+        {
+          "name": "清秋",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "如何肯到清秋日——秋日的清凉与衰败。",
+          "role": "意象元素",
+          "source": "如何肯到清秋日",
+          "images": []
+        },
+        {
+          "name": "断肠天",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "春日在乐游春苑中已感到断肠——以乐景写哀情。",
+          "role": "情感表达",
+          "source": "乐游春苑断肠天",
+          "images": []
+        },
+        {
+          "name": "不忍",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "如何肯到——对美好时光逝去的不忍与不甘。",
+          "role": "情感表达",
+          "source": "如何肯到清秋日",
+          "images": []
+        },
+        {
+          "name": "物我交融",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "以柳自喻——柳树从春到秋的变化即是诗人身世的写照。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《柳》",
+          "target": "柳"
+        },
+        {
+          "source": "《柳》",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《柳》",
+          "target": "忧愁"
+        },
+        {
+          "source": "《柳》",
+          "target": "时光流逝"
+        },
+        {
+          "source": "《柳》",
+          "target": "身世之感"
+        },
+        {
+          "source": "柳",
+          "target": "东风"
+        },
+        {
+          "source": "柳",
+          "target": "斜阳"
+        },
+        {
+          "source": "柳",
+          "target": "蝉"
+        },
+        {
+          "source": "柳",
+          "target": "舞筵"
+        },
+        {
+          "source": "东风",
+          "target": "舞筵"
+        },
+        {
+          "source": "斜阳",
+          "target": "蝉"
+        },
+        {
+          "source": "斜阳",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "蝉",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "斜阳",
+          "target": "时光流逝"
+        },
+        {
+          "source": "东风",
+          "target": "时光流逝"
+        },
+        {
+          "source": "时光流逝",
+          "target": "忧愁"
+        },
+        {
+          "source": "舞筵",
+          "target": "乐游春苑"
+        },
+        {
+          "source": "断肠",
+          "target": "忧愁"
+        },
+        {
+          "source": "今昔对比",
+          "target": "时光流逝"
+        },
+        {
+          "source": "《柳》",
+          "target": "春苑"
+        },
+        {
+          "source": "《柳》",
+          "target": "清秋"
+        },
+        {
+          "source": "《柳》",
+          "target": "不忍"
+        },
+        {
+          "source": "《柳》",
+          "target": "物我交融"
+        },
+        {
+          "source": "春苑",
+          "target": "东风"
+        },
+        {
+          "source": "春苑",
+          "target": "乐游春苑"
+        },
+        {
+          "source": "清秋",
+          "target": "斜阳"
+        },
+        {
+          "source": "清秋",
+          "target": "蝉"
+        },
+        {
+          "source": "断肠天",
+          "target": "断肠"
+        },
+        {
+          "source": "断肠天",
+          "target": "忧愁"
+        },
+        {
+          "source": "不忍",
+          "target": "清秋"
+        },
+        {
+          "source": "春苑",
+          "target": "清秋"
+        },
+        {
+          "source": "物我交融",
+          "target": "柳"
+        },
+        {
+          "source": "物我交融",
+          "target": "身世之感"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "曾逐东风拂舞筵",
+          "explanation": "以'曾'字领起对昔日繁华的追忆，柳枝拂筵的画面轻盈美好。",
+          "dimensions": [
+            "追忆感",
+            "繁华感",
+            "轻盈感"
+          ],
+          "scores": [
+            0.8,
+            0.85,
+            0.75
+          ]
+        },
+        {
+          "line": "乐游春苑断肠天",
+          "explanation": "在春游的欢乐中突然插入'断肠'二字，以乐景写哀情，是全诗情感的第一次转折。",
+          "dimensions": [
+            "哀感",
+            "矛盾感",
+            "不祥预感"
+          ],
+          "scores": [
+            0.85,
+            0.7,
+            0.65
+          ]
+        },
+        {
+          "line": "如何肯到清秋日",
+          "explanation": "以反问写不忍面对时光流逝，'如何肯'三字蕴含诗人对往昔的无限留恋。",
+          "dimensions": [
+            "惋惜",
+            "无奈",
+            "留恋"
+          ],
+          "scores": [
+            0.9,
+            0.8,
+            0.85
+          ]
+        },
+        {
+          "line": "已带斜阳又带蝉",
+          "explanation": "斜阳与蝉声双重叠加，将萧瑟推到极致，是全诗最沉重的一笔。",
+          "dimensions": [
+            "萧瑟感",
+            "苍凉",
+            "沉重"
+          ],
+          "scores": [
+            0.92,
+            0.88,
+            0.85
+          ]
+        }
+      ]
+    }
+  },
+  "wanqing": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "深居俯夹城",
+          "pinyin": "shēn jū fǔ jiā chéng",
+          "story": "诗人深居简出，俯视夹城之外的景色，安静而自在。",
+          "pages": [
+            {
+              "prompt": "诗人幽居小楼，从高处俯瞰城外景色，春末夏初的清新空气弥漫。",
+              "image_url": ""
+            },
+            {
+              "prompt": "雨后初晴，阳光穿过云层洒在幽草与高阁之上。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "天意怜幽草",
+          "pinyin": "tiān yì lián yōu cǎo",
+          "story": "上天似乎怜惜那幽处的草，给它们雨后的晚晴。此句暗喻诗人对命运的感恩。",
+          "pages": [
+            {
+              "prompt": "雨后的幽草在夕阳下闪着水光，温暖而生机盎然。",
+              "image_url": ""
+            },
+            {
+              "prompt": "微光透过小窗照入室内，幽草在光影中摇曳。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《晚晴》以五言律诗写雨后晚晴的宁静心境，声调平和舒展，是李商隐诗中少有的温暖之作。",
+      "lines": [
+        {
+          "text": "深居俯夹城",
+          "rhythm": "深居 / 俯夹城",
+          "tonePattern": "平平 / 仄仄平",
+          "readingTip": "起句平稳，读出幽居的安静。",
+          "emotionLink": "以幽居姿态开篇。"
+        },
+        {
+          "text": "春去夏犹清",
+          "rhythm": "春去 / 夏犹清",
+          "tonePattern": "平仄 / 仄平平",
+          "readingTip": "语气舒展，读出初夏的清新。",
+          "emotionLink": "季节过渡中的清新之感。"
+        },
+        {
+          "text": "天意怜幽草",
+          "rhythm": "天意 / 怜幽草",
+          "tonePattern": "平仄 / 平平仄",
+          "readingTip": "'怜'字略重，读出感恩之情。",
+          "emotionLink": "对命运的温情体悟。"
+        },
+        {
+          "text": "人间重晚晴",
+          "rhythm": "人间 / 重晚晴",
+          "tonePattern": "平平 / 仄仄平",
+          "readingTip": "句中眼目，读得沉稳而温暖。",
+          "emotionLink": "全诗的哲理核心。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两联",
+          "text": "从幽居写到晚晴，由空间到时间，由外在景物到内心感悟，步步深入。"
+        },
+        {
+          "range": "后两联",
+          "text": "以高阁、小窗、越鸟归飞的意象写晚晴带来的清明与自由。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《晚晴》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐五言律诗，以雨后晚晴写晚年对生命的温情体悟，是诗集中少有的温暖明亮之作。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "深居",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "幽居之所，既是实写居住环境，也象征诗人晚年退守自处的心境。",
+          "role": "空间意象",
+          "source": "深居俯夹城",
+          "images": []
+        },
+        {
+          "name": "幽草",
+          "category": 1,
+          "symbolSize": 42,
+          "info": "雨后幽处的草，象征被上天眷顾的卑微生命，是诗人的自喻。",
+          "role": "核心意象",
+          "source": "天意怜幽草",
+          "images": []
+        },
+        {
+          "name": "晚晴",
+          "category": 1,
+          "symbolSize": 44,
+          "info": "雨后的傍晚晴天，既是自然景象也是人生境界——经历风雨后的平静与温暖。",
+          "role": "核心意象",
+          "source": "人间重晚晴",
+          "images": []
+        },
+        {
+          "name": "高阁",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "登高所见的楼阁，雨后显得更加高远清晰。",
+          "role": "视觉意象",
+          "source": "并添高阁迥",
+          "images": []
+        },
+        {
+          "name": "小窗",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "室内小窗，微光透入，写雨后阳光的温柔与细腻。",
+          "role": "空间意象",
+          "source": "微注小窗明",
+          "images": []
+        },
+        {
+          "name": "越鸟",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "南方之鸟，巢干后归飞体轻，象征经历风雨后重获自由与安宁。",
+          "role": "象征意象",
+          "source": "越鸟巢干后，归飞体更轻",
+          "images": []
+        },
+        {
+          "name": "宁静愉悦",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗核心情感——雨后晚晴带来的平静与淡淡的喜悦。",
+          "role": "情感基调",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "闲适",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "幽居俯视、静观晚晴的从容闲适。",
+          "role": "情感表达",
+          "source": "深居俯夹城",
+          "images": []
+        },
+        {
+          "name": "感恩",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "对天意怜幽草的体悟——历经风雨后对命运的温情理解。",
+          "role": "情感表达",
+          "source": "天意怜幽草，人间重晚晴",
+          "images": []
+        },
+        {
+          "name": "隐逸",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "深居简出、与自然共处的隐逸情怀。",
+          "role": "主题表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "人生感悟",
+          "category": 4,
+          "symbolSize": 38,
+          "info": "从晚晴中体悟人生——风雨之后的平静更值得珍惜。",
+          "role": "主题表达",
+          "source": "天意怜幽草，人间重晚晴",
+          "images": []
+        },
+        {
+          "name": "自然之美",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "对雨后自然景物的细腻描绘——幽草、高阁、小窗、越鸟。",
+          "role": "主题表达",
+          "source": "颔联、颈联",
+          "images": []
+        },
+        {
+          "name": "夹城",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "诗人深居俯瞰之处。",
+          "role": "诗中地点",
+          "source": "深居俯夹城",
+          "images": []
+        },
+        {
+          "name": "高阁·地点",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "雨后登高远望的楼阁。",
+          "role": "诗中地点",
+          "source": "并添高阁迥",
+          "images": []
+        },
+        {
+          "name": "初夏",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "春去夏犹清——春夏之交的清新。",
+          "role": "意象元素",
+          "source": "春去夏犹清",
+          "images": []
+        },
+        {
+          "name": "微光",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "微注小窗明——雨后阳光透过小窗的温柔光线。",
+          "role": "意象元素",
+          "source": "微注小窗明",
+          "images": []
+        },
+        {
+          "name": "归飞",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "越鸟巢干后归飞——风雨过后重返家园的轻快。",
+          "role": "意象元素",
+          "source": "越鸟巢干后，归飞体更轻",
+          "images": []
+        },
+        {
+          "name": "温暖",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "全诗情感特质——李商隐诗中少有的温暖明亮。",
+          "role": "情感表达",
+          "source": "天意怜幽草，人间重晚晴",
+          "images": []
+        },
+        {
+          "name": "回归",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "越鸟归飞——经历风雨后回归本真的主题。",
+          "role": "主题表达",
+          "source": "越鸟巢干后，归飞体更轻",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《晚晴》",
+          "target": "幽草"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "晚晴"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "越鸟"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "闲适"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "感恩"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "隐逸"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "人生感悟"
+        },
+        {
+          "source": "幽草",
+          "target": "晚晴"
+        },
+        {
+          "source": "幽草",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "晚晴",
+          "target": "人生感悟"
+        },
+        {
+          "source": "晚晴",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "越鸟",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "越鸟",
+          "target": "隐逸"
+        },
+        {
+          "source": "深居",
+          "target": "闲适"
+        },
+        {
+          "source": "小窗",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "高阁·地点",
+          "target": "夹城"
+        },
+        {
+          "source": "感恩",
+          "target": "人生感悟"
+        },
+        {
+          "source": "自然之美",
+          "target": "隐逸"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "初夏"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "微光"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "归飞"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "温暖"
+        },
+        {
+          "source": "《晚晴》",
+          "target": "回归"
+        },
+        {
+          "source": "初夏",
+          "target": "幽草"
+        },
+        {
+          "source": "微光",
+          "target": "小窗"
+        },
+        {
+          "source": "微光",
+          "target": "晚晴"
+        },
+        {
+          "source": "归飞",
+          "target": "越鸟"
+        },
+        {
+          "source": "归飞",
+          "target": "回归"
+        },
+        {
+          "source": "温暖",
+          "target": "宁静愉悦"
+        },
+        {
+          "source": "回归",
+          "target": "隐逸"
+        },
+        {
+          "source": "温暖",
+          "target": "感恩"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "深居俯夹城，春去夏犹清",
+          "explanation": "以幽居姿态和季节的清新写晚年心境——退守之后的平静与清朗。",
+          "dimensions": [
+            "平静感",
+            "清朗感",
+            "闲适感"
+          ],
+          "scores": [
+            0.85,
+            0.75,
+            0.8
+          ]
+        },
+        {
+          "line": "天意怜幽草，人间重晚晴",
+          "explanation": "将自然之景提升为人生哲理——卑微生命被上天眷顾，风雨后的平静格外珍贵。",
+          "dimensions": [
+            "温暖感",
+            "哲理感",
+            "感恩"
+          ],
+          "scores": [
+            0.9,
+            0.85,
+            0.88
+          ]
+        },
+        {
+          "line": "并添高阁迥，微注小窗明",
+          "explanation": "雨后视野更加开阔高远，小窗微光中见细腻温柔，是全诗最从容的一联。",
+          "dimensions": [
+            "开阔感",
+            "温柔感",
+            "从容"
+          ],
+          "scores": [
+            0.8,
+            0.85,
+            0.82
+          ]
+        },
+        {
+          "line": "越鸟巢干后，归飞体更轻",
+          "explanation": "以越鸟归飞写风雨过后的自由与轻快，是全诗最轻盈的收束。",
+          "dimensions": [
+            "自由感",
+            "轻快感",
+            "安宁"
+          ],
+          "scores": [
+            0.88,
+            0.9,
+            0.85
+          ]
+        }
+      ]
+    }
+  },
+  "zenghehua": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "世间花叶不相伦",
+          "pinyin": "shì jiān huā yè bù xiāng lún",
+          "story": "世人对待花与叶的态度不同——花入金盆，叶作尘土，以对比开篇。",
+          "pages": [
+            {
+              "prompt": "金盆中的花朵娇艳，而绿叶被弃于尘埃之中。",
+              "image_url": ""
+            },
+            {
+              "prompt": "对比画面——花与叶截然不同的命运。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "惟有绿荷红菡萏",
+          "pinyin": "wéi yǒu lǜ hé hóng hàn dàn",
+          "story": "只有荷花——绿叶红花相得益彰，花叶共荣。",
+          "pages": [
+            {
+              "prompt": "池塘中绿荷与红莲相依相映，卷舒开合自然天成。",
+              "image_url": ""
+            },
+            {
+              "prompt": "特写荷花花瓣与荷叶的和谐之美。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《赠荷花》以七言律诗借荷花写美好事物的自然天真与脆弱易逝。",
+      "lines": [
+        {
+          "text": "世间花叶不相伦",
+          "rhythm": "世间 / 花叶 / 不相伦",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "起句平稳，读出对比中的不平。",
+          "emotionLink": "以对比开篇。"
+        },
+        {
+          "text": "花入金盆叶作尘",
+          "rhythm": "花入 / 金盆 / 叶作尘",
+          "tonePattern": "平仄 / 平平 / 仄仄平",
+          "readingTip": "一扬一抑，读出命运之别。",
+          "emotionLink": "揭示世俗的不公。"
+        },
+        {
+          "text": "惟有绿荷红菡萏",
+          "rhythm": "惟有 / 绿荷 / 红菡萏",
+          "tonePattern": "平仄 / 仄平 / 平仄仄",
+          "readingTip": "语气转赞美，读出例外之美。",
+          "emotionLink": "荷花的独特与完美。"
+        },
+        {
+          "text": "卷舒开合任天真",
+          "rhythm": "卷舒 / 开合 / 任天真",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "读得舒展自然，体现出荷花的天真之态。",
+          "emotionLink": "自然天成的美好。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两联",
+          "text": "以世俗对待花叶的不公对比荷花的自然和谐。"
+        },
+        {
+          "range": "后两联",
+          "text": "写花叶相映之美与翠减红衰的必然结局。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《赠荷花》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐咏物寄慨之作，借荷花写美好事物的自然天真与脆弱易逝。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "绿荷",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "绿色的荷叶，与红花相映共生，象征生命本真的和谐。",
+          "role": "核心意象",
+          "source": "惟有绿荷红菡萏",
+          "images": []
+        },
+        {
+          "name": "红菡萏",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "即红色的荷花（未开为菡萏），与绿叶相配，是自然之美的化身。",
+          "role": "核心意象",
+          "source": "惟有绿荷红菡萏",
+          "images": []
+        },
+        {
+          "name": "金盆",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "世人所重的金盆，象征世俗价值的偏见——只重花不重叶。",
+          "role": "象征意象",
+          "source": "花入金盆叶作尘",
+          "images": []
+        },
+        {
+          "name": "花叶相映",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "荷花的花与叶互相映衬，卷舒开合任自然，是全诗最美的意象。",
+          "role": "核心意象",
+          "source": "此花此叶常相映",
+          "images": []
+        },
+        {
+          "name": "天真",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "荷花卷舒开合的自然本性，不假雕饰，象征本真的美好。",
+          "role": "象征意象",
+          "source": "卷舒开合任天真",
+          "images": []
+        },
+        {
+          "name": "翠减红衰",
+          "category": 1,
+          "symbolSize": 38,
+          "info": "翠绿消减、红艳衰败，写荷花美好的必然消逝，是全诗最沉痛的意象。",
+          "role": "核心意象",
+          "source": "翠减红衰愁杀人",
+          "images": []
+        },
+        {
+          "name": "赞美",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "对荷花自然天真的由衷赞美——花叶共荣、不假雕饰。",
+          "role": "情感表达",
+          "source": "颔联",
+          "images": []
+        },
+        {
+          "name": "哀愁忧郁",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗核心情感——翠减红衰的必然结局所带来的深沉哀愁。",
+          "role": "情感主线",
+          "source": "尾联",
+          "images": []
+        },
+        {
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "对美好事物终将消逝的忧愁。",
+          "role": "情感表达",
+          "source": "翠减红衰愁杀人",
+          "images": []
+        },
+        {
+          "name": "美好事物的消逝",
+          "category": 4,
+          "symbolSize": 44,
+          "info": "全诗的核心主题——自然之美虽动人但脆弱，终将消逝。",
+          "role": "核心主题",
+          "source": "翠减红衰愁杀人",
+          "images": []
+        },
+        {
+          "name": "自然之美",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "对荷花卷舒开合、花叶相映的自然之美的歌颂。",
+          "role": "主题表达",
+          "source": "颔联、颈联",
+          "images": []
+        },
+        {
+          "name": "世俗批判",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "对世人重花轻叶、重表轻里的价值偏见的批判。",
+          "role": "主题表达",
+          "source": "首联",
+          "images": []
+        },
+        {
+          "name": "池塘",
+          "category": 5,
+          "symbolSize": 28,
+          "info": "荷花生长之处。",
+          "role": "诗中地点",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "卷舒开合",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "荷花的自然姿态——卷起与舒展、开放与闭合，一切自然而天真。",
+          "role": "意象元素",
+          "source": "卷舒开合任天真",
+          "images": []
+        },
+        {
+          "name": "花叶同衰",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "翠减红衰愁杀人——花与叶一同衰败的沉痛景象。",
+          "role": "核心意象",
+          "source": "翠减红衰愁杀人",
+          "images": []
+        },
+        {
+          "name": "自然天趣",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "卷舒开合任天真——自然无为的审美理想。",
+          "role": "主题表达",
+          "source": "卷舒开合任天真",
+          "images": []
+        },
+        {
+          "name": "脆弱",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "荷花虽美却脆弱——翠减红衰的必然。",
+          "role": "情感表达",
+          "source": "翠减红衰愁杀人",
+          "images": []
+        },
+        {
+          "name": "红绿对照",
+          "category": 4,
+          "symbolSize": 30,
+          "info": "绿荷与红菡萏的颜色对照——花叶共荣的和谐之美。",
+          "role": "结构主题",
+          "source": "惟有绿荷红菡萏",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《赠荷花》",
+          "target": "绿荷"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "红菡萏"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "花叶相映"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "天真"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "翠减红衰"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "赞美"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "哀愁忧郁"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "美好事物的消逝"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "自然之美"
+        },
+        {
+          "source": "绿荷",
+          "target": "红菡萏"
+        },
+        {
+          "source": "绿荷",
+          "target": "花叶相映"
+        },
+        {
+          "source": "红菡萏",
+          "target": "花叶相映"
+        },
+        {
+          "source": "花叶相映",
+          "target": "赞美"
+        },
+        {
+          "source": "天真",
+          "target": "自然之美"
+        },
+        {
+          "source": "翠减红衰",
+          "target": "哀愁忧郁"
+        },
+        {
+          "source": "翠减红衰",
+          "target": "美好事物的消逝"
+        },
+        {
+          "source": "美好事物的消逝",
+          "target": "哀愁忧郁"
+        },
+        {
+          "source": "金盆",
+          "target": "世俗批判"
+        },
+        {
+          "source": "自然之美",
+          "target": "美好事物的消逝"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "卷舒开合"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "花叶同衰"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "自然天趣"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "脆弱"
+        },
+        {
+          "source": "《赠荷花》",
+          "target": "红绿对照"
+        },
+        {
+          "source": "卷舒开合",
+          "target": "天真"
+        },
+        {
+          "source": "卷舒开合",
+          "target": "自然天趣"
+        },
+        {
+          "source": "花叶同衰",
+          "target": "翠减红衰"
+        },
+        {
+          "source": "花叶同衰",
+          "target": "脆弱"
+        },
+        {
+          "source": "花叶同衰",
+          "target": "哀愁忧郁"
+        },
+        {
+          "source": "红绿对照",
+          "target": "绿荷"
+        },
+        {
+          "source": "红绿对照",
+          "target": "红菡萏"
+        },
+        {
+          "source": "红绿对照",
+          "target": "自然之美"
+        },
+        {
+          "source": "自然天趣",
+          "target": "自然之美"
+        },
+        {
+          "source": "脆弱",
+          "target": "美好事物的消逝"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "世间花叶不相伦，花入金盆叶作尘",
+          "explanation": "以世俗价值的不公开篇，为荷花的独特作铺垫。",
+          "dimensions": [
+            "不平",
+            "批判",
+            "铺垫"
+          ],
+          "scores": [
+            0.6,
+            0.7,
+            0.55
+          ]
+        },
+        {
+          "line": "惟有绿荷红菡萏，卷舒开合任天真",
+          "explanation": "以'惟有'转出荷花的独特之美——自然率性、不假雕饰，是全诗情感最明亮处。",
+          "dimensions": [
+            "赞美",
+            "明亮",
+            "自然"
+          ],
+          "scores": [
+            0.9,
+            0.85,
+            0.9
+          ]
+        },
+        {
+          "line": "此花此叶常相映",
+          "explanation": "花叶相映的美好场景，但'常'字已隐含对永恒的期许与隐隐的不安。",
+          "dimensions": [
+            "美好",
+            "温情",
+            "隐忧"
+          ],
+          "scores": [
+            0.85,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "line": "翠减红衰愁杀人",
+          "explanation": "最沉痛的一笔——从美好跌入衰败，'愁杀人'将情感推到极致。",
+          "dimensions": [
+            "哀愁",
+            "沉痛",
+            "绝望"
+          ],
+          "scores": [
+            0.95,
+            0.9,
+            0.85
+          ]
+        }
+      ]
+    }
+  },
+  "jiasheng": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "宣室求贤访逐臣",
+          "pinyin": "xuān shì qiú xián fǎng zhú chén",
+          "story": "汉文帝在宣室召见被贬逐的贾谊，表面是求贤，实为讽刺。",
+          "pages": [
+            {
+              "prompt": "汉代宫殿宣室内，汉文帝与贾谊对坐夜谈，殿中灯火昏黄。",
+              "image_url": ""
+            },
+            {
+              "prompt": "画面强调帝王的庄严与臣子的恭谨之间的张力。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "不问苍生问鬼神",
+          "pinyin": "bú wèn cāng shēng wèn guǐ shén",
+          "story": "讽刺的顶点——君王不关心百姓疾苦，却询问鬼神之事。",
+          "pages": [
+            {
+              "prompt": "画面一转，帝王前席而问，而真正的民生疾苦被隔绝在宫殿之外。",
+              "image_url": ""
+            },
+            {
+              "prompt": "宫殿外是苍茫大地与苍生，宫殿内是虚无的鬼神之谈。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《贾生》以七言绝句写咏史讽刺，前扬后抑，以冷静笔调写出最深的不平。",
+      "lines": [
+        {
+          "text": "宣室求贤访逐臣",
+          "rhythm": "宣室 / 求贤 / 访逐臣",
+          "tonePattern": "平仄 / 平平 / 仄仄平",
+          "readingTip": "语气庄重，读出表面的郑重其事。",
+          "emotionLink": "以正面姿态开篇。"
+        },
+        {
+          "text": "贾生才调更无伦",
+          "rhythm": "贾生 / 才调 / 更无伦",
+          "tonePattern": "仄平 / 平仄 / 仄平平",
+          "readingTip": "读出对贾谊才华的赞叹。",
+          "emotionLink": "将期待推到最高。"
+        },
+        {
+          "text": "可怜夜半虚前席",
+          "rhythm": "可怜 / 夜半 / 虚前席",
+          "tonePattern": "仄平 / 仄仄 / 平平仄",
+          "readingTip": "'可怜'二字转冷，读出讽刺意味。",
+          "emotionLink": "转折——期待的落空。"
+        },
+        {
+          "text": "不问苍生问鬼神",
+          "rhythm": "不问 / 苍生 / 问鬼神",
+          "tonePattern": "仄仄 / 平平 / 仄仄平",
+          "readingTip": "收束冷静而沉重，读出反讽。",
+          "emotionLink": "讽刺的顶点。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两句",
+          "text": "以郑重其事的口吻写汉文帝召见贾谊，将期待推到最高。"
+        },
+        {
+          "range": "后两句",
+          "text": "以'可怜'转身，揭露求贤的虚妄——不问苍生问鬼神。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《贾生》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐咏史绝句的巅峰之作，借贾谊遭遇讽刺统治者不重贤才。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "贾谊",
+          "category": 1,
+          "symbolSize": 48,
+          "info": "西汉著名政论家、文学家，年少才高而被贬，是李商隐的自喻。",
+          "role": "核心人物",
+          "source": "贾生才调更无伦",
+          "images": []
+        },
+        {
+          "name": "汉文帝",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "西汉皇帝，表面求贤若渴，实则不识真才。",
+          "role": "人物意象",
+          "source": "宣室求贤访逐臣",
+          "images": []
+        },
+        {
+          "name": "宣室",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "汉代未央宫中殿名，汉文帝召见贾谊之处，象征帝王表面的礼贤下士。",
+          "role": "空间意象",
+          "source": "宣室求贤访逐臣",
+          "images": []
+        },
+        {
+          "name": "鬼神之事",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "汉文帝询问贾谊的内容，象征统治者对虚无之事的关心胜过民生疾苦。",
+          "role": "象征意象",
+          "source": "不问苍生问鬼神",
+          "images": []
+        },
+        {
+          "name": "苍生",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "百姓民生——汉文帝不问之事，是全诗讽刺的焦点。",
+          "role": "象征意象",
+          "source": "不问苍生问鬼神",
+          "images": []
+        },
+        {
+          "name": "讽刺、哀怨",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗核心情感——对统治者轻才重鬼神的尖锐讽刺与对贤才不遇的哀怨。",
+          "role": "情感主线",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "借贾谊遭遇写自身不遇的深沉忧愁。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "借古讽今",
+          "category": 4,
+          "symbolSize": 44,
+          "info": "全诗的核心主题与手法——以汉代故事讽刺当朝统治者。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "怀才不遇",
+          "category": 4,
+          "symbolSize": 40,
+          "info": "借贾谊才高而不得其用的故事写诗人自身的不遇之愤。",
+          "role": "主题表达",
+          "source": "贾生才调更无伦",
+          "images": []
+        },
+        {
+          "name": "贾谊之遭遇",
+          "category": 3,
+          "symbolSize": 40,
+          "info": "贾谊年少即以文才闻名，汉文帝召见却只问鬼神之事。事见《史记·屈原贾生列传》。",
+          "role": "历史典故",
+          "source": "史记·屈原贾生列传",
+          "images": []
+        },
+        {
+          "name": "宣室·地点",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "汉代未央宫前殿正室，汉文帝在此召见贾谊。",
+          "role": "诗中地点",
+          "source": "宣室求贤访逐臣",
+          "images": []
+        },
+        {
+          "name": "才调无伦",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "贾生才调更无伦——贾谊才华无与伦比。",
+          "role": "意象元素",
+          "source": "贾生才调更无伦",
+          "images": []
+        },
+        {
+          "name": "夜半虚前席",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "文帝夜半前席倾听——表面礼贤下士的极致姿态，'虚'字则写尽徒劳。",
+          "role": "核心意象",
+          "source": "可怜夜半虚前席",
+          "images": []
+        },
+        {
+          "name": "失望",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "可怜夜半虚前席——对帝王虚有其表的求贤姿态的失望。",
+          "role": "情感表达",
+          "source": "可怜夜半虚前席",
+          "images": []
+        },
+        {
+          "name": "贤才之悲",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "借贾谊之遇写天下贤才的共同命运——被赏识却不得其用。",
+          "role": "主题表达",
+          "source": "贾生才调更无伦",
+          "images": []
+        },
+        {
+          "name": "昏君之鉴",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "不问苍生问鬼神——以汉文帝影射当朝统治者的昏庸。",
+          "role": "主题表达",
+          "source": "不问苍生问鬼神",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《贾生》",
+          "target": "贾谊"
+        },
+        {
+          "source": "《贾生》",
+          "target": "汉文帝"
+        },
+        {
+          "source": "《贾生》",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "《贾生》",
+          "target": "忧愁"
+        },
+        {
+          "source": "《贾生》",
+          "target": "借古讽今"
+        },
+        {
+          "source": "《贾生》",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "《贾生》",
+          "target": "贾谊之遭遇"
+        },
+        {
+          "source": "贾谊",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "贾谊",
+          "target": "贾谊之遭遇"
+        },
+        {
+          "source": "汉文帝",
+          "target": "宣室·地点"
+        },
+        {
+          "source": "鬼神之事",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "苍生",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "贾谊之遭遇",
+          "target": "借古讽今"
+        },
+        {
+          "source": "怀才不遇",
+          "target": "忧愁"
+        },
+        {
+          "source": "宣室·地点",
+          "target": "汉文帝"
+        },
+        {
+          "source": "借古讽今",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "《贾生》",
+          "target": "才调无伦"
+        },
+        {
+          "source": "《贾生》",
+          "target": "夜半虚前席"
+        },
+        {
+          "source": "《贾生》",
+          "target": "失望"
+        },
+        {
+          "source": "《贾生》",
+          "target": "贤才之悲"
+        },
+        {
+          "source": "《贾生》",
+          "target": "昏君之鉴"
+        },
+        {
+          "source": "才调无伦",
+          "target": "贾谊"
+        },
+        {
+          "source": "夜半虚前席",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "夜半虚前席",
+          "target": "失望"
+        },
+        {
+          "source": "失望",
+          "target": "讽刺、哀怨"
+        },
+        {
+          "source": "贤才之悲",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "昏君之鉴",
+          "target": "借古讽今"
+        },
+        {
+          "source": "苍生",
+          "target": "昏君之鉴"
+        },
+        {
+          "source": "鬼神之事",
+          "target": "昏君之鉴"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "宣室求贤访逐臣",
+          "explanation": "以庄重的口吻写汉文帝召回贾谊，表面是求贤盛事，为后文的讽刺埋下伏笔。",
+          "dimensions": [
+            "郑重",
+            "期待",
+            "暗含讽刺"
+          ],
+          "scores": [
+            0.7,
+            0.75,
+            0.4
+          ]
+        },
+        {
+          "line": "贾生才调更无伦",
+          "explanation": "对贾谊才华的由衷赞叹，'更无伦'将期待推到最高点。",
+          "dimensions": [
+            "赞叹",
+            "期待",
+            "推崇"
+          ],
+          "scores": [
+            0.9,
+            0.85,
+            0.9
+          ]
+        },
+        {
+          "line": "可怜夜半虚前席",
+          "explanation": "'可怜'二字是全诗情感的转折——谈至深夜、前席倾听，却是徒劳。",
+          "dimensions": [
+            "惋惜",
+            "转折",
+            "讽刺"
+          ],
+          "scores": [
+            0.85,
+            0.8,
+            0.75
+          ]
+        },
+        {
+          "line": "不问苍生问鬼神",
+          "explanation": "讽刺的顶点——以最冷静的笔调写出最深的不平，全诗在此句达到高潮。",
+          "dimensions": [
+            "讽刺",
+            "愤懑",
+            "苍凉"
+          ],
+          "scores": [
+            0.95,
+            0.88,
+            0.85
+          ]
+        }
+      ]
+    }
+  },
+  "yimei": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "定定住天涯",
+          "pinyin": "dìng dìng zhù tiān yá",
+          "story": "以'定定'二字写滞留天涯的无奈与确定——不得不长居此地。",
+          "pages": [
+            {
+              "prompt": "诗人独坐天涯，远望故乡方向，神色黯然。",
+              "image_url": ""
+            },
+            {
+              "prompt": "天涯远方的苍茫景色与诗人孤独的身影形成对比。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "寒梅最堪恨",
+          "pinyin": "hán méi zuì kān hèn",
+          "story": "寒梅因'常作去年花'而最令人遗憾——它总开在去年，提醒诗人时光流逝、归期无望。",
+          "pages": [
+            {
+              "prompt": "一树寒梅在霜雪中绽放，独自美丽却带着深深的遗憾。",
+              "image_url": ""
+            },
+            {
+              "prompt": "梅花特写，花瓣上的霜与诗人眼中的泪交汇。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《忆梅》以五言绝句写思乡之情，短短二十字中浓缩了天涯沦落之悲。",
+      "lines": [
+        {
+          "text": "定定住天涯",
+          "rhythm": "定定 / 住天涯",
+          "tonePattern": "仄仄 / 仄平平",
+          "readingTip": "'定定'二字叠用，读出滞留的无可奈何。",
+          "emotionLink": "以无奈开篇。"
+        },
+        {
+          "text": "依依向物华",
+          "rhythm": "依依 / 向物华",
+          "tonePattern": "平平 / 仄仄平",
+          "readingTip": "'依依'读出深情与不舍。",
+          "emotionLink": "对美好事物的眷恋。"
+        },
+        {
+          "text": "寒梅最堪恨",
+          "rhythm": "寒梅 / 最堪恨",
+          "tonePattern": "平平 / 仄平仄",
+          "readingTip": "'最堪恨'三字读得沉重而深切。",
+          "emotionLink": "情感的高潮。"
+        },
+        {
+          "text": "常作去年花",
+          "rhythm": "常作 / 去年花",
+          "tonePattern": "平仄 / 仄平平",
+          "readingTip": "收束要轻而余味悠长。",
+          "emotionLink": "以时光之悲收束。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两句",
+          "text": "写滞留天涯的无奈与对自然之美的依依眷恋。"
+        },
+        {
+          "range": "后两句",
+          "text": "以寒梅为媒介写出时光流逝之悲与思乡之痛。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《忆梅》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐五言绝句，借寒梅写天涯沦落与思乡之情。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "寒梅",
+          "category": 1,
+          "symbolSize": 48,
+          "info": "全诗核心意象——寒梅最堪恨，因它常作去年花，提醒诗人时光流逝、归期无望。",
+          "role": "核心意象",
+          "source": "寒梅最堪恨",
+          "images": []
+        },
+        {
+          "name": "天涯",
+          "category": 1,
+          "symbolSize": 40,
+          "info": "极远之地，诗人滞留之处。'定定'二字写尽不得不留的无奈。",
+          "role": "空间意象",
+          "source": "定定住天涯",
+          "images": []
+        },
+        {
+          "name": "物华",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "自然万物的美好，诗人依依不舍的对象——越是美好，越衬出沦落之悲。",
+          "role": "反衬意象",
+          "source": "依依向物华",
+          "images": []
+        },
+        {
+          "name": "去年花",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "寒梅花开总在去年，'去年'二字写时光不可倒回的沉痛。",
+          "role": "时间意象",
+          "source": "常作去年花",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 44,
+          "info": "寒梅独自开于天涯的孤寂清冷，是诗人内心世界的投射。",
+          "role": "情感表达",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "忧愁",
+          "category": 2,
+          "symbolSize": 40,
+          "info": "滞留天涯、归期无望的深沉忧愁。",
+          "role": "情感主线",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "思乡",
+          "category": 4,
+          "symbolSize": 44,
+          "info": "全诗核心主题——因梅忆乡、因花思归。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "时光流逝",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "寒梅常作去年花，暗示一年又一年过去而人仍未归。",
+          "role": "主题表达",
+          "source": "常作去年花",
+          "images": []
+        },
+        {
+          "name": "天涯·地点",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "诗人滞留的远方，可能是桂林或梓州等李商隐曾任职的偏远之地。",
+          "role": "诗中地点",
+          "source": "定定住天涯",
+          "images": []
+        },
+        {
+          "name": "定定",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "叠字写滞留天涯的确定与无奈——不是暂居而是长住。",
+          "role": "意象元素",
+          "source": "定定住天涯",
+          "images": []
+        },
+        {
+          "name": "依依",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "叠字写对美好事物的深情眷恋——与'定定'的无奈形成对照。",
+          "role": "意象元素",
+          "source": "依依向物华",
+          "images": []
+        },
+        {
+          "name": "常作去年花",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "寒梅花开总在去年——时间差写归期无望的残酷。",
+          "role": "核心意象",
+          "source": "常作去年花",
+          "images": []
+        },
+        {
+          "name": "沦落",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "定定住天涯——天涯沦落的无奈与悲哀。",
+          "role": "情感表达",
+          "source": "定定住天涯",
+          "images": []
+        },
+        {
+          "name": "恨",
+          "category": 2,
+          "symbolSize": 30,
+          "info": "寒梅最堪恨——不是恨梅，而是恨时光流逝、归期无望。",
+          "role": "情感表达",
+          "source": "寒梅最堪恨",
+          "images": []
+        },
+        {
+          "name": "叠字法",
+          "category": 4,
+          "symbolSize": 28,
+          "info": "'定定'与'依依'的对仗叠字——音韵与情感的双重表达。",
+          "role": "结构主题",
+          "source": "定定住天涯，依依向物华",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "name": "《忆梅》",
+          "source": "《忆梅》",
+          "target": "寒梅"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "天涯·地点"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "忧愁"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "思乡"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "时光流逝"
+        },
+        {
+          "source": "寒梅",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "寒梅",
+          "target": "去年花"
+        },
+        {
+          "source": "天涯·地点",
+          "target": "忧愁"
+        },
+        {
+          "source": "天涯·地点",
+          "target": "思乡"
+        },
+        {
+          "source": "物华",
+          "target": "忧愁"
+        },
+        {
+          "source": "去年花",
+          "target": "时光流逝"
+        },
+        {
+          "source": "时光流逝",
+          "target": "忧愁"
+        },
+        {
+          "source": "思乡",
+          "target": "忧愁"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "定定"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "依依"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "常作去年花"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "沦落"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "恨"
+        },
+        {
+          "source": "《忆梅》",
+          "target": "叠字法"
+        },
+        {
+          "source": "定定",
+          "target": "天涯·地点"
+        },
+        {
+          "source": "定定",
+          "target": "沦落"
+        },
+        {
+          "source": "依依",
+          "target": "物华"
+        },
+        {
+          "source": "常作去年花",
+          "target": "去年花"
+        },
+        {
+          "source": "常作去年花",
+          "target": "时光流逝"
+        },
+        {
+          "source": "恨",
+          "target": "寒梅"
+        },
+        {
+          "source": "沦落",
+          "target": "忧愁"
+        },
+        {
+          "source": "叠字法",
+          "target": "定定"
+        },
+        {
+          "source": "叠字法",
+          "target": "依依"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "定定住天涯",
+          "explanation": "'定定'叠用写滞留天涯的无可奈何，开篇即奠定全诗沉重基调。",
+          "dimensions": [
+            "无奈",
+            "沉重",
+            "孤寂"
+          ],
+          "scores": [
+            0.88,
+            0.8,
+            0.85
+          ]
+        },
+        {
+          "line": "依依向物华",
+          "explanation": "对自然之美依依眷恋，但越留恋越衬出沦落天涯之悲。",
+          "dimensions": [
+            "眷恋",
+            "温情",
+            "暗含悲伤"
+          ],
+          "scores": [
+            0.85,
+            0.75,
+            0.7
+          ]
+        },
+        {
+          "line": "寒梅最堪恨",
+          "explanation": "'最堪恨'是全诗情感最强音——不是恨寒梅，而是恨时光流逝、归期无望。",
+          "dimensions": [
+            "沉痛",
+            "愤懑",
+            "无奈"
+          ],
+          "scores": [
+            0.9,
+            0.8,
+            0.85
+          ]
+        },
+        {
+          "line": "常作去年花",
+          "explanation": "以最平静的口吻说出最残酷的事实——花开花落又一年，人仍在天涯。",
+          "dimensions": [
+            "苍凉",
+            "时光之悲",
+            "绝望"
+          ],
+          "scores": [
+            0.9,
+            0.92,
+            0.8
+          ]
+        }
+      ]
+    }
+  },
+  "chan": {
+    "aiImage": {
+      "lines": [
+        {
+          "text": "本以高难饱",
+          "pinyin": "běn yǐ gāo nán bǎo",
+          "story": "蝉因栖高饮露而难饱——以蝉自喻，写清高者的困顿。",
+          "pages": [
+            {
+              "prompt": "一只蝉停在高枝上，饮露难饱，周围是茂密的碧树。",
+              "image_url": ""
+            },
+            {
+              "prompt": "特写蝉在枝头的孤独姿态，背景虚化。",
+              "image_url": ""
+            }
+          ]
+        },
+        {
+          "text": "五更疏欲断，一树碧无情",
+          "pinyin": "wǔ gēng shū yù duàn, yí shù bì wú qíng",
+          "story": "蝉鸣到五更声嘶力竭，而碧树依旧无动于衷——以蝉声与碧树的冷漠写世态炎凉。",
+          "pages": [
+            {
+              "prompt": "五更天色微明，蝉声将断，一树碧叶茂盛却显得冷漠无情。",
+              "image_url": ""
+            },
+            {
+              "prompt": "画面冷色调，蝉的挣扎与树的冷漠形成尖锐对比。",
+              "image_url": ""
+            }
+          ]
+        }
+      ]
+    },
+    "toneAnalysis": {
+      "moduleNote": "《蝉》以五言律诗写咏物自况，借蝉写清高者难为世用的困顿，声调由清高转入悲凉。",
+      "lines": [
+        {
+          "text": "本以高难饱",
+          "rhythm": "本以 / 高难饱",
+          "tonePattern": "仄仄 / 平平仄",
+          "readingTip": "起句沉重，读出清高的代价。",
+          "emotionLink": "以自嘲开篇。"
+        },
+        {
+          "text": "徒劳恨费声",
+          "rhythm": "徒劳 / 恨费声",
+          "tonePattern": "平平 / 仄仄平",
+          "readingTip": "'徒劳'略顿，读出徒然之感。",
+          "emotionLink": "鸣声都是徒劳。"
+        },
+        {
+          "text": "五更疏欲断",
+          "rhythm": "五更 / 疏欲断",
+          "tonePattern": "仄平 / 平仄仄",
+          "readingTip": "读出蝉声将断未断的挣扎。",
+          "emotionLink": "声嘶力竭的悲凉。"
+        },
+        {
+          "text": "一树碧无情",
+          "rhythm": "一树 / 碧无情",
+          "tonePattern": "仄仄 / 仄平平",
+          "readingTip": "收束冷静，读出碧树的冷漠无情。",
+          "emotionLink": "世态炎凉的极致。"
+        }
+      ],
+      "coupletSummaries": [
+        {
+          "range": "前两联",
+          "text": "以蝉自喻，写清高难饱、徒劳费声的困境。"
+        },
+        {
+          "range": "后两联",
+          "text": "从蝉的困境转写自身薄宦漂泊，最终以'举家清'收束。"
+        }
+      ]
+    },
+    "knowledgeGraph": {
+      "categories": [
+        "作品",
+        "意象",
+        "情感",
+        "典故",
+        "主题",
+        "地点"
+      ],
+      "nodes": [
+        {
+          "name": "《蝉》",
+          "category": 0,
+          "symbolSize": 60,
+          "info": "李商隐咏物自况的名篇，借蝉写清高难为世用的困顿与坚守。",
+          "role": "作品中心",
+          "source": "李商隐",
+          "images": []
+        },
+        {
+          "name": "蝉",
+          "category": 1,
+          "symbolSize": 50,
+          "info": "全诗核心意象，以蝉自喻——栖高难饱、费声徒劳，是清高者的写照。",
+          "role": "核心意象",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "高枝",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "蝉栖身之处——高而难饱，象征清高者因不肯低就而困顿。",
+          "role": "空间意象",
+          "source": "本以高难饱",
+          "images": []
+        },
+        {
+          "name": "费声",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "蝉的鸣叫徒劳无益——象征奔走呼号却无人理会的悲哀。",
+          "role": "听觉意象",
+          "source": "徒劳恨费声",
+          "images": []
+        },
+        {
+          "name": "五更",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "拂晓时分，蝉鸣到五更已声嘶力竭，写尽挣扎的极限。",
+          "role": "时间意象",
+          "source": "五更疏欲断",
+          "images": []
+        },
+        {
+          "name": "一树碧",
+          "category": 1,
+          "symbolSize": 38,
+          "info": "碧树茂盛却对蝉声无动于衷——象征世界的冷漠与无情。",
+          "role": "象征意象",
+          "source": "一树碧无情",
+          "images": []
+        },
+        {
+          "name": "薄宦",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "卑微的官职如水中断梗漂泊不定，是诗人自况之词。",
+          "role": "身份意象",
+          "source": "薄宦梗犹泛",
+          "images": []
+        },
+        {
+          "name": "故园",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "故乡田园已经荒芜，象征归去无路的悲哀。",
+          "role": "空间意象",
+          "source": "故园芜已平",
+          "images": []
+        },
+        {
+          "name": "举家清",
+          "category": 1,
+          "symbolSize": 36,
+          "info": "全家清贫——蝉以清高自守而难饱，诗人亦以清白自守而穷困。",
+          "role": "象征意象",
+          "source": "我亦举家清",
+          "images": []
+        },
+        {
+          "name": "孤寂清冷",
+          "category": 2,
+          "symbolSize": 48,
+          "info": "全诗情感基调——清高者的孤独与世界的冷漠交织。",
+          "role": "情感主线",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "悲愤",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "徒劳费声、碧树无情的悲愤。",
+          "role": "情感表达",
+          "source": "徒劳恨费声",
+          "images": []
+        },
+        {
+          "name": "坚守",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "宁愿举家清贫也不愿改变清高本性的坚守。",
+          "role": "情感表达",
+          "source": "我亦举家清",
+          "images": []
+        },
+        {
+          "name": "隐逸",
+          "category": 4,
+          "symbolSize": 33,
+          "info": "蝉居高饮露的传统象征——隐士的清高自守。",
+          "role": "主题表达",
+          "source": "本以高难饱",
+          "images": []
+        },
+        {
+          "name": "怀才不遇",
+          "category": 4,
+          "symbolSize": 40,
+          "info": "借蝉写自身才华不被赏识、徒劳奔走的困境。",
+          "role": "核心主题",
+          "source": "贯穿全诗",
+          "images": []
+        },
+        {
+          "name": "世态炎凉",
+          "category": 4,
+          "symbolSize": 36,
+          "info": "'一树碧无情'写尽世间冷漠。",
+          "role": "主题表达",
+          "source": "一树碧无情",
+          "images": []
+        },
+        {
+          "name": "故园·地点",
+          "category": 5,
+          "symbolSize": 30,
+          "info": "诗人远方的故乡，田园已荒芜。",
+          "role": "诗中地点",
+          "source": "故园芜已平",
+          "images": []
+        },
+        {
+          "name": "栖高",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "蝉栖于高枝——本以高难饱，清高者的生存困境。",
+          "role": "意象元素",
+          "source": "本以高难饱",
+          "images": []
+        },
+        {
+          "name": "梗泛",
+          "category": 1,
+          "symbolSize": 33,
+          "info": "薄宦梗犹泛——微官如水中断梗漂泊不定，用《战国策》桃梗漂流的典故。",
+          "role": "意象元素",
+          "source": "薄宦梗犹泛",
+          "images": []
+        },
+        {
+          "name": "故园芜",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "故园荒芜——象征归路已断、后路已失。",
+          "role": "意象元素",
+          "source": "故园芜已平",
+          "images": []
+        },
+        {
+          "name": "相警",
+          "category": 1,
+          "symbolSize": 30,
+          "info": "烦君最相警——蝉声警醒着诗人，人与蝉形成精神共鸣。",
+          "role": "意象元素",
+          "source": "烦君最相警",
+          "images": []
+        },
+        {
+          "name": "清贫自守",
+          "category": 2,
+          "symbolSize": 36,
+          "info": "我亦举家清——在清贫中坚持清高本性的精神力量。",
+          "role": "情感表达",
+          "source": "我亦举家清",
+          "images": []
+        }
+      ],
+      "links": [
+        {
+          "source": "《蝉》",
+          "target": "蝉"
+        },
+        {
+          "source": "《蝉》",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《蝉》",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "《蝉》",
+          "target": "隐逸"
+        },
+        {
+          "source": "蝉",
+          "target": "高枝"
+        },
+        {
+          "source": "蝉",
+          "target": "费声"
+        },
+        {
+          "source": "蝉",
+          "target": "五更"
+        },
+        {
+          "source": "蝉",
+          "target": "一树碧"
+        },
+        {
+          "source": "蝉",
+          "target": "薄宦"
+        },
+        {
+          "source": "蝉",
+          "target": "举家清"
+        },
+        {
+          "source": "高枝",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "费声",
+          "target": "悲愤"
+        },
+        {
+          "source": "一树碧",
+          "target": "世态炎凉"
+        },
+        {
+          "source": "一树碧",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "薄宦",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "故园·地点",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "举家清",
+          "target": "坚守"
+        },
+        {
+          "source": "隐逸",
+          "target": "坚守"
+        },
+        {
+          "source": "世态炎凉",
+          "target": "悲愤"
+        },
+        {
+          "source": "怀才不遇",
+          "target": "孤寂清冷"
+        },
+        {
+          "source": "《蝉》",
+          "target": "栖高"
+        },
+        {
+          "source": "《蝉》",
+          "target": "梗泛"
+        },
+        {
+          "source": "《蝉》",
+          "target": "故园芜"
+        },
+        {
+          "source": "《蝉》",
+          "target": "相警"
+        },
+        {
+          "source": "《蝉》",
+          "target": "清贫自守"
+        },
+        {
+          "source": "栖高",
+          "target": "高枝"
+        },
+        {
+          "source": "栖高",
+          "target": "隐逸"
+        },
+        {
+          "source": "梗泛",
+          "target": "薄宦"
+        },
+        {
+          "source": "梗泛",
+          "target": "怀才不遇"
+        },
+        {
+          "source": "故园芜",
+          "target": "故园·地点"
+        },
+        {
+          "source": "相警",
+          "target": "蝉"
+        },
+        {
+          "source": "相警",
+          "target": "清贫自守"
+        },
+        {
+          "source": "清贫自守",
+          "target": "举家清"
+        },
+        {
+          "source": "清贫自守",
+          "target": "坚守"
+        },
+        {
+          "source": "五更",
+          "target": "费声"
+        }
+      ],
+      "emotionAnalyses": [
+        {
+          "line": "本以高难饱，徒劳恨费声",
+          "explanation": "以蝉自喻开篇——清高者因不肯低就而困顿，所有鸣叫都是徒劳，沉重而自嘲。",
+          "dimensions": [
+            "沉重",
+            "自嘲",
+            "无奈"
+          ],
+          "scores": [
+            0.85,
+            0.7,
+            0.8
+          ]
+        },
+        {
+          "line": "五更疏欲断，一树碧无情",
+          "explanation": "蝉鸣到五更声嘶力竭而碧树无动于衷——以碧树之冷漠写尽世态炎凉，是全诗最震撼的一联。",
+          "dimensions": [
+            "悲凉",
+            "愤懑",
+            "绝望"
+          ],
+          "scores": [
+            0.92,
+            0.85,
+            0.88
+          ]
+        },
+        {
+          "line": "薄宦梗犹泛，故园芜已平",
+          "explanation": "从蝉转写自身——官职卑微如水中断梗漂流不定，故园荒芜归去无路。",
+          "dimensions": [
+            "漂泊感",
+            "苍凉",
+            "无奈"
+          ],
+          "scores": [
+            0.85,
+            0.88,
+            0.82
+          ]
+        },
+        {
+          "line": "烦君最相警，我亦举家清",
+          "explanation": "感谢蝉的警醒——以'举家清'收束，既写清贫也写清白，在悲凉中见坚守。",
+          "dimensions": [
+            "悲凉",
+            "坚守",
+            "孤傲"
+          ],
+          "scores": [
+            0.8,
+            0.85,
+            0.9
           ]
         }
       ]
