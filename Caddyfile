@@ -1,3 +1,16 @@
+# TLS: Caddy automatically obtains certificates from Let's Encrypt via HTTP challenge.
+# Prerequisites: ports 80 & 443 must be open in your cloud security group.
+#
+# If port 80 is blocked, switch to DNS challenge:
+#   1. Build Caddy with the DNS plugin (e.g. xcaddy build --with github.com/caddy-dns/alidns)
+#   2. Add the tls directive inside the site block:
+#      tls {
+#        dns alidns {
+#          access_key_id {$ALIDNS_ACCESS_KEY_ID}
+#          access_key_secret {$ALIDNS_ACCESS_KEY_SECRET}
+#        }
+#      }
+
 {$SITE_DOMAIN:localhost} {
 	encode zstd gzip
 

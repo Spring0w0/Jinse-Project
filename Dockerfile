@@ -15,23 +15,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     JINSE_BACKEND_PORT=5001
 
 WORKDIR /app
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends nodejs \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY jinse-backend/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY jinse-backend/ /app/jinse-backend/
 COPY jinse-frontend/src/mocks/ /app/jinse-frontend/src/mocks/
 
+COPY jinse-backend/scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 EXPOSE 5001
-CMD gunicorn "app:app" \
-    --chdir /app/jinse-backend \
-    --bind 0.0.0.0:5001 \
-    --workers "${GUNICORN_WORKERS:-2}" \
-    --threads "${GUNICORN_THREADS:-4}" \
-    --timeout "${GUNICORN_TIMEOUT:-120}"
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 FROM caddy:2-alpine AS caddy
 COPY Caddyfile /etc/caddy/Caddyfile
