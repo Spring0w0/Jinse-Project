@@ -7,14 +7,8 @@ services:
     depends_on:
       backend:
         condition: service_started
-    environment:
-      SITE_DOMAIN: ${SITE_DOMAIN:-localhost}
     ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - caddy_data:/data
-      - caddy_config:/config
+      - "81:81"
     logging:
       driver: "json-file"
       options:
@@ -82,6 +76,4 @@ services:
         max-file: "3"
 
 volumes:
-  caddy_data:
-  caddy_config:
   postgres_data:
